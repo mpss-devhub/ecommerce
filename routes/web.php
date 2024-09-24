@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('product');
+    return view('home');
 });
 
 // Route::get('/product',[ProductPageController::class, 'showProductPage'])->name('product');

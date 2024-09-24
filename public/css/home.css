@@ -1,0 +1,133 @@
+.home-mv{
+  margin-top: 54px;
+  background-image: url(../img/09-img.jpg);
+  height: 500px;
+}
+.txt-box{
+  width: 50%;
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.txt-box small, .txt-box p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.txt-box img{
+  float: left;
+  width: 100px;
+}
+.txt-box h3{
+  padding-top: 34px;
+}
+
+.txt-box .slide-ani {
+  -webkit-animation: slideIn 2s infinite;
+  -moz-animation: slideIn 2s infinite;
+  animation: slideIn 2s infinite;
+}
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideIn {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* End Review Row */
+
+
+/*Home Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .home-mv{
+    margin-top: 7.188vw;
+  }
+  .txt-box{
+    width: 31.25vw;
+    right: 10%;
+    top: 10%;
+    font-size: 3.516vw;
+  }
+  .txt-box small, .txt-box p {
+    font-size: 1.563vw;
+  }
+    
+  @-webkit-keyframes slideIn {
+  0% {
+    transform: translateX(7.813vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  }
+  @-moz-keyframes slideIn {
+  0% {
+    transform: translateX(7.813vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+}
+
+/*home sp*/
+@media screen and (max-width: 767.9px) {
+  .home-mv{
+    margin-top: 11.995vw;
+  }
+  .txt-box{
+    width: 52.151vw;
+    right: 10%;
+    top: 10%;
+    font-size: 5.867vw;
+  }
+  .txt-box small, .txt-box p {
+    font-size: 2.608vw;
+  }
+  
+  @-webkit-keyframes slideIn {
+    0% {
+      transform: translateX(13.038vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @-moz-keyframes slideIn {
+    0% {
+      transform: translateX(13.038vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translateX(13.038vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
