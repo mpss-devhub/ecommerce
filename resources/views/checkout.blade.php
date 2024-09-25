@@ -9,7 +9,7 @@ octoverse| Checkout Page
 
 <section class="sec-checkout">
     <form action="{{ route('checkout') }}" method="POST">
-    @csrf
+        @csrf
         <div class="l-inner clearfix">
             <div class="left-col">
                 <h3 class="checkout-ttl">
@@ -72,7 +72,7 @@ octoverse| Checkout Page
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>
-                                    {{ $item['name'] }}
+                                    {{ $item['product_name'] }}
                                 </td>
                                 <td>{{ $item['qty'] }}</td>
                                 <td>$ {{ number_format($item['price']) }}</td>
@@ -91,11 +91,24 @@ octoverse| Checkout Page
                                 <td></td>
                                 <td>Grand Total</td>
                                 <td>
-                                    $ {{ number_format($total_price) }}             
+                                    $ {{ number_format($total_price) }}
                                 </td>
                             </tr>
                         </tfoot>
                     </table>
+                </div>
+                <hr>
+
+                <h3 class="checkout-ttl">Payments (Direct)</h3>
+                <div>
+                    <label for="COD"><input type="radio" id="cod" name="payment" value="COD">
+                        COD</label><br>
+                    <label for="kbz"><input type="radio" id="css" name="payment" value="KBZ">
+                        KBZ</label><br>
+                </div>
+                <h3 class="checkout-ttl">Payments (Redirect)</h3>
+                <div>
+                    <button class="checkout-btn btn">Redirect Payment</button>
                 </div>
             </div>
         </div>

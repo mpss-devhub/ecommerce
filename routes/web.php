@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckOutController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +26,5 @@ Route::get('/cart/update', [ProductsController::class, 'updateCart'])->name("car
 Route::get('/cart/{id}', [ProductsController::class, 'destroyCart'])->name("cart.destroy");
 Route::post('/cart/clear', [ProductsController::class, 'clear'])->name('cart.clear');
 
-Route::get('/checkout', [ProductsController::class, 'checkout'])->name('checkout');
+Route::match(['get', 'post'], '/checkout', [CheckOutController::class, 'checkout'])->name('checkout');
+Route::get('/redirect/checkout', [CheckOutController::class, 'redirectCheckOut'])->name('redirectCheckOut');

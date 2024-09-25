@@ -84,7 +84,9 @@ octoverse| Cart Page
                             @csrf
                             <a href="javascript:;" class="cart-btn clear" onclick="confirmClearCart(event)">CLEAR</a>
                         </form>
-                        <a href="{{ route('checkout') }}" class="cart-btn checkout">CHECKOUT</a>
+
+                        <a href="{{ route('redirectCheckOut') }}" class="cart-btn checkout">REDIRECT CHECKOUT</a>
+                        <a href="{{ route('checkout') }}" class="cart-btn checkout">DIRECT CHECKOUT</a>
                     </div>
                 </div>
             </div>

@@ -30,8 +30,12 @@ class ProductsController extends Controller
 
     public function cart()
     {
-        $cart = session()->get('cart');
-        return view('cart', compact('cart'));
+        if (session()->has('cart') && count(session()->get('cart')) > 0) {
+            $cart = session()->get('cart');
+            return view('cart', compact('cart'));
+        }
+        Toastr::info('Your Cart is Empty', 'INFO');
+        return back();
     }
 
     public function updateCart(Request $request)
