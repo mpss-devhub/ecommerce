@@ -34,8 +34,7 @@
                     <li>
                         <a href="/cart">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            <!-- <img src="{{ asset('/img/08-cart.jpg') }}" alt="cart"> -->
-                            <!-- (<span class="cart-count">{{ session()->has('cart') && count(session()->get('cart')) > 0 ? count(session()->get('cart')) : 0 }}</span>) -->
+                            (<span class="cart-count">{{ session()->has('cart') && count(session()->get('cart')) > 0 ? count(session()->get('cart')) : 0 }}</span>)
                         </a>
                     </li>
                 </ul>
@@ -59,7 +58,7 @@
     <!--footer-->
 
     <script src="{{asset('js/libary/jquery.min.js')}}"></script>
-    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="{{asset('js/libary/toastr.min.js')}}"></script>
     <script src="{{asset('js/common.js')}}"></script>
     <script src="{{asset('js/cart.js')}}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

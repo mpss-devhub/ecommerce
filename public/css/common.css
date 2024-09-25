@@ -229,12 +229,16 @@ section.sec-mv {
 }
 
 .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-color: #e5e7eb;
   color: #777272;
   text-align: center;
   padding: 8px 0;
   border-top: 1px solid #ffffff;
-  font-size: 20px;
+  font-size: 10px;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 400;
 }
@@ -428,7 +432,7 @@ section.sec-mv {
 
   .menu-icon {
     float: right;
-    margin: 2.469vw 3.281vw 0 0;
+    margin: 0.469vw 3.281vw 0 0;
   }
 
   .menu-icon {

@@ -21,11 +21,11 @@ svg{
   margin-top: 2px;
 }
 path{
-  fill: #006699;
+  fill: #777272;
 }
 .sec-cart .cmn-ttl{
   text-align: center;
-  color: #006699;
+  color: #777272;
   font-size: 38px;
   float: left;
 }
@@ -94,7 +94,7 @@ path{
   font-size: 24px;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 600;
-  color: #006699;
+  color: #777272;
 }
 .sec-cart .cart-table .tfoot{
   border-top: 1px solid rgba(0, 102, 153,0.4);
@@ -163,11 +163,11 @@ border: 1px solid #006699;
     margin-top: 0.156vw;
   }
   path{
-    fill: #006699;
+    fill: #777272;
   }
   .sec-cart .cmn-ttl{
     text-align: center;
-    color: #006699;
+    color: #777272;
     font-size: 2.969vw;
     float: left;
   }
@@ -230,7 +230,7 @@ border: 1px solid #006699;
     font-size: 1.875vw;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 600;
-    color: #006699;
+    color: #777272;
   }
   .sec-cart .cart-table .tfoot{
     border-top: 0.078vw solid rgba(0, 102, 153,0.4);
@@ -266,13 +266,13 @@ border: 1px solid #006699;
     border: 0.078vw solid #ff0000 ;
     }
   .sec-cart   .checkout{
-  background-color:  #006699;
-  border: 0.078vw solid #006699;
+  background-color:  #777272;
+  border: 0.078vw solid #777272;
   }
   .sec-cart   .checkout:hover{
     background-color: white;
-    color:#006699;
-    border: 0.078vw solid #006699 ;
+    color:#777272;
+    border: 0.078vw solid #777272 ;
     }
     .del-svg{
   width: 2.344vw;
@@ -304,11 +304,11 @@ border: 1px solid #006699;
     margin-top: 0.261vw;
   }
   path{
-    fill: #006699;
+    fill: #777272;
   }
   .sec-cart .cmn-ttl{
     text-align: center;
-    color: #006699;
+    color: #777272;
     font-size: 4.954vw;
     float: left;
   }
@@ -370,7 +370,7 @@ border: 1px solid #006699;
     font-size: 2.347vw;
     font-family: 'RobotoCondensed-Bold', sans-serif;
     font-weight: 600;
-    color: #006699;
+    color: #777272;
   }
   .sec-cart .cart-table .tfoot{
     border-top: 0.13vw solid rgba(0, 102, 153,0.4);
@@ -407,13 +407,13 @@ border: 1px solid #006699;
     border: 0.13vw solid #ff0000 ;
     }
   .sec-cart   .checkout{
-  background-color:  #006699;
-  border: 0.13vw solid #006699;
+  background-color:  #777272;
+  border: 0.13vw solid #777272;
   }
   .sec-cart   .checkout:hover{
     background-color: white;
-    color:#006699;
-    border: 0.13vw solid #006699 ;
+    color:#777272;
+    border: 0.13vw solid #777272 ;
     }
     .del-svg{
       width: 3.911vw;

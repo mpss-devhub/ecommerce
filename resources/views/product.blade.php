@@ -5,21 +5,6 @@ Octoverse| Product
 @section('content')
 <section class="box-container">
     <div class="l-inner">
-        <!-- <ul class="ttl-box clearfix">
-      <li class="ttl-list">
-        <a href="#"
-        class="">
-          All Products
-        </a>
-      </li>
-      <li class="ttl-list">
-        <a href="#"
-        class="category-tab-link">
-          category name
-        </a>
-      </li>
-    </ul> -->
-
         <!-- all tab -->
         <ul class="item-box clearfix">
             <?php
@@ -30,12 +15,12 @@ Octoverse| Product
                         <img src="{{ asset('img/products/' . $product->product_image) }}" alt="">
                     </div>
                     <div class="item-txt">
-                        <p class="cmn-p">
-                            {{$product['price']}} MMK
-                        </p>
                         <h5 class="cmn-h5">
                             {{$product['product_name']}}
-                        </h5>
+                        </h5> 
+                           <p class="cmn-p">
+                            {{$product['price']}} MMK
+                        </p>
                         <button class="add-to-cart-btn" data-id="{{$product['id']}}">
                             Add to Cart
                         </button>
@@ -45,10 +30,6 @@ Octoverse| Product
             }
             ?>
         </ul>
-        <!-- End all tab -->
-        <div class="pagination-blk">
-        </div>
-
     </div>
 </section>
 
