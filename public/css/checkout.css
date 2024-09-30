@@ -1,6 +1,5 @@
 .sec-checkout {
   margin-top: 70px;
-  padding: 68px 0;
   color: #2d3038;
 }
 
@@ -15,6 +14,7 @@
   margin-bottom: 36px;
   padding-bottom: 14px;
   font-size: 24px;
+  color: #777272;
 }
 
 .sec-checkout .checkout-ttl:after {
@@ -35,30 +35,35 @@
 
 .sec-checkout .left-col {
   float: left;
+  width: 40%;
+}
+
+.sec-checkout .left-col .Ewallet,.QR,.webpay{
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+
+.sec-checkout .left-col h2{
+  font-size: 24px;
+  color: #777272;
+  padding: 10px 0;
+  text-decoration: underline blue;
+}
+
+.sec-checkout .left-col .pay-list a {
+  float: left;
+  width: 9%;
+  margin-right: 2%;
+  margin-left: 5%;
 }
 
 .sec-checkout .right-col {
   float: right;
 }
 
-/* New */
-.sec-checkout .user-info-blk .input-bx {
-  margin-bottom: 20px;
+.sec-checkout .left-col .webpay .pay-list a:nth-child(3), a:nth-child(4){
+  margin-top: 5px !important;
 }
-
-.sec-checkout .user-info-blk input {
-  width: 72%;
-  padding: 8.5px;
-  border: 1.5px solid #2d3038;
-  outline: none;
-}
-
-.sec-checkout .user-info-blk .text-danger {
-  display: block;
-  margin-top: 5px;
-  padding-left: 0;
-}
-
 /* New */
 
 .checkout-btn {
@@ -78,7 +83,9 @@
   background-color: transparent;
   color: #006699;
 }
-
+.infoForm {
+  margin-bottom: 50px;
+}
 .sec-checkout .order-info-blk table {
   width: 100%;
   border-collapse: collapse;
@@ -107,6 +114,39 @@
   font-size: 12px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .sec-checkout {
     margin-top: 5.469vw;

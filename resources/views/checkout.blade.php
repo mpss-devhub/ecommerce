@@ -3,46 +3,45 @@
 octoverse| Checkout Page
 @endsection
 @section('content')
-<button onclick="topFunction()" id="myBtn" class="myBtn" title="Go to top">
-    <img src="img/home/img_up_arrow5.jpg" alt="UpArrow" class="up-img">
-</button>
-
 <section class="sec-checkout">
     <form action="{{ route('checkout') }}" method="POST">
         @csrf
         <div class="l-inner clearfix">
             <div class="left-col">
-                <h3 class="checkout-ttl">
-                    Personal Info
-                </h3>
-
-                <div class="user-info-blk">
-                    <div class="input-bx">
-                        <label for="">Username</label>
-                        <input type="text" name="name" value="{{ @old('name', $user->name) }}">
-                        <span class="text-danger">{{ $errors->first('name') }}</span><br>
+                <div class="Ewallet">
+                    <h2>E-Wallet</h2>
+                    <div class="clearfix">
+                        <div class="pay-list">
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/KBZPay.png') }}" alt="KBZPay"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/CBPay.png') }}" alt="CBPay"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/UABPay.png') }}" alt="UBPay"></a>
+                            <a href="#" class="showFormLink"> <img src="{{ asset('img/bank_logo/AYAPay.png') }}" alt="AYAPay"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/onePay.png') }}" alt="onePay"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/MoMoney.png') }}" alt="MoMoney"></a>
+                        </div>
                     </div>
-
-                    <div class="input-bx">
-                        <label for="">Email Address</label>
-                        <input type="text" name="email" value="{{ @old('email', $user->email) }}">
-                        <span class="text-danger">{{ $errors->first('email') }}</span><br>
+                </div>
+                <div class="QR">
+                    <h2>QR Pay</h2>
+                    <div class="clearfix">
+                        <div class="pay-list">
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/KBZPay.png') }}" alt="KBZPay"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/CBPay.png') }}" alt="CBPay"></a>
+                            <a href="#" class="showFormLink"> <img src="{{ asset('img/bank_logo/AYAPay.png') }}" alt="AYAPay"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/MoMoney.png') }}" alt="MoMoney"></a>
+                        </div>
                     </div>
-
-                    <div class="input-bx">
-                        <label for="">Phone Number</label>
-                        <input type="text" name="phone" value="{{ @old('phone', $user->phone) }}">
-                        <span class="text-danger">{{ $errors->first('phone') }}</span><br>
-                    </div>
-
-                    <div class="input-bx">
-                        <label for="">Address</label>
-                        <input type="text" name="address" value="{{ @old('address', $user->address) }}">
-                        <span class="text-danger">{{ $errors->first('address') }}</span><br>
-                    </div>
-
-                    <div class="">
-                        <button class="checkout-btn btn">Submit Order</button>
+                </div>
+                <div class="webpay">
+                    <h2>Web Pay</h2>
+                    <div class="clearfix">
+                        <div class="pay-list">
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/Wavepay.png') }}" alt="Wave"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/OkDollar.png') }}" alt="OkDollar"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/MPU.png') }}" alt="MPU"></a>
+                            <a href="#" class="showFormLink"> <img src="{{ asset('img/bank_logo/Visa & Master.png') }}" alt="Visa&Master"></a>
+                            <a href="#" class="showFormLink"> <img src="{{ asset('img/bank_logo/M-Pitesan.png') }}" alt="M-pitesan"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,20 +97,69 @@ octoverse| Checkout Page
                     </table>
                 </div>
                 <hr>
-
-                <h3 class="checkout-ttl">Payments (Direct)</h3>
-                <div>
-                    <label for="COD"><input type="radio" id="cod" name="payment" value="COD">
-                        COD</label><br>
-                    <label for="kbz"><input type="radio" id="css" name="payment" value="KBZ">
-                        KBZ</label><br>
-                </div>
-                <h3 class="checkout-ttl">Payments (Redirect)</h3>
-                <div>
-                    <button class="checkout-btn btn">Redirect Payment</button>
-                </div>
             </div>
         </div>
     </form>
 </section>
+<!-- Modal structure -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span> <!-- Ensure this exists -->
+    <h2 id="modalHeader">Payment Information</h2>
+    <form id="paymentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+  // Get modal and other elements
+  const modal = document.getElementById('myModal');
+  const closeModalBtn = document.getElementsByClassName('close')[0];
+  const showModalLinks = document.querySelectorAll('.showFormLink');
+  const modalHeader = document.getElementById('modalHeader');
+
+//   Function to show the modal
+  function showModal(paymentType) {
+    modalHeader.innerText = `${paymentType} Payment Information`;
+    modal.style.display = 'block';
+  }
+
+  // Function to hide the modal
+  function hideModal() {
+    modal.style.display = 'none';
+  }
+
+  // Loop through each link and add click event listener to show the modal
+  showModalLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      const paymentType = link.getAttribute('data-payment');
+      showModal(paymentType);  // Show the modal and pass the payment type
+    });
+  });
+
+  // Close the modal when the 'x' button is clicked
+  closeModalBtn.onclick = function() {
+    hideModal();
+  }
+
+  // Close the modal if the user clicks outside the modal content
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      hideModal();
+    }
+  }
+});
+
+</script>
 @endsection
