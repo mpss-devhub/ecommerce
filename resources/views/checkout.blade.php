@@ -12,11 +12,11 @@ octoverse| Checkout Page
                     <h2>E-Wallet</h2>
                     <div class="clearfix">
                         <div class="pay-list">
-                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/KBZPay.png') }}" alt="KBZPay"></a>
-                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/CBPay.png') }}" alt="CBPay"></a>
-                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/UABPay.png') }}" alt="UBPay"></a>
-                            <a href="#" class="showFormLink"> <img src="{{ asset('img/bank_logo/AYAPay.png') }}" alt="AYAPay"></a>
-                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/onePay.png') }}" alt="onePay"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/KBZPay.png') }}" alt="KBZ"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/CBPay.png') }}" alt="CB"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/UABPay.png') }}" alt="UAB"></a>
+                            <a href="#" class="showFormLink"> <img src="{{ asset('img/bank_logo/AYAPay.png') }}" alt="AYA"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/onePay.png') }}" alt="one"></a>
                             <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/MoMoney.png') }}" alt="MoMoney"></a>
                         </div>
                     </div>
@@ -25,14 +25,14 @@ octoverse| Checkout Page
                     <h2>QR Pay</h2>
                     <div class="clearfix">
                         <div class="pay-list">
-                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/KBZPay.png') }}" alt="KBZPay"></a>
-                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/CBPay.png') }}" alt="CBPay"></a>
-                            <a href="#" class="showFormLink"> <img src="{{ asset('img/bank_logo/AYAPay.png') }}" alt="AYAPay"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/KBZPay.png') }}" alt="KBZ"></a>
+                            <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/CBPay.png') }}" alt="CB"></a>
+                            <a href="#" class="showFormLink"> <img src="{{ asset('img/bank_logo/AYAPay.png') }}" alt="AYA"></a>
                             <a href="#" class="showFormLink"><img src="{{ asset('img/bank_logo/MoMoney.png') }}" alt="MoMoney"></a>
                         </div>
                     </div>
                 </div>
-                <div class="webpay">
+                <div class="web">
                     <h2>Web Pay</h2>
                     <div class="clearfix">
                         <div class="pay-list">
@@ -105,60 +105,58 @@ octoverse| Checkout Page
 <div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span> <!-- Ensure this exists -->
-    <h2 id="modalHeader">Payment Information</h2>
-    <form id="paymentForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+    <h2 id="modalHeader" class="modalHeader">Payment Information</h2>
+    <form id="paymentForm" class="paymentForm">
+        <div class="paymentBox clearfix">
+            <label for="name" class="title">Name:</label>
+            <input type="text" id="name" name="name" class="paytxt-box" required>
+        </div>
+        <div class="paymentBox clearfix">
+            <label for="phone" class="title">Phone:</label>
+            <input type="text" id="phone" name="phone" class="paytxt-box" required>
+        </div>
+        <div class="paymentBox clearfix">
+            <label for="email" class="title">Email:</label>
+            <input type="email" id="email" name="email" class="paytxt-box" required>
+        </div>
 
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <button type="submit">Submit</button>
+        <button type="submit" class="paySubmit">Submit</button>
     </form>
   </div>
 </div>
 <script>
  document.addEventListener('DOMContentLoaded', function() {
-  // Get modal and other elements
-  const modal = document.getElementById('myModal');
-  const closeModalBtn = document.getElementsByClassName('close')[0];
-  const showModalLinks = document.querySelectorAll('.showFormLink');
-  const modalHeader = document.getElementById('modalHeader');
-
-//   Function to show the modal
-  function showModal(paymentType) {
-    modalHeader.innerText = `${paymentType} Payment Information`;
-    modal.style.display = 'block';
-  }
-
-  // Function to hide the modal
-  function hideModal() {
-    modal.style.display = 'none';
-  }
-
-  // Loop through each link and add click event listener to show the modal
-  showModalLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent default link behavior
-      const paymentType = link.getAttribute('data-payment');
-      showModal(paymentType);  // Show the modal and pass the payment type
-    });
-  });
-
-  // Close the modal when the 'x' button is clicked
-  closeModalBtn.onclick = function() {
-    hideModal();
-  }
-
-  // Close the modal if the user clicks outside the modal content
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      hideModal();
+    const modal = document.getElementById('myModal'); // Ensure the modal ID matches
+    const closeModalBtn = document.getElementsByClassName('close')[0];
+    const modalHeader = document.getElementById('modalHeader');
+  
+    function showModal(paymentType) {
+        modalHeader.innerText = `${paymentType} Payment Information`;
+        modal.style.display = 'block';
     }
-  }
+  
+    function hideModal() {
+        modal.style.display = 'none';
+    }
+  
+    // Add event listeners to all elements with the class 'showFormLink'
+    document.querySelectorAll('.showFormLink').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            const paymentType = this.querySelector('img').alt;
+            showModal(paymentType);
+        });
+    });
+  
+    closeModalBtn.onclick = function() {
+        hideModal();
+    };
+  
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            hideModal();
+        }
+    };
 });
 
 </script>

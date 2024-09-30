@@ -132,7 +132,41 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 500px;
+  max-width: 560px;
+}
+
+.modalHeader {
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.paymentForm {
+  width: 75%;
+  margin: auto;
+  padding: 0 27px;
+}
+.paymentForm .paymentBox{
+  margin-bottom: 25px;
+}
+.paymentForm .title {
+  float: left;
+  width: 20%;
+  margin-top: 10px;
+}
+
+.paymentForm .paytxt-box {
+  float: right;
+  width: 75%;
+  padding: 4px 0;
+}
+
+.paySubmit {
+  width: 25%;
+  padding: 5px 0px;
+  margin-left: 25%;
+  background-color: rgb(101, 48, 140);
+  border: none;
+  color: white
 }
 
 .close {
