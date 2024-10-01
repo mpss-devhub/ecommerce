@@ -181,6 +181,14 @@
   text-decoration: none;
   cursor: pointer;
 }
+.QR-block {
+  margin: auto;
+  width: 50%;
+}
+
+.QR-block img{
+  margin-top: 10px;
+}
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .sec-checkout {
     margin-top: 5.469vw;

@@ -10,7 +10,7 @@ octoverse| Checkout Page
         <div class="l-inner clearfix">
             <div class="left-col">
                 @foreach($response as $item)
-                <div class="Ewallet">
+                <div class="{{$item['paymentType']}}">
                     <h2>{{ $item['paymentType'] }}</h2>
                     <div class="clearfix">
                         <div class="pay-list">
@@ -95,8 +95,10 @@ octoverse| Checkout Page
                         <label for="email" class="title">Email:</label>
                         <input type="email" id="email" name="email" class="paytxt-box" required>
                     </div>
-
-                    <button type="submit" class="paySubmit">Submit</button>
+                    <button class="paySubmit">Submit</button>
+                </div>
+                <div class="QR-block" style="display: none;">
+                    <img src="{{ asset('img/bank_logo/KBZPay.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -145,5 +147,11 @@ octoverse| Checkout Page
             }
         };
     });
+
+    document.getElementsByClassName('paySubmit').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('.QR Scan').style.display = 'block';
+    });
 </script>
+
 @endsection
