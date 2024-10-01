@@ -28,7 +28,6 @@ octoverse| Checkout Page
                 <h3 class="checkout-ttl">
                     Order Details
                 </h3>
-
                 <div class="order-info-blk">
                     <table>
                         <thead>
@@ -40,7 +39,6 @@ octoverse| Checkout Page
                                 <th>Sub Total</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             @php $total_price = 0 @endphp
                             @foreach($cart as $item)
@@ -77,7 +75,6 @@ octoverse| Checkout Page
                 <hr>
             </div>
         </div>
-        <!-- Modal structure -->
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span> <!-- Ensure this exists -->
@@ -95,27 +92,37 @@ octoverse| Checkout Page
                         <label for="email" class="title">Email:</label>
                         <input type="email" id="email" name="email" class="paytxt-box" required>
                     </div>
-                    <button class="paySubmit">Submit</button>
+                    <input type="button" name="submit" class="paySubmit" value="Submit" />
                 </div>
                 <div class="QR-block" style="display: none;">
-                    <img src="{{ asset('img/bank_logo/KBZPay.png') }}" alt="">
+                    <img src="" alt="">
                 </div>
             </div>
         </div>
     </form>
 </section>
 <script>
-    document.querySelectorAll('.showFormLink').forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const paymentCode = this.getAttribute('data-code');
-            console.log('Selected Payment Code:', paymentCode);
-            document.getElementById('selectedPaymentCode').value = paymentCode;
-        });
-    });
-
     document.addEventListener('DOMContentLoaded', function() {
-        const modal = document.getElementById('myModal'); // Ensure the modal ID matches
+        document.querySelectorAll('.showFormLink').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const paymentCode = this.getAttribute('data-code');
+                const paymentTypeContainer = this.closest('.pay-list').parentNode.parentNode;
+                const paymentTypeElement = paymentTypeContainer.querySelector('h2');
+                const paymentType = paymentTypeElement ? paymentTypeElement.innerText.trim() : '';
+                console.log('Selected Payment Code:', paymentCode);
+                console.log('Selected Payment Type:', paymentType);
+                document.getElementById('selectedPaymentCode').value = paymentCode;
+                showModal(paymentType);
+                const paySubmitButton = document.querySelector('.paySubmit');
+                if (paymentType === 'QR Scan') {
+                    paySubmitButton.type = 'button';
+                } else {
+                    paySubmitButton.type = 'submit';
+                }
+            });
+        });
+        const modal = document.getElementById('myModal');
         const closeModalBtn = document.getElementsByClassName('close')[0];
         const modalHeader = document.getElementById('modalHeader');
 
@@ -128,15 +135,6 @@ octoverse| Checkout Page
             modal.style.display = 'none';
         }
 
-        // Add event listeners to all elements with the class 'showFormLink'
-        document.querySelectorAll('.showFormLink').forEach(function(link) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const paymentType = this.querySelector('img').alt;
-                showModal(paymentType);
-            });
-        });
-
         closeModalBtn.onclick = function() {
             hideModal();
         };
@@ -146,11 +144,36 @@ octoverse| Checkout Page
                 hideModal();
             }
         };
-    });
 
-    document.getElementsByClassName('paySubmit').addEventListener('click', function(event) {
-        event.preventDefault();
-        document.querySelector('.QR Scan').style.display = 'block';
+        document.querySelector('.paySubmit').addEventListener('click', function(event) {
+            console.log($('#selectedPaymentCode').val());
+            if (this.type === 'button') {
+                event.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/checkout',
+                    data: {
+                        phoneNo: $('#phoneNo').val(),
+                        email: $('#email').val(),
+                        name: $('#name').val(),
+                        payment_code: $('#selectedPaymentCode').val(),
+                        _token: $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(response) {
+                        if (response.qrImg) {
+                            const qrImageElement = document.querySelector('.QR-block img');
+                            qrImageElement.src = response.qrImg;
+                            document.querySelector('.QR-block').style.display = 'block';
+                        }
+                    },
+                    error: function(xhr) {
+                        console.error(xhr.responseText);
+                        alert("An error occurred: " + xhr.statusText);
+                    }
+                });
+            }
+        });
+
     });
 </script>
 
