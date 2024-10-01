@@ -133,6 +133,7 @@ octoverse| Checkout Page
 
         function hideModal() {
             modal.style.display = 'none';
+            resetForm();
         }
 
         closeModalBtn.onclick = function() {
@@ -144,6 +145,14 @@ octoverse| Checkout Page
                 hideModal();
             }
         };
+
+        function resetForm() {
+        document.getElementById('phoneNo').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('name').value = '';
+        document.getElementById('selectedPaymentCode').value = '';
+        document.querySelector('.QR-block').style.display = 'none'; 
+     }
 
         document.querySelector('.paySubmit').addEventListener('click', function(event) {
             console.log($('#selectedPaymentCode').val());

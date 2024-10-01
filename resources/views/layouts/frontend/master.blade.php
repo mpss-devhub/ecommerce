@@ -22,7 +22,7 @@
     <header class="sec-header">
         <div class="l-inner clearfix">
             <div class="logo">
-                <a href="#">
+                <a href="/">
                     <img src="{{ asset('/img/01-logo.png') }}" alt="logo">
                 </a>
             </div>

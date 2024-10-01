@@ -23,7 +23,25 @@
   width: 100px;
 }
 .txt-box h3{
-  padding-top: 34px;
+  font-size: 24px;
+  padding-top: 44px;
+}
+
+.shopNowBtn {
+margin-top: 25px !important;
+padding: 5px 15px;
+font-size: 16px;
+color: rgb(101, 48, 140);
+background-color: #ffffff;
+border-radius: 5px;
+}
+.shopNowBtn:hover {
+margin-top: 25px !important;
+padding: 5px 15px;
+font-size: 16px;
+color: #ffffff;
+background-color: rgb(101, 48, 140);
+border-radius: 5px;
 }
 
 .txt-box .slide-ani {
