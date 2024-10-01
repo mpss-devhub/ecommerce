@@ -90,7 +90,7 @@ class CheckOutController extends Controller
         $responseData = $response->json();
         if ($responseData["respCode"] === "0000" && isset($responseData["data"])) {
             if (isset($responseData["data"]["qrImg"])) {
-                dd($responseData["data"]["qrImg"]);
+                // dd($responseData["data"]["qrImg"]);
                 return redirect()->route('home');
             } elseif (isset($responseData["data"]["redirectUrl"])) {
                 return redirect()->away($responseData["data"]["redirectUrl"]);

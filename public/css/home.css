@@ -1,7 +1,7 @@
 .home-mv{
   margin-top: 54px;
   background-image: url(../img/09-img.jpg);
-  height: 500px;
+  height: 580px;
 }
 .txt-box{
   width: 50%;
@@ -61,7 +61,8 @@
 /*Home Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .home-mv{
-    margin-top: 7.188vw;
+    margin-top: 5.188vw;
+    height: 71.067vw;
   }
   .txt-box{
     width: 31.25vw;
@@ -95,6 +96,7 @@
 @media screen and (max-width: 767.9px) {
   .home-mv{
     margin-top: 11.995vw;
+    height: 569px;
   }
   .txt-box{
     width: 52.151vw;
