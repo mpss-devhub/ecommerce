@@ -29,31 +29,34 @@ octoverse| Cart Page
                     <tbody>
                         @php $total_price = 0 @endphp
                         @foreach($cart as $key => $item)
-                        @php $total_price += $item['price'] * $item['qty'] @endphp
+                        @php
+                        // Access the nested product details inside each cart item
+                        $product = $item['product'];
+                        $total_price += $item['price'] * $item['qty'];
+                        @endphp
                         <tr class="cart-item-list">
-                            <input type="hidden" class="product_id" value="{{ $item['id'] }}">
+                            <input type="hidden" class="product_id" value="{{ $product['id'] }}">
                             <td>
-                                <img src="{{asset('img/products/'.$item['product_image'])}}" alt="">
+                                <img src="{{ asset('img/products/' . $product['product_image']) }}" alt="">
                             </td>
-                            <td>{{ $item['product_name'] }}</td>
+                            <td>{{ $product['product_name'] }}</td>
                             <td>
                                 <div class="qty-box clearfix">
                                     <a href="javascript:;" class="update-cart minus">&minus;</a>
-                                    <input type="number" disabled class="qty" value="{{ $item['qty'] }}">
+                                    <input type="number" class="qty" value="{{ $item['qty'] }}" data-id="{{ $product['id'] }}" min="1">
                                     <a href="javascript:;" class="update-cart plus">&plus;</a>
                                 </div>
                             </td>
                             <td>
-                                $ {{ $item['price'] }}
+                                {{ number_format($product['price']) }} MMK
                             </td>
                             <td>
-                                $ <span class="sub-total">{{ number_format($item['qty'] * $item['price']) }}</span>
+                                <span class="sub-total">{{ number_format($item['qty'] * $product['price']) }} MMK</span>
                             </td>
                             <td>
-                                <form action="{{ route('cart.destroy', $item['id']) }}" style="display: inline" method="GET"
-                                    class="removeCartItemForm{{$item['id']}}">
+                                <form action="{{ route('cart.destroy', $product['id']) }}" style="display: inline" method="GET" class="removeCartItemForm{{ $product['id'] }}">
                                     @csrf
-                                    <a href="javascript:;" class="remove-cart-item" data-id="{{ $item['id'] }}">
+                                    <a href="javascript:;" class="remove-cart-item" data-id="{{ $product['id'] }}">
                                         <svg class="del-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path class="del-icon" d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z" />
                                         </svg>
@@ -63,7 +66,6 @@ octoverse| Cart Page
                         </tr>
                         @endforeach
                     </tbody>
-
                     <tfoot class="tfoot">
                         <tr class="grand-total-row">
                             <td></td>
@@ -72,7 +74,7 @@ octoverse| Cart Page
                             <td></td>
                             <td class="grand-ttl">Grand Total</td>
                             <td class="grand-ttl">
-                                $ <span class="sub-total">{{ number_format($total_price) }}</span>
+                                <span class="sub-total">{{ number_format($total_price) }} MMK</span>
                             </td>
                         </tr>
                     </tfoot>

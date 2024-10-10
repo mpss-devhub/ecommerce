@@ -2,36 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Products;
+use App\Http\Services\ProductService;
+use App\Http\Services\CartService;
 use Illuminate\Http\Request;
 use Yoeunes\Toastr\Facades\Toastr;
 
 class ProductsController extends Controller
 {
+    private $productService;
+    private $cartService;
+
+    public function __construct(ProductService $productService, CartService $cartService)
+    {
+        $this->productService = $productService;
+        $this->cartService = $cartService;
+    }
+
     public function index()
     {
-        $products = Products::get();
-        return view('product', compact('products'));
+        $products = $this->productService->getAllProducts();
+        return view('product', ["products" => $products]);
     }
 
     public function addToCart(Request $request)
     {
-        $product = Products::find($request->id);
-        $cart = session()->get('cart');
-        if (isset($cart[$request->id])) {
-            return response()->json(['msg' => 'error', 'cart' => $cart]);
-        }
-        $cart[$request->id] = $product->toArray();
-        $cart[$request->id]['price'] = $product->price;
-        $cart[$request->id]['qty'] = 1;
-        session()->put('cart', $cart);
+        $product = $this->productService->getProductById($request->id);
+        $cart = $this->cartService->addProductToCart($product);
         return response()->json(['msg' => 'success', 'cart' => $cart]);
     }
 
     public function cart()
     {
-        if (session()->has('cart') && count(session()->get('cart')) > 0) {
-            $cart = session()->get('cart');
+        $cart = $this->cartService->getCart();
+        if (count($cart) > 0) {
             return view('cart', compact('cart'));
         }
         Toastr::info('Your Cart is Empty', 'INFO');
@@ -40,31 +43,25 @@ class ProductsController extends Controller
 
     public function updateCart(Request $request)
     {
-        $data = $request->all();
-        $cart = session()->get('cart');
-        $cart[$data['id']]['qty'] = $data['qty'];
-        $tt_price  = $cart[$data['id']]['price'] * $data['qty'];
-        $sub_total = number_format($tt_price);
-        session()->put('cart', $cart);
+        $cart = $this->cartService->updateProductQty($request->id, $request->qty);
+        $product = $cart[$request->id];
+        $sub_total = number_format($product['price'] * $product['qty']);
         return response()->json(['sub_total' => $sub_total]);
     }
 
     public function destroyCart($id)
     {
-        $cart = session()->get('cart');
-        unset($cart[$id]);
-        session()->put('cart', $cart);
-        $result = count(session()->get('cart')) > 0 ? $status = true : $status = false;
-        if ($result) {
+        $cart = $this->cartService->removeProductFromCart($id);
+        if (count($cart) > 0) {
             Toastr::success('Cart Item Removed Successfully', 'SUCCESS');
             return back();
         }
         return redirect()->route('home');
     }
 
-    function clear()
+    public function clear()
     {
-        session()->forget('cart');
+        $this->cartService->clearCart();
         return redirect()->route('home');
     }
 }
