@@ -50,9 +50,9 @@ octoverse| Checkout Page
                                     {{ $item['product_name'] }}
                                 </td>
                                 <td>{{ $item['qty'] }}</td>
-                                <td>$ {{ number_format($item['price']) }}</td>
+                                <td> {{ number_format($item['price']) }} MMK</td>
                                 <td>
-                                    <span class="sub-total">$ {{ number_format($item['qty'] * $item['price']) }}</span>
+                                    <span class="sub-total">{{ number_format($item['qty'] * $item['price']) }} MMK</span>
                                 </td>
                             </tr>
                             @endforeach
@@ -66,7 +66,7 @@ octoverse| Checkout Page
                                 <td></td>
                                 <td>Grand Total</td>
                                 <td>
-                                    $ {{ number_format($total_price) }}
+                                    {{ number_format($total_price) }} MMK 
                                 </td>
                             </tr>
                         </tfoot>
@@ -147,12 +147,12 @@ octoverse| Checkout Page
         };
 
         function resetForm() {
-        document.getElementById('phoneNo').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('name').value = '';
-        document.getElementById('selectedPaymentCode').value = '';
-        document.querySelector('.QR-block').style.display = 'none'; 
-     }
+            document.getElementById('phoneNo').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('selectedPaymentCode').value = '';
+            document.querySelector('.QR-block').style.display = 'none';
+        }
 
         document.querySelector('.paySubmit').addEventListener('click', function(event) {
             console.log($('#selectedPaymentCode').val());

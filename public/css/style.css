@@ -1,177 +1,124 @@
 /*about pc*/
-.mv-blk{
-    width:600px;
-    margin: 0 auto;
-    margin-top: 20px;
-    padding: 20px 0;
-    margin-bottom: 20px;
-  }
-   .cmn-ttl{
-    font-size: 38px;
-    margin-bottom: 50px;
-    text-align: center;
-    color: #006699;
-    position: relative;
-  }
-  .cmn-ttl::after {
-    position: absolute;
-    right: 0;
-    bottom: -42%;
-    left: 0;
-    width: 66px;
-    height: 4px;
-    margin: 0 auto;
-    background-color: #FF8364;
-    content: '';
-  }
-  .mv-blk  .about-txt{
-    width: 500px;
-    font-size: 18px;
-    opacity: 0.7;
-    padding: 0 50px;
-    margin: 0 auto;
-  
-  }
-  .mv-blk  .about-txt .about-box .day{
-    float: left;
-  }
-  .mv-blk  .about-txt .about-box .time{
-    padding-bottom: 2px;
-    float: right;
-  }
-  .mv-blk  .about-txt .about-box{
-    width: 400px;
-    border-bottom:1px solid rgba(0, 102, 153,0.5);
-    padding-bottom: 4px;
-    margin-bottom: 20px;
-  }
-  .mv-blk  .about-txt .list-ttl {
-    padding-top: 30px;
-    text-align: center;
-  }
-  .mv-blk  .about-txt a{
-    display: inline-block;
-  }
-  .txt-blk{
-    width: 700px;
-    margin: 0 auto;
-    padding-bottom: 80px;
-  }
-  .txt-blk p{
-    text-indent: 50px;
-   text-align: justify;
-   word-spacing: 1.2px;
-   line-height: 1.7;
-  }
-  /*about Tablet*/
-  @media screen and (min-width: 768px) and (max-width: 1280px) {
-   .mv-blk{
-    width:46.875vw;
+.mv-blk {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.cmn-ttl {
+  font-size: 38px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #006699;
+  position: relative;
+}
+
+.cmn-ttl::after {
+  position: absolute;
+  right: 0;
+  bottom: -42%;
+  left: 0;
+  width: 66px;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #65308c;
+  content: '';
+}
+
+.mv-blk .about-txt {
+  width: 500px;
+  font-size: 18px;
+  opacity: 0.7;
+  padding: 0 50px;
+  margin: 0 auto;
+
+}
+
+.txt-blk {
+  width: 700px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.txt-blk p {
+  text-indent: 50px;
+  text-align: justify;
+  word-spacing: 1.2px;
+  line-height: 1.7;
+}
+
+/*about Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .mv-blk {
+    width: 46.875vw;
     margin: 0 auto;
     margin-top: 1.563vw;
     padding: 1.563vw 0;
     margin-bottom: 1.563vw;
   }
-   .cmn-ttl{
+
+  .cmn-ttl {
     font-size: 2.969vw;
     margin-bottom: 3.906vw;
-    position: relative;
   }
+
   .cmn-ttl::after {
-    position: absolute;
     right: 0;
     bottom: -42%;
     left: 0;
     width: 5.156vw;
     height: 0.313vw;
     margin: 0 auto;
-    background-color: #FF8364;
     content: '';
   }
-  .mv-blk  .about-txt{
-    width: 39.063vw;
-    font-size: 1.406vw;
-    opacity: 0.7;
-    padding: 0 3.906vw;
+
+  .txt-blk {
+    width: 54.688vw;
     margin: 0 auto;
-  
-  } 
-  .mv-blk  .about-txt .about-box .time{
-      padding-bottom: 0.156vw;
-    }
-    .mv-blk  .about-txt .about-box{
-     width: 31.25vw;
-      border-bottom:0.078vw solid rgba(0, 102, 153,0.5);
-      padding-bottom: 0.313vw;
-      margin-bottom: 1.563vw;
-    }
-    .mv-blk  .about-txt .list-ttl {
-      padding-top: 2.344vw;
-    }
-    .txt-blk{
-      width: 54.688vw;
-      margin: 0 auto;
-      padding-bottom: 6.25vw;
-    }
-    .txt-blk p{
-      text-indent: 3.906vw;
-     word-spacing: 0.094vw;
-    }
+    padding-bottom: 6.25vw;
   }
-  
-  /*about sp*/
-  @media screen and (max-width: 767.9px) {
-    .mv-blk{
-      width:78.227vw;
-      margin: 0 auto;
-      margin-top: 2.608vw;
-      padding: 2.608vw 0;
-      margin-bottom: 2.608vw;
-    }
-    .cmn-ttl{
-      font-size: 4.954vw;
-      margin-bottom: 6.519vw;
-      position: relative;
-    }
-    .cmn-ttl::after {
-      position: absolute;
-      right: 0;
-      bottom: -42%;
-      left: 0;
-      width: 8.605vw;
-      height: 0.522vw;
-      margin: 0 auto;
-      background-color: #FF8364;
-      content: '';
-    }
-    .mv-blk  .about-txt{
-      width: 65.189vw;
-      font-size: 2.347vw;
-      opacity: 0.7;
-      padding: 0 6.519vw;
-      margin: 0 auto;
-    }
-    .mv-blk  .about-txt .about-box .time{
-      padding-bottom: 0.261vw;
-    }
-    .mv-blk  .about-txt .about-box{
-      width: 52.151vw;
-      border-bottom:0.13vw solid rgba(0, 102, 153,0.5);
-      padding-bottom: 0.522vw;
-      margin-bottom: 2.608vw;
-    }
-    .mv-blk  .about-txt .list-ttl {
-      padding-top: 3.911vw;
-    }
-    .txt-blk{
-      width: 91.265vw;
-      margin: 0 auto;
-      padding-bottom: 10.43vw;
-    }
-    .txt-blk p{
-      text-indent: 6.519vw;
-     word-spacing: 0.156vw;
-    }
+
+  .txt-blk p {
+    text-indent: 3.906vw;
+    word-spacing: 0.094vw;
   }
-  
-  
+}
+
+/*about sp*/
+@media screen and (max-width: 767.9px) {
+  .mv-blk {
+    width: 78.227vw;
+    margin: 0 auto;
+    margin-top: 2.608vw;
+    padding: 2.608vw 0;
+    margin-bottom: 2.608vw;
+  }
+
+  .cmn-ttl {
+    font-size: 4.954vw;
+    margin-bottom: 6.519vw;
+  }
+
+  .cmn-ttl::after {
+    right: 0;
+    bottom: -42%;
+    left: 0;
+    width: 8.605vw;
+    height: 0.522vw;
+    margin: 0 auto;
+    content: '';
+  }
+
+  .txt-blk {
+    width: 91.265vw;
+    margin: 0 auto;
+    padding-bottom: 10.43vw;
+  }
+
+  .txt-blk p {
+    text-indent: 6.519vw;
+    word-spacing: 0.156vw;
+  }
+}

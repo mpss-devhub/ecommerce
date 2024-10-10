@@ -37,8 +37,29 @@
                             (<span class="cart-count">{{ session()->has('cart') && count(session()->get('cart')) > 0 ? count(session()->get('cart')) : 0 }}</span>)
                         </a>
                     </li>
-                </ul>
+                    @auth
+                    <li><a href="{{url('/logout')}}">Logout</a></li>
+                    @else
+                    <li class="dropdown pc">
+                        <button class="dropbtn pc">
+                            <i class="fas fa-sign-out-alt signout-icon"></i>
+                        </button>
+                        <div class="dropdown-content pc">
+                            <a href="{{route('login')}}">Login</a>
+                            <a href="{{route('register')}}" class="{{  Request::is('/register') ? 'active' : '' }}">Register</a>
+                        </div>
+
+                    </li>
+                    <li class="  sp">
+                        <ul class="list">
+                            <li><a href="{{route('register')}}" class="{{  Request::is('/register') ? 'active' : '' }}  sp">Register</a></li>
+                            <li class="sp"><a href="{{route('login')}} ap">Login</a>
+                            </li>
+                        </ul>
+                    </li>
+                    </ul>
                 </li>
+                 @endauth
                 </ul>
             </nav>
             <!--gnav-->
@@ -62,7 +83,7 @@
     <script src="{{asset('js/common.js')}}"></script>
     <script src="{{asset('js/cart.js')}}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    @stack('js')
+    <!-- @stack('js') -->
 </body>
 
 </html>

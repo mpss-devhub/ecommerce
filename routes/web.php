@@ -3,6 +3,8 @@
 use App\Http\Controllers\CheckOutController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+Route::get('/logout', [LoginController::class, 'logout']);
+
 Route::get('/', function () {
     return view('home');
 })->name("home");
@@ -26,5 +31,10 @@ Route::get('/cart/update', [ProductsController::class, 'updateCart'])->name("car
 Route::get('/cart/{id}', [ProductsController::class, 'destroyCart'])->name("cart.destroy");
 Route::post('/cart/clear', [ProductsController::class, 'clear'])->name('cart.clear');
 
+Route::middleware('auth')->group(function () {
 Route::match(['get', 'post'], '/checkout', [CheckOutController::class, 'checkout'])->name('checkout');
 Route::get('/redirect/checkout', [CheckOutController::class, 'redirectCheckOut'])->name('redirectCheckOut');
+});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,0 +1,187 @@
+body {
+    background-image: linear-gradient(284deg, #7ddff8, #b1ade2);
+    margin: 0 auto;
+}
+.reg {
+  margin: 75px auto 60px;
+  width: 40%;
+  padding: 30px 30px 20px;
+  font-size: 20px;
+  color: rgba(0, 102, 153,0.8) ;
+  background-color: rgba(255, 255, 255,0.3);
+  border-radius: 15px;
+}
+.reg input[type=text], .reg input[type=email], .reg input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #006699;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+.reg .input-box{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.reg .btn-submit {
+  width: 100%;
+  background-color: #006699;;
+  color: #ffffff;
+  font-family: 'RobotoCondensed', sans-serif;
+  font-weight: 400;
+  padding: 14px 20px;
+  margin: 15px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 20px;
+}
+.reg .btn-submit:hover {
+  border-color: #006699;;
+}
+.reg-h2 {
+  color: #006699;
+  text-align: center;
+  font-family: 'RobotoCondensed-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  padding-top: 5px;
+  padding-bottom: 34px;
+}
+.reg label {
+  color: #006699;;
+  font-family: 'RobotoCondensed', sans-serif;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.reg .rdo-reg {
+  padding-top: 12px;
+}
+
+/*Register Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .reg {
+    width: 48%;
+    margin: 5.859vw auto 4.688vw;
+    padding: 2.344vw 2.344vw 1.563vw;
+    font-size: 1.563vw;
+    color: rgba(0, 102, 153,0.8) ;
+    background-color: rgba(255, 255, 255,0.3);
+    border-radius: 1.172vw;
+  }
+  .reg input[type=text], .reg input[type=email], .reg input[type=password] {
+    width: 100%;
+    padding: 0.938vw 1.563vw;
+    border: 0.078vw solid #006699;
+    border-style: border-box;
+    border-radius: 1.563vw;
+    font-size: 1.250vw;
+    outline: none;
+  }
+  
+  .reg .input-box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.391vw;
+  }
+  .reg .btn-submit {
+    width: 100%;
+    background-color: #006699;;
+    color: #ffffff;
+    font-family: 'RobotoCondensed', sans-serif;
+    font-weight: 400;
+    padding: 1.094vw 1.563vw;
+    margin: 1.172vw 0;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25vw;
+    border-radius: 1.563vw;
+  }
+  .reg .btn-submit:hover {
+    border-color: #006699;;
+  }
+  .reg-h2 {
+    color: #006699;
+    text-align: center;
+    font-family: 'RobotoCondensed-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 3.516vw;
+    padding-top: 0.391vw;
+    padding-bottom: 2.656vw;
+  }
+  .reg label {
+    color: #006699;;
+    font-family: 'RobotoCondensed', sans-serif;
+    font-weight: 400;
+    padding-bottom: 0.781vw;
+  }
+  .reg .rdo-reg {
+    padding-top: 0.938vw;
+  }
+  
+}
+
+/*Register sp*/
+@media screen and (max-width: 767.9px) {
+  .reg {
+    margin: 9.126vw auto 7.823vw;
+    width: 80%;
+    padding: 3.911vw 3.911vw 2.608vw;
+    font-size: 2.608vw;
+    color: rgba(0, 102, 153,0.8) ;
+    background-color: rgba(255, 255, 255,0.3);
+    border-radius: 1.956vw;
+  }
+  .reg input[type=text], .reg input[type=email], .reg input[type=password] {
+    width: 100%;
+    padding: 1.565vw 2.608vw;
+    border: 0.13vw solid #006699;
+    border-style: border-box;
+    border-radius: 2.608vw;
+    font-size: 2.086vw;
+    outline: none;
+  }
+  
+  .reg .input-box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.652vw;
+  }
+  .reg .btn-submit {
+    width: 100%;
+    background-color: #006699;;
+    color: #ffffff;
+    font-family: 'RobotoCondensed', sans-serif;
+    font-weight: 400;
+    padding: 1.825vw 2.608vw;
+    margin: 1.956vw 0;
+    border: none;
+    cursor: pointer;
+    font-size: 2.086vw;
+    border-radius: 2.608vw;
+  }
+  .reg .btn-submit:hover {
+    border-color: #006699;;
+  }
+  .reg-h2 {
+    color: #006699;
+    text-align: center;
+    font-family: 'RobotoCondensed-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 5.867vw;
+    padding-top: 0.652vw;
+    padding-bottom: 4.433vw;
+  }
+  .reg label {
+    color: #006699;;
+    font-family: 'RobotoCondensed', sans-serif;
+    font-weight: 400;
+    padding-bottom: 1.304vw;
+  }
+  .reg .rdo-reg {
+    padding-top: 1.565vw;
+  }
+  
+}
