@@ -26,29 +26,32 @@ octoverse| Cart Page
                     <tbody>
                         @php $total_price = 0 @endphp
                         @foreach($cart as $key => $item)
-                        @php $total_price += $item['price'] * $item['qty'] @endphp
+                        @php
+                        // Access the nested product details inside each cart item
+                        $product = $item['product'];
+                        $total_price += $item['price'] * $item['qty'];
+                        @endphp
                         <tr class="cart-item-list">
-                            <input type="hidden" class="product_id" value="{{ $item['id'] }}">
+                            <input type="hidden" class="product_id" value="{{ $product['id'] }}">
                             <td>
-                                <img src="{{asset('img/products/'.$item['product_image'])}}" alt="">
+                                <img src="{{ asset('img/products/' . $product['product_image']) }}" alt="">
                             </td>
-                            <td>{{ $item['product_name'] }}</td>
+                            <td>{{ $product['product_name'] }}</td>
                             <td>
                                 <div class="qty-box clearfix">
                                     <a href="javascript:;" class="update-cart minus">&minus;</a>
-                                    <input type="number" disabled class="qty" value="{{ $item['qty'] }}">
+                                    <input type="number" class="qty" value="{{ $item['qty'] }}" data-id="{{ $product['id'] }}" min="1">
                                     <a href="javascript:;" class="update-cart plus">&plus;</a>
                                 </div>
                             </td>
                             <td>
-                                {{ $item['price'] }} MMK
+                                {{ number_format($product['price']) }} MMK
                             </td>
                             <td>
-                                <span class="sub-total">{{ number_format($item['qty'] * $item['price']) }}</span> MMK
+                                <span class="sub-total">{{ number_format($item['qty'] * $product['price']) }} MMK</span>
                             </td>
                             <td>
-                                <form action="{{ route('cart.destroy', $item['id']) }}" style="display: inline" method="GET"
-                                    class="removeCartItemForm{{$item['id']}}">
+                                <form action="{{ route('cart.destroy', $product['id']) }}" style="display: inline" method="GET" class="removeCartItemForm{{ $product['id'] }}">
                                     @csrf
                                     <a href="javascript:;" class="remove-cart-item" data-id="{{ $item['id'] }}">
                                         <i class="fa-solid fa-trash del-icon"></i>
@@ -58,7 +61,6 @@ octoverse| Cart Page
                         </tr>
                         @endforeach
                     </tbody>
-
                     <tfoot class="tfoot">
                         <tr class="grand-total-row">
                             <td></td>

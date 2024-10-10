@@ -161,6 +161,10 @@ octoverse| Checkout Page
                 $.ajax({
                     type: 'POST',
                     url: '/checkout',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    contentType: 'application/json',
                     data: {
                         phoneNo: $('#phoneNo').val(),
                         email: $('#email').val(),
@@ -169,6 +173,10 @@ octoverse| Checkout Page
                         _token: $('meta[name="csrf-token"]').attr('content')
                     },
                     success: function(response) {
+                        console.log(response);
+                        if (response.message) {
+                            toastr.error(response.message);
+                        }
                         if (response.qrImg) {
                             const qrImageElement = document.querySelector('.QR-block img');
                             qrImageElement.src = response.qrImg;
