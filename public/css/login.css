@@ -1,7 +1,10 @@
 /*login*/
 .sec-login {
   background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
-  padding: 100px 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .img-container{ 
   width: 30%;
@@ -75,11 +78,10 @@
   font-family: 'RobotoCondensed-Bold', sans-serif;
   font-weight: 500;
   display: block;
-  padding: 10px 0;
 }
 
 .log-form .create {
-  padding: 10px 0 25px 0;
+  padding-bottom: 25px;
   font-size: 14px;
   text-align: center;
   letter-spacing: 1.2px;
@@ -138,12 +140,12 @@
   }
 
   .log-form .input-gp {
-    width: 27.344vw;
+    row-gap: 3.333vw;
   }
 
   .log-form .input-box {
-    row-gap: 0.391vw;
-    margin: 1.953vw 0;
+    margin: 0 auto;
+    width: 40vw;
   }
 
   .log-form .input {
@@ -223,12 +225,12 @@
   }
 
   .log-form .input-gp {
-    width: 45.632vw;
+    row-gap: 3.333vw;
   }
 
   .log-form .input-box {
-    row-gap: 0.652vw;
-    margin: 3.259vw 0;
+    margin: 0 auto;
+    width: 40vw;
   }
 
   .log-form .input {
@@ -282,6 +284,18 @@
     transform: translateY(-50%);
   }
 
+
+  .log-form .or::after {
+    position: absolute;
+    top: 76%;
+    left: 10%;
+    background: url(../img/img_02.png) no-repeat;
+    width: 15.645vw;
+    height: 0.13vw;
+    content: '';
+    transform: translateY(-50%);
+  }
+  
   .log-form .or::after {
     position: absolute;
     top: 76%;

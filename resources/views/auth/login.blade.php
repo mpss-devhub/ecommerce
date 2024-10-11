@@ -18,16 +18,15 @@
             <div class="img-container">
                 <img src="{{ asset('img/10-img.png') }}" alt="octoverse logo" class="octoverse-img">
             </div>
-            
             @csrf
             <div class="input-gp">
                 <div class="input-box">
                     <input type="email" name="email" class="input @error('email') is-invalid @enderror" placeholder="Enter Your Email Address" value="{{ @old('email') }}">
-                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                    <p class="text-danger">{{ $errors->first('email') }}</p>
                 </div>
                 <div class="input-box">
                     <input type="password" name="password" id="password" class="input @error('password') is-invalid @enderror" placeholder="Enter Your Password">
-                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                    <p class="text-danger">{{ $errors->first('password') }}</p>
                 </div>
                 <div class="input-box">
                     <button type="submit" class="submit">Sign In</button>
