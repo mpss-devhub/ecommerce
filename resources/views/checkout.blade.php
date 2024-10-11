@@ -41,13 +41,16 @@ octoverse| Checkout Page
                         </thead>
                         <tbody>
                             @php $total_price = 0 @endphp
-                            @foreach($cart as $item)
-                            @php $total_price += $item['price'] * $item['qty'] @endphp
-                            <input type="hidden" class="product_id" value="{{ $item['id'] }}">
+                            @foreach($cart as $key => $item)
+                            @php
+                            $product = $item['product'];
+                            $total_price += $item['price'] * $item['qty'];
+                            @endphp
+                            <input type="hidden" class="product_id" value="{{ $product['id'] }}">
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>
-                                    {{ $item['product_name'] }}
+                                    {{ $product['product_name'] }}
                                 </td>
                                 <td>{{ $item['qty'] }}</td>
                                 <td> {{ number_format($item['price']) }} MMK</td>
@@ -66,7 +69,7 @@ octoverse| Checkout Page
                                 <td></td>
                                 <td>Grand Total</td>
                                 <td>
-                                    {{ number_format($total_price) }} MMK 
+                                    {{ number_format($total_price) }} MMK
                                 </td>
                             </tr>
                         </tfoot>

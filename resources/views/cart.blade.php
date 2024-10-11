@@ -27,7 +27,6 @@ octoverse| Cart Page
                         @php $total_price = 0 @endphp
                         @foreach($cart as $key => $item)
                         @php
-                        // Access the nested product details inside each cart item
                         $product = $item['product'];
                         $total_price += $item['price'] * $item['qty'];
                         @endphp

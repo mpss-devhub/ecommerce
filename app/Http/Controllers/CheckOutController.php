@@ -27,7 +27,6 @@ class CheckOutController extends Controller
         ];
         $payData = JWT::encode($payload, config('octoverse.redirect_merchant_secret_key'), 'HS256');
         $paymentTokenData = Http::post(config('octoverse.base_url') . 'auth/token', ["payData" => $payData])->json()['data'];
-        //TODO amount less than amount
         $paymentToken = JWT::decode($paymentTokenData, new Key(config('octoverse.redirect_merchant_secret_key'), 'HS256'));
         return redirect()->away($paymentToken->paymenturl);
     }
