@@ -7,7 +7,7 @@ octoverse| Cart Page
     <div class="l-inner">
         <div class="cart-mv">
             <div class="cart-box clearfix">
-            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                <i class="fa-solid fa-cart-shopping cart-icon"></i>
                 <h2 class="cmn-ttl"> Shopping Cart</h2>
             </div>
             <div class="table-box">
@@ -47,12 +47,12 @@ octoverse| Cart Page
                                 {{ number_format($product['price']) }} MMK
                             </td>
                             <td>
-                                <span class="sub-total">{{ number_format($item['qty'] * $product['price']) }} MMK</span>
+                                <span class="sub-total">{{ number_format($item['qty'] * $product['price']) }}</span> MMK
                             </td>
                             <td>
                                 <form action="{{ route('cart.destroy', $product['id']) }}" style="display: inline" method="GET" class="removeCartItemForm{{ $product['id'] }}">
                                     @csrf
-                                    <a href="javascript:;" class="remove-cart-item" data-id="{{ $item['id'] }}">
+                                    <a href="javascript:;" class="remove-cart-item" data-id="{{ $product['id'] }}">
                                         <i class="fa-solid fa-trash del-icon"></i>
                                     </a>
                                 </form>

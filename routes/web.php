@@ -25,6 +25,10 @@ Route::get('/', function () {
 })->name("home");
 Route::get('/products', [ProductsController::class, 'index'])->name("products.index");
 
+Route::get('/admin', function () {
+    return view('admin/layouts/admin');
+});
+
 Route::get('/addToCart', [ProductsController::class, 'addToCart'])->name("products.addToCart");
 Route::get('/cart', [ProductsController::class, 'cart'])->name('cart.index');
 Route::get('/cart/update', [ProductsController::class, 'updateCart'])->name("cart.update");
@@ -32,8 +36,8 @@ Route::get('/cart/{id}', [ProductsController::class, 'destroyCart'])->name("cart
 Route::post('/cart/clear', [ProductsController::class, 'clear'])->name('cart.clear');
 
 Route::middleware('auth')->group(function () {
-Route::match(['get', 'post'], '/checkout', [CheckOutController::class, 'checkout'])->name('checkout');
-Route::get('/redirect/checkout', [CheckOutController::class, 'redirectCheckOut'])->name('redirectCheckOut');
+    Route::match(['get', 'post'], '/checkout', [CheckOutController::class, 'checkout'])->name('checkout');
+    Route::get('/redirect/checkout', [CheckOutController::class, 'redirectCheckOut'])->name('redirectCheckOut');
 });
 Auth::routes();
 

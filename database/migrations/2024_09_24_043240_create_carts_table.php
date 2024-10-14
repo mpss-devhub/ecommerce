@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            $table->integer('product_id');
-            $table->integer('quantity');
-            $table->boolean('check_out_flg');
+            $table->foreignId('user_id')->constrained('users');
+            $table->decimal('total_amount', 10, 2)->default(0);
             $table->timestamps();
         });
     }

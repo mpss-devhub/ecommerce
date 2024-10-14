@@ -4,9 +4,9 @@ octoverse| Checkout Page
 @endsection
 @section('content')
 <section class="sec-checkout">
-    <form action="{{ route('checkout') }}" method="POST">
+    <div>
         @csrf
-        <input type="hidden" id="selectedPaymentCode" name="payment_code" value="">
+        <input type="hidden" id="selectedPaymentCode" value="">
         <div class="l-inner clearfix">
             <div class="left-col">
                 @foreach($response as $item)
@@ -15,7 +15,7 @@ octoverse| Checkout Page
                     <div class="clearfix">
                         <div class="pay-list">
                             @foreach($item['payments'] as $payment)
-                            <a href="#" class="showFormLink" name="payment_code" data-code="{{ $payment['paymentCode'] }}">
+                            <a href="#" class="showFormLink" data-code="{{ $payment['paymentCode'] }}">
                                 <img src="{{ $payment['logo'] }}" alt="{{ $payment['paymentName'] }}">
                             </a>
                             @endforeach
@@ -80,7 +80,7 @@ octoverse| Checkout Page
         </div>
         <div id="myModal" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span> <!-- Ensure this exists -->
+                <span class="close">&times;</span>
                 <h2 id="modalHeader" class="modalHeader">Payment Information</h2>
                 <div id="paymentForm" class="paymentForm">
                     <div class="paymentBox clearfix">
@@ -95,14 +95,14 @@ octoverse| Checkout Page
                         <label for="email" class="title">Email:</label>
                         <input type="email" id="email" name="email" class="paytxt-box" required>
                     </div>
-                    <input type="button" name="submit" class="paySubmit" value="Submit" />
+                    <input type="button" name="button" class="paySubmit" value="Pay Now" />
                 </div>
                 <div class="QR-block" style="display: none;">
                     <img src="" alt="">
                 </div>
             </div>
         </div>
-    </form>
+        </form>
 </section>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -117,12 +117,6 @@ octoverse| Checkout Page
                 console.log('Selected Payment Type:', paymentType);
                 document.getElementById('selectedPaymentCode').value = paymentCode;
                 showModal(paymentType);
-                const paySubmitButton = document.querySelector('.paySubmit');
-                if (paymentType === 'QR Scan') {
-                    paySubmitButton.type = 'button';
-                } else {
-                    paySubmitButton.type = 'submit';
-                }
             });
         });
         const modal = document.getElementById('myModal');
@@ -158,42 +152,48 @@ octoverse| Checkout Page
         }
 
         document.querySelector('.paySubmit').addEventListener('click', function(event) {
-            console.log($('#selectedPaymentCode').val());
-            if (this.type === 'button') {
-                event.preventDefault();
-                $.ajax({
-                    type: 'POST',
-                    url: '/checkout',
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    contentType: 'application/json',
-                    data: {
-                        phoneNo: $('#phoneNo').val(),
-                        email: $('#email').val(),
-                        name: $('#name').val(),
-                        payment_code: $('#selectedPaymentCode').val(),
-                        _token: $('meta[name="csrf-token"]').attr('content')
-                    },
-                    success: function(response) {
-                        console.log(response);
-                        if (response.message) {
-                            toastr.error(response.message);
-                        }
-                        if (response.qrImg) {
-                            const qrImageElement = document.querySelector('.QR-block img');
-                            qrImageElement.src = response.qrImg;
-                            document.querySelector('.QR-block').style.display = 'block';
-                        }
-                    },
-                    error: function(xhr) {
-                        console.error(xhr.responseText);
-                        alert("An error occurred: " + xhr.statusText);
-                    }
-                });
-            }
-        });
+            event.preventDefault();
 
+            const submitButton = this;
+            submitButton.disabled = true; // Disable button to prevent multiple submissions
+
+            $.ajax({
+                type: 'POST',
+                url: '/checkout',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    phoneNo: $('#phoneNo').val(),
+                    email: $('#email').val(),
+                    name: $('#name').val(),
+                    selectedPaymentCode: $('#selectedPaymentCode').val(),
+                    _token: $('meta[name="csrf-token"]').attr('content')
+                }),
+                success: function(response) {
+                    console.log(response);
+                    if (response.message) {
+                        toastr.error(response.message);
+                    } else if (response.data && response.data.type === 'QR') {
+                        const qrImageElement = document.querySelector('.QR-block img');
+                        qrImageElement.src = response.data.data;
+                        document.querySelector('.QR-block').style.display = 'block';
+                    } else if (response.data && response.data.type === 'DEEP_LINK') {
+                        window.location.href = response.data.data;
+                    } else if (response.data.type === 'MESSAGE') {
+                        toastr.success(response.data.data);
+                    }
+                },
+                error: function(xhr) {
+                    console.error(xhr.responseText);
+                    alert("An error occurred: " + xhr.statusText);
+                },
+                complete: function() {
+                    submitButton.disabled = false;
+                }
+            });
+        });
     });
 </script>
 
