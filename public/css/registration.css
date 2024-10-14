@@ -2,6 +2,15 @@ body {
   background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
   margin: 0 auto;
 }
+
+.img-container{ 
+  width: 30%;
+  margin: 0 auto;
+}
+.octoverse-img {
+  width: 100%;
+}
+
 .reg {
   margin: 75px auto 60px;
   width: 40%;

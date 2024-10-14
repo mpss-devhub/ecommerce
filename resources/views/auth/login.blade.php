@@ -15,10 +15,10 @@
 <body class="sec-login">
     <section class="login">
         <form action="{{ route('login') }}" method="post" class="log-form">
+        @csrf
             <div class="img-container">
                 <img src="{{ asset('img/10-img.png') }}" alt="octoverse logo" class="octoverse-img">
             </div>
-            @csrf
             <div class="input-gp">
                 <div class="input-box">
                     <input type="email" name="email" class="input @error('email') is-invalid @enderror" placeholder="Enter Your Email Address" value="{{ @old('email') }}">

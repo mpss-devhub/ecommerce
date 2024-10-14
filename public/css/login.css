@@ -17,21 +17,26 @@
 .log-form {
   width: 400px;
   margin: 0 auto;
-  font-size: 46px;
   font-weight: 500;
   color: #6d6270;
   background-color: #e2e0e0;
   border-radius: 10px;
+  padding: 30px 0;
+}
+
+.log-form .ttl {
+  font-size: 16px;
 }
 
 .log-form .input-gp {
   display: grid;
   row-gap: 25px;
+  margin-top: 15px;
 }
 
-.log-form .input-box {
-  margin: 0 auto;
+.log-form .input-box{
   width: 300px;
+  margin: 0 auto;
 }
 
 .log-form .input {
@@ -43,6 +48,7 @@
   outline: none;
   font-size: 16px;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 .log-form .input::placeholder {
@@ -81,7 +87,6 @@
 }
 
 .log-form .create {
-  padding-bottom: 25px;
   font-size: 14px;
   text-align: center;
   letter-spacing: 1.2px;
@@ -139,18 +144,22 @@
     border-radius: 0.781vw;
   }
 
+  .log-form .ttl {
+    font-size: 2.133vw;
+  }
+  
   .log-form .input-gp {
     row-gap: 3.333vw;
+    margin-top: 2vw;
   }
 
   .log-form .input-box {
     margin: 0 auto;
-    width: 40vw;
+    width: 23.2vw;
   }
 
   .log-form .input {
     width: 23.438vw;
-    margin-left: 1.953vw;
     padding: 0.781vw 1.172vw;
     border: 0.078vw solid #5e5b61;
     border-radius: 1.172vw;
@@ -165,7 +174,6 @@
     border: 0.078vw solid #5e5b61;
     width: 23.438vw;
     padding: 0.781vw 0;
-    margin-left: 1.953vw;
     border-radius: 1.953vw;
     margin-bottom: 1.172vw;
     font-size: 1.406vw;
@@ -224,8 +232,18 @@
     border-radius: 1.304vw;
   }
 
+  .log-form .input-box {
+    margin: 0 auto;
+    width: 23.2vw;
+  }
+
+  .log-form .ttl {
+    font-size: 2.133vw;
+  }
+
   .log-form .input-gp {
     row-gap: 3.333vw;
+    margin-top: 2vw;
   }
 
   .log-form .input-box {
@@ -235,7 +253,6 @@
 
   .log-form .input {
     width: 39.113vw;
-    margin-left: 3.259vw;
     padding: 1.304vw 1.956vw;
     border: 0.13vw solid #5e5b61;
     border-radius: 1.956vw;

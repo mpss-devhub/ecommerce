@@ -177,6 +177,9 @@ section.sec-mv {
 .gnav ul li a {
   color: #5e5b61;
 }
+.gnav ul li .logout{
+  padding:8px  0!important;
+}
 
 .gnav ul li a:hover,
 .gnav ul li a.active {

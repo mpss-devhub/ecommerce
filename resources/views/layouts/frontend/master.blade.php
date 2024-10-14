@@ -38,7 +38,7 @@
                         </a>
                     </li>
                     @auth
-                    <li><a href="{{url('/logout')}}">Logout</a></li>
+                    <li><a href="{{url('/logout')}}" class="logout">Logout</a></li>
                     @else
                     <li class="dropdown pc">
                         <button class="dropbtn pc">
@@ -48,7 +48,6 @@
                             <a href="{{route('login')}}">Login</a>
                             <a href="{{route('register')}}" class="{{  Request::is('/register') ? 'active' : '' }}">Register</a>
                         </div>
-
                     </li>
                     <li class="  sp">
                         <ul class="list">
