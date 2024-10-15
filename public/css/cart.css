@@ -136,6 +136,17 @@
   color: #343a40;
   border: 1px solid #343a40;
 }
+.sec-cart .checkout {
+  border: 1px solid #65308c;
+  color: #f0eaf8;
+  background-color: #65308c;
+}
+
+.sec-cart .checkout:hover {
+  color: #65308c;
+  background-color: #f0eaf8;
+  border: 1px solid #65308c;
+}
 
 .sec-cart .clear {
   background-color: #ff0000;
@@ -146,18 +157,6 @@
   background-color: white;
   color: #ff0000;
   border: 1px solid #ff0000;
-}
-
-.sec-cart .checkout {
-  color: #f0eaf8;
-  background-color: #65308c;
-
-}
-
-.sec-cart .checkout:hover {
-  color: #65308c;
-  background-color: #ffffff;
-  border: 1px solid #65308c;
 }
 
 /*Tablet*/

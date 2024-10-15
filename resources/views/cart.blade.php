@@ -80,15 +80,25 @@ octoverse| Cart Page
                             @csrf
                             <a href="javascript:;" class="cart-btn clear" onclick="confirmClearCart(event)">CLEAR</a>
                         </form>
-
-                        <a href="{{ route('redirectCheckOut') }}" class="cart-btn checkout">REDIRECT CHECKOUT</a>
-                        <a href="{{ route('checkout') }}" class="cart-btn checkout">DIRECT CHECKOUT</a>
+                        <a href="{{ route('redirectCheckOut') }}" class="cart-btn checkout showForm">REDIRECT CHECKOUT</a>
+                        <a href="{{ route('checkout') }}" class="cart-btn checkout showForm">DIRECT CHECKOUT</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>
+            This website is a demo website that has been tested to understand the sample payment flow of Octoverse Payment Gateway. Please be informed that if you purchase items from this website, you will not actually receive the item, but your bank account will be charged for the value of the item.
+            </p>
+            <p class="myanmar-text">ယခု website သည် Octoverse Payment Gateway ၏ Sample payment Flow အား သိရှိနားလည်နိုင်စေရန် Testing ပြုလုပ်ထားသည့် Demo Website ဖြစ်ပါသည်။ ယခု Website မှ Items များကို ဝယ်ယူပါက အဆိုပါပစ္စည်းအား အမှန်တကယ်ရရှိမည် မဟုတ်သော်လည်း လူကြီးမင်း၏ Bank Account မှ အဆိုပါ ပစ္စည်းတန်ဖိုး၏ ကျသင့်ငွေ ဖြတ်သွားမည်ဖြစ်ပါကြောင်း အသိပေးကြေညာ အပ်ပါသည်။ </p>
+        </div>
+    </div>
 </section>
+<script>
+    
+</script>
 
 {{--data-id="{{ $category->id }}"--}}
 @endsection

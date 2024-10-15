@@ -24,7 +24,7 @@
   width: 10%;
   height: 3px;
   margin: 0 auto;
-  background-color: #006699;
+  background-color: #65308c;
   content: '';
 }
 
@@ -47,7 +47,7 @@
   font-size: 24px;
   color: #777272;
   padding: 10px 0;
-  text-decoration: underline blue;
+  text-decoration: underline #65308c;
 }
 
 .sec-checkout .left-col .pay-list a {
@@ -68,8 +68,8 @@
 
 .checkout-btn {
   padding: 10px 20px;
-  border: 1px solid #006699;
-  background-color: #006699;
+  border: 1px solid #65308c;
+  background-color: #65308c;
   color: #ffffff;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 14px;
@@ -81,7 +81,7 @@
 
 .checkout-btn:hover {
   background-color: transparent;
-  color: #006699;
+  color: #65308c;
 }
 .infoForm {
   margin-bottom: 50px;
@@ -94,7 +94,7 @@
 .sec-checkout .order-info-blk table tr th {
   font-weight: 600;
   text-align: left;
-  border-bottom: 4px double #006685;
+  border-bottom: 4px double #65308c;
 }
 
 .sec-checkout .order-info-blk table tr th,
@@ -105,9 +105,9 @@
 }
 
 .sec-checkout .order-info-blk table tfoot tr td {
-  color: #006699;
+  color: #65308c;
   font-weight: 700;
-  border-top: 4px double #006685;
+  border-top: 4px double #65308c;
 }
 
 .sec-checkout .currency-unit {
@@ -233,7 +233,7 @@
 
   .checkout-btn {
     padding: 0.781vw 1.563vw;
-    border: 0.078vw solid #006699;
+    border: 0.078vw solid #65308c;
     font-size: 1.094vw;
     letter-spacing: 0.078vw;
   }
@@ -307,7 +307,7 @@
   .checkout-btn {
     margin-bottom: 7.823vw;
     padding: 1.304vw 2.608vw;
-    border: 0.130vw solid #006699;
+    border: 0.130vw solid #65308c;
     font-size: 1.825vw;
     letter-spacing: 0.130vw;
   }
