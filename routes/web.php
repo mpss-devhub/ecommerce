@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\CheckOutController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
@@ -25,9 +26,6 @@ Route::get('/', function () {
 })->name("home");
 Route::get('/products', [ProductsController::class, 'index'])->name("products.index");
 
-Route::get('/admin', function () {
-    return view('admin/layouts/admin');
-});
 
 Route::get('/addToCart', [ProductsController::class, 'addToCart'])->name("products.addToCart");
 Route::get('/cart', [ProductsController::class, 'cart'])->name('cart.index');
@@ -42,3 +40,5 @@ Route::middleware('auth')->group(function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/admin/category', [CategoryController::class, 'index'])->name("admin.category.index");
