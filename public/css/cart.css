@@ -126,12 +126,12 @@
   margin-right: 20px;
 }
 
-.sec-cart .back {
+.back {
   background-color: #343a40;
   border: 1px solid #343a40;
 }
 
-.sec-cart .back:hover {
+.back:hover {
   background-color: white;
   color: #343a40;
   border: 1px solid #343a40;
@@ -171,6 +171,11 @@
 .modalHeader {
   margin-top: 41px !important;
   text-align: start !important;
+}
+
+.understandingBox{
+  font-size: 14px;
+  margin-bottom: 5%;
 }
 
 /*Tablet*/
@@ -482,13 +487,10 @@
   }
 
   .sec-cart .checkout {
-    background-color: #5e5b61;
-    border: 0.13vw solid #5e5b61;
+    border: 0.13vw solid #65308c;
   }
 
   .sec-cart .checkout:hover {
-    background-color: white;
-    color: #5e5b61;
-    border: 0.13vw solid #5e5b61;
+    border: 0.13vw solid #65308c;
   }
 }

@@ -143,7 +143,7 @@
   }
 
   .txt-box {
-    width: 52.151vw;
+    width: 77.751vw;
     right: 10%;
     top: 10%;
     font-size: 5.867vw;
@@ -151,7 +151,7 @@
 
   .txt-box small,
   .txt-box p {
-    font-size: 2.608vw;
+    font-size: 2.408vw;
   }
 
   @-webkit-keyframes slideIn {

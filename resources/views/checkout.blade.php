@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
 @section('title')
-octoverse| Checkout Page
+Octoverse
 @endsection
 @section('content')
 <section class="sec-checkout">
@@ -76,6 +76,9 @@ octoverse| Checkout Page
                     </table>
                 </div>
                 <hr>
+                <div class="clearfix">
+                        <a href="/cart" class="cart-btn back" style="float: right;">BACK</a>
+                </div>
             </div>
         </div>
         <div id="myModal" class="modal">
@@ -152,53 +155,55 @@ octoverse| Checkout Page
         }
 
         document.querySelector('.paySubmit').addEventListener('click', function(event) {
-            event.preventDefault();
+    event.preventDefault();
 
-            const submitButton = this;
-            submitButton.disabled = true;
+    const submitButton = this;
+    submitButton.disabled = true; 
 
-            $.ajax({
-                type: 'POST',
-                url: '/checkout',
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                contentType: 'application/json',
-                data: JSON.stringify({
-                    phoneNo: $('#phoneNo').val(),
-                    email: $('#email').val(),
-                    name: $('#name').val(),
-                    selectedPaymentCode: $('#selectedPaymentCode').val(),
-                    _token: $('meta[name="csrf-token"]').attr('content')
-                }),
-                success: function(response) {
-                    console.log(response);
-                    if (response.message) {
-                        toastr.error(response.message);
-                    } else if (response.data) {
-                        if (response.data.type === 'QR') {
-                            const qrImageElement = document.querySelector('.QR-block img');
-                            qrImageElement.src = response.data.data;
-                            document.querySelector('.QR-block').style.display = 'block';
-                        } else if (response.data.type === 'DEEP_LINK') {
-                            window.location.href = response.data.data;
-                        } else if (response.data.type === 'REDIRECT_URL') {
-                            window.location.href = response.data.data; // Redirect to the URL
-                        } else if (response.data.type === 'MESSAGE') {
-                            toastr.success(response.data.data);
-                        }
-                    }
-                },
-
-                error: function(xhr) {
-                    console.error(xhr.responseText);
-                    alert("An error occurred: " + xhr.statusText);
-                },
-                complete: function() {
-                    submitButton.disabled = false;
+    $.ajax({
+        type: 'POST',
+        url: '/checkout',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        contentType: 'application/json',
+        data: JSON.stringify({
+            phoneNo: $('#phoneNo').val(),
+            email: $('#email').val(),
+            name: $('#name').val(),
+            selectedPaymentCode: $('#selectedPaymentCode').val(),
+            _token: $('meta[name="csrf-token"]').attr('content')
+        }),
+        success: function(response) {
+            console.log(response);
+            if (response.message) {
+                toastr.error(response.message);
+                submitButton.disabled = false;  
+            } else if (response.data) {
+                if (response.data.type === 'QR') {
+                    const qrImageElement = document.querySelector('.QR-block img');
+                    qrImageElement.src = response.data.data;
+                    document.querySelector('.QR-block').style.display = 'block';
+                } else if (response.data.type === 'DEEP_LINK') {
+                    window.location.href = response.data.data;
+                } else if (response.data.type === 'REDIRECT_URL') {
+                    window.location.href = response.data.data; 
+                } else if (response.data.type === 'MESSAGE') {
+                    toastr.success(response.data.data);
+                    setTimeout(function() {
+                        window.location.href = '/';  
+                    }, 100);
                 }
-            });
-        });
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error("Error occurred: ", error);
+            toastr.error("An error occurred. Please try again.");
+            submitButton.disabled = false; 
+        }
+    });
+});
+
     });
 </script>
 

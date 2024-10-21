@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
 @section('title')
-Octoverse| Product
+Octoverse
 @endsection
 @section('content')
 <section class="box-container">
