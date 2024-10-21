@@ -80,8 +80,8 @@ octoverse| Cart Page
                             @csrf
                             <a href="javascript:;" class="cart-btn clear" onclick="confirmClearCart(event)">CLEAR</a>
                         </form>
-                        <a href="{{ route('redirectCheckOut') }}" class="cart-btn checkout showForm">REDIRECT CHECKOUT</a>
-                        <a href="{{ route('checkout') }}" class="cart-btn checkout showForm">DIRECT CHECKOUT</a>
+                        <a href="#" class="cart-btn checkout myBtn" data-route="{{ route('redirectCheckOut') }}">REDIRECT CHECKOUT</a>
+                        <a href="#" class="cart-btn checkout myBtn" data-route="{{ route('checkout') }}">DIRECT CHECKOUT</a>
                     </div>
                 </div>
             </div>
@@ -89,15 +89,48 @@ octoverse| Cart Page
     </div>
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <p>
-            This website is a demo website that has been tested to understand the sample payment flow of Octoverse Payment Gateway. Please be informed that if you purchase items from this website, you will not actually receive the item, but your bank account will be charged for the value of the item.
-            </p>
-            <p class="myanmar-text">ယခု website သည် Octoverse Payment Gateway ၏ Sample payment Flow အား သိရှိနားလည်နိုင်စေရန် Testing ပြုလုပ်ထားသည့် Demo Website ဖြစ်ပါသည်။ ယခု Website မှ Items များကို ဝယ်ယူပါက အဆိုပါပစ္စည်းအား အမှန်တကယ်ရရှိမည် မဟုတ်သော်လည်း လူကြီးမင်း၏ Bank Account မှ အဆိုပါ ပစ္စည်းတန်ဖိုး၏ ကျသင့်ငွေ ဖြတ်သွားမည်ဖြစ်ပါကြောင်း အသိပေးကြေညာ အပ်ပါသည်။ </p>
+            <span class="close">&times;</span>
+            <div id="modalHeader" class="modalHeader">
+                <p class="eng-text">
+                    This website is a demo website that has been tested to understand the sample payment flow of Octoverse Payment Gateway. Please be informed that if you purchase items from this website, you will not actually receive the item, but your bank account will be charged for the value of the item.
+                </p>
+                <p class="myanmar-text">ယခု website သည် Octoverse Payment Gateway ၏ Sample payment Flow အား သိရှိနားလည်နိုင်စေရန် Testing ပြုလုပ်ထားသည့် Demo Website ဖြစ်ပါသည်။ ယခု Website မှ Items များကို ဝယ်ယူပါက အဆိုပါပစ္စည်းအား အမှန်တကယ်ရရှိမည် မဟုတ်သော်လည်း လူကြီးမင်း၏ Bank Account မှ အဆိုပါ ပစ္စည်းတန်ဖိုး၏ ကျသင့်ငွေ ဖြတ်သွားမည်ဖြစ်ပါကြောင်း အသိပေးကြေညာ အပ်ပါသည်။</p>
+            </div>
+
+            <button id="proceedBtn" class="paySubmit" style="margin-left: 40%;">Submit</button>
+            <div id="loading" hidden></div>
         </div>
     </div>
 </section>
 <script>
-    
+    var modal = document.getElementById("myModal");
+    var btns = document.querySelectorAll(".myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    var proceedBtn = document.getElementById("proceedBtn");
+    var loadingIndicator = document.getElementById("loading");
+    var nextRoute = "";
+    btns.forEach(function(btn) {
+        btn.onclick = function(event) {
+            event.preventDefault();
+            nextRoute = btn.getAttribute("data-route");
+            modal.style.display = "block";
+        }
+    });
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    proceedBtn.onclick = function() {
+        loadingIndicator.style.display = "block";
+        modal.style.display = "none";
+        setTimeout(function() {
+            window.location.href = nextRoute;
+        }, 100);
+    }
 </script>
 
 {{--data-id="{{ $category->id }}"--}}

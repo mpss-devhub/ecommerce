@@ -155,7 +155,7 @@ octoverse| Checkout Page
             event.preventDefault();
 
             const submitButton = this;
-            submitButton.disabled = true; // Disable button to prevent multiple submissions
+            submitButton.disabled = true;
 
             $.ajax({
                 type: 'POST',
