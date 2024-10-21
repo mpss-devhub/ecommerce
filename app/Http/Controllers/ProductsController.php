@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Dao\CartDao;
 use App\Http\Services\ProductService;
 use App\Http\Services\CartService;
 use Illuminate\Http\Request;
@@ -11,11 +12,13 @@ class ProductsController extends Controller
 {
     private $productService;
     private $cartService;
+    private $cartDao;
 
-    public function __construct(ProductService $productService, CartService $cartService)
+    public function __construct(ProductService $productService, CartService $cartService, CartDao $cartDao)
     {
         $this->productService = $productService;
         $this->cartService = $cartService;
+        $this->cartDao = $cartDao;
     }
 
     public function index()
@@ -63,5 +66,11 @@ class ProductsController extends Controller
     {
         $this->cartService->clearCart();
         return redirect()->route('home');
+    }
+
+    public function viewHistory()
+    {
+        $data = $this->cartDao->viewHistory();
+        return view('history', ['data' => $data]);
     }
 }

@@ -32,9 +32,9 @@ Route::get('/cart/{id}', [ProductsController::class, 'destroyCart'])->name("cart
 Route::post('/cart/clear', [ProductsController::class, 'clear'])->name('cart.clear');
 
 Route::middleware('auth')->group(function () {
-Route::match(['get', 'post'], '/checkout', [CheckOutController::class, 'checkout'])->name('checkout');
-Route::get('/redirect/checkout', [CheckOutController::class, 'redirectCheckOut'])->name('redirectCheckOut');
+    Route::match(['get', 'post'], '/checkout', [CheckOutController::class, 'checkout'])->name('checkout');
+    Route::get('/redirect/checkout', [CheckOutController::class, 'redirectCheckOut'])->name('redirectCheckOut');
+    Route::get('/history', [ProductsController::class, 'viewHistory'])->name('history');
 });
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();

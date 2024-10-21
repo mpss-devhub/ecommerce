@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{asset('css/product.css')}}">
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <link rel="stylesheet" href="{{asset('css/checkout.css')}}">
+    <link rel="stylesheet" href="{{asset('css/history.css')}}">
     <link rel="stylesheet" href="{{asset('fontawesome/all.min.css')}}">
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 </head>
@@ -32,6 +33,7 @@
                 <ul>
                     <li><a href="/" class="">Home</a></li>
                     <li><a href="/products" class="">Product</a></li>
+                    <li><a href="/history" class="">History</a></li>
                     <li>
                         <a href="/cart">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -82,6 +84,7 @@
     <script src="{{asset('js/libary/toastr.min.js')}}"></script>
     <script src="{{asset('js/common.js')}}"></script>
     <script src="{{asset('js/cart.js')}}"></script>
+    <script src="{{asset('js/checkout.js')}}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- @stack('js') -->
 </body>

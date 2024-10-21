@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->integer('product_id');
             $table->integer('quantity');
-            $table->boolean('check_out_flg');
+            $table->string('invoice_no');
+            $table->string('check_out_flg');
+            $table->integer('created_user_id');
             $table->timestamps();
-        });
+    });
     }
 
     /**
