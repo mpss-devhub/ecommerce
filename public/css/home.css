@@ -13,6 +13,7 @@
 }
 
 .eng-text {
+  margin-top: 51px;
   text-align: justify;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -36,6 +37,7 @@
 .txt-box h3 {
   font-size: 24px;
   padding-top: 44px;
+  color: #65308c;
 }
 
 .shopNowBtn {

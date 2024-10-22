@@ -1,9 +1,6 @@
 @extends('layouts.frontend.master')
-@section('title')
-Octoverse
-@endsection
 @section('content')
-<section class="box-container">
+<section class="box-container commonBox">
     <div class="l-inner">
         <!-- all tab -->
         <ul class="item-box clearfix">

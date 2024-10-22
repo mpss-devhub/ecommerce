@@ -8,8 +8,9 @@ Octoverse
         @csrf
         <input type="hidden" id="selectedPaymentCode" value="">
         <div class="l-inner clearfix">
-            <div class="left-col">
+            <div class="left-col commonBox">
                 @foreach($response as $item)
+                @if($item['paymentType'] !== 'Global Card')
                 <div class="{{$item['paymentType']}}">
                     <h2>{{ $item['paymentType'] }}</h2>
                     <div class="clearfix">
@@ -22,6 +23,7 @@ Octoverse
                         </div>
                     </div>
                 </div>
+                @endif
                 @endforeach
             </div>
             <div class="right-col">
@@ -82,9 +84,9 @@ Octoverse
             </div>
         </div>
         <div id="myModal" class="modal">
-            <div class="modal-content">
+            <div class="modal-contentCheck">
                 <span class="close">&times;</span>
-                <h2 id="modalHeader" class="modalHeader">Payment Information</h2>
+                <h2 id="modalHeaderCheck" class="modalHeader" style="text-align: center;">Payment Information</h2>
                 <div id="paymentForm" class="paymentForm">
                     <div class="paymentBox clearfix">
                         <label for="name" class="title">Name:</label>

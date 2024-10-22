@@ -1,8 +1,3 @@
-.sec-checkout {
-  margin-top: 70px;
-  color: #2d3038;
-}
-
 .sec-checkout label {
   display: block;
   margin-bottom: 6px;
@@ -126,18 +121,18 @@
   overflow: auto;
 }
 
-.modal-content {
+.modal-contentCheck {
   background-color: #fff;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 560px;
+  max-width: 560px !important;
 }
 
-.modalHeader {
+.modalHeaderCheck {
   margin-bottom: 5%;
-  text-align: center;
+  text-align: center !important;
 }
 
 .paymentForm {

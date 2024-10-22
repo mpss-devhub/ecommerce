@@ -251,7 +251,10 @@ section.sec-mv {
   font-weight: 400;
 }
 
-
+.commonBox{
+  margin-top: 70px;
+  color: #2d3038;
+}
 /*Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1280px) {
 

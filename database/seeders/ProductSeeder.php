@@ -35,7 +35,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 "product_name" => "မင်္ဂလာ နေကြာဆီ",
-                "price" => 2000,
+                "price" => 1000,
                 "product_image" => "05-oil.jpg"
             ],
             [

@@ -1,9 +1,6 @@
 @extends('layouts.frontend.master')
-@section('title')
-Octoverse
-@endsection
 @section('content')
-<section class="sec-cart">
+<section class="sec-cart commonBox">
     <div class="l-inner">
         <div class="cart-mv">
             <div class="cart-box clearfix">
