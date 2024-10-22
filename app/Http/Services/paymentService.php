@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Contracts\Services\paymentInterface;
+use App\Models\Cart;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use Illuminate\Support\Facades\Http;
@@ -46,5 +47,25 @@ class PaymentService implements paymentInterface
             "paymentCode" => $paymentCode,
             "payData" => $payData
         ])->json();
+    }
+
+    public function updateDirectPaymentSuccess($request)
+    {
+        $callbackData = $this->decodeJWT($request, config('octoverse.direct_merchant_secret_key'));
+        $payments = Cart::where('invoice_no', $callbackData->invoiceNo)->get();
+        foreach ($payments as $payment) {
+            $payment->checkout_flg = $callbackData->status;
+            $payment->save();
+        }
+    }
+
+    public function updateRedirectPaymentSuccess($request)
+    {
+        $callbackData = $this->decodeJWT($request, config('octoverse.redirect_merchant_secret_key'));
+        $payments = Cart::where('invoice_no', $callbackData->invoiceNo)->get();
+        foreach ($payments as $payment) {
+            $payment->checkout_flg = $callbackData->status;
+            $payment->save();
+        }
     }
 }

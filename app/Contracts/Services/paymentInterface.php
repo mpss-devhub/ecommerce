@@ -10,4 +10,5 @@ interface paymentInterface
     public function getPaymentToken($payData, $url);
     public function getAvailablePaymentsList($accessToken, $paymentToken, $url);
     public function processPayment($accessToken, $paymentToken, $paymentCode, $payData, $url);
+    public function updateDirectPaymentSuccess($request);
 }

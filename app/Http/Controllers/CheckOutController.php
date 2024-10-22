@@ -55,7 +55,7 @@ class CheckOutController extends Controller
                 $payload = [
                     'merchantID' => config('octoverse.direct_merchant_id'),
                     'frontendUrl' => route('home'),
-                    'backendUrl' => route('octoverse.backend.redirect-callback'),
+                    'backendUrl' => route('octoverse.backend.direct-callback'),
                     'currencyCode' => 'MMK',
                     'amount' => $amount,
                     'invoiceNo' =>  $invoiceNo

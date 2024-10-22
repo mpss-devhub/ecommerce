@@ -19,4 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/callbacks/redirect-payment-status', [CallBackController::class, 'storeRedirectCallbackStatus'])->name('octoverse.backend.redirect-callback');
+Route::post('/callbacks/direct-payment-status', [CallBackController::class, 'directCallback'])->name('octoverse.backend.direct-callback');
+Route::post('/callbacks/redirect-payment-status', [CallBackController::class, 'redirectCallback'])->name('octoverse.backend.redirect-callback');
