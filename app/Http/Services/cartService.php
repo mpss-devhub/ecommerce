@@ -2,9 +2,9 @@
 
 namespace App\Http\Services;
 
-use App\Contracts\Services\cartInterface;
+use App\Contracts\Services\CartInterface;
 
-class CartService implements cartInterface
+class CartService implements CartInterface
 {
     public function getCart()
     {

@@ -2,7 +2,7 @@
 
 namespace App\Contracts\Dao;
 
-interface productDaoInterface
+interface ProductDaoInterface
 {
     public function getAllProducts();
     public function getProductById($id);

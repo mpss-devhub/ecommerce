@@ -2,7 +2,7 @@
 
 namespace App\Contracts\Services;
 
-interface paymentInterface
+interface PaymentInterface
 {
     public function encodeJWT($payload, $secretkey);
     public function decodeJWT($token, $secretkey);

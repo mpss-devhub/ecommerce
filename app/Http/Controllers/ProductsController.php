@@ -10,33 +10,33 @@ use Yoeunes\Toastr\Facades\Toastr;
 
 class ProductsController extends Controller
 {
-    private $productService;
-    private $cartService;
+    private $ProductService;
+    private $CartService;
     private $cartDao;
 
-    public function __construct(ProductService $productService, CartService $cartService, CartDao $cartDao)
+    public function __construct(ProductService $ProductService, CartService $CartService, CartDao $cartDao)
     {
-        $this->productService = $productService;
-        $this->cartService = $cartService;
+        $this->ProductService = $ProductService;
+        $this->CartService = $CartService;
         $this->cartDao = $cartDao;
     }
 
     public function index()
     {
-        $products = $this->productService->getAllProducts();
+        $products = $this->ProductService->getAllProducts();
         return view('product', ["products" => $products]);
     }
 
     public function addToCart(Request $request)
     {
-        $product = $this->productService->getProductById($request->id);
-        $cart = $this->cartService->addProductToCart($product);
+        $product = $this->ProductService->getProductById($request->id);
+        $cart = $this->CartService->addProductToCart($product);
         return response()->json(['msg' => 'success', 'cart' => $cart]);
     }
 
     public function cart()
     {
-        $cart = $this->cartService->getCart();
+        $cart = $this->CartService->getCart();
         if (count($cart) > 0) {
             return view('cart', compact('cart'));
         }
@@ -46,7 +46,7 @@ class ProductsController extends Controller
 
     public function updateCart(Request $request)
     {
-        $cart = $this->cartService->updateProductQty($request->id, $request->qty);
+        $cart = $this->CartService->updateProductQty($request->id, $request->qty);
         $product = $cart[$request->id];
         $sub_total = number_format($product['price'] * $product['qty']);
         return response()->json(['sub_total' => $sub_total]);
@@ -54,7 +54,7 @@ class ProductsController extends Controller
 
     public function destroyCart($id)
     {
-        $cart = $this->cartService->removeProductFromCart($id);
+        $cart = $this->CartService->removeProductFromCart($id);
         if (count($cart) > 0) {
             Toastr::success('Cart Item Removed Successfully', 'SUCCESS');
             return back();
@@ -64,7 +64,7 @@ class ProductsController extends Controller
 
     public function clear()
     {
-        $this->cartService->clearCart();
+        $this->CartService->clearCart();
         return redirect()->route('home');
     }
 

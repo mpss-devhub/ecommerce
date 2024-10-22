@@ -2,10 +2,10 @@
 
 namespace App\Http\Dao;
 
-use App\Contracts\Dao\productDaoInterface;
+use App\Contracts\Dao\ProductDaoInterface;
 use App\Models\Products;
 
-class ProductDao implements productDaoInterface
+class ProductDao implements ProductDaoInterface
 {
     public function getAllProducts()
     {

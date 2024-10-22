@@ -2,7 +2,7 @@
 
 namespace App\Contracts\Dao;
 
-interface cartDaoInterface
+interface CartDaoInterface
 {
     public function saveCartInDb($productId, $quantity);
 }

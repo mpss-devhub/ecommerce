@@ -2,7 +2,7 @@
 
 namespace App\Contracts\Services;
 
-interface cartInterface
+interface CartInterface
 {
     public function getCart();
     public function saveCart($cart);

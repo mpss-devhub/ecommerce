@@ -2,13 +2,13 @@
 
 namespace App\Http\Services;
 
-use App\Contracts\Services\paymentInterface;
+use App\Contracts\Services\PaymentInterface;
 use App\Models\Cart;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use Illuminate\Support\Facades\Http;
 
-class PaymentService implements paymentInterface
+class PaymentService implements PaymentInterface
 {
     public function encodeJWT($payload, $secretKey)
     {
