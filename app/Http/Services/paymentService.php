@@ -57,6 +57,12 @@ class PaymentService implements paymentInterface
             $payment->checkout_flg = $callbackData->status;
             $payment->save();
         }
+        if ($callbackData->status === "SUCCESS") {
+            session()->forget('cart');
+        }
+        if (in_array($callbackData->paymentCode, ["CBPAYQR", "MOMONEY_QR", "AYA_QR", "KBZPAY_QR"])) {
+            return redirect('/');
+        }
     }
 
     public function updateRedirectPaymentSuccess($request)
@@ -66,6 +72,12 @@ class PaymentService implements paymentInterface
         foreach ($payments as $payment) {
             $payment->checkout_flg = $callbackData->status;
             $payment->save();
+        }
+        if ($callbackData->status === "SUCCESS") {
+            session()->forget('cart');
+        }
+        if (in_array($callbackData->paymentCode, ["CBPAYQR", "MOMONEY_QR", "AYA_QR", "KBZPAY_QR"])) {
+            return redirect('/');
         }
     }
 }
