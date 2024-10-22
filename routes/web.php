@@ -22,7 +22,8 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('/', function () {
     return view('home');
-})->name("home");
+})->name('home');
+
 Route::get('/products', [ProductsController::class, 'index'])->name("products.index");
 
 Route::get('/addToCart', [ProductsController::class, 'addToCart'])->name("products.addToCart");
