@@ -51,7 +51,7 @@ class PaymentService implements PaymentInterface
 
     public function updateDirectPaymentSuccess($request)
     {
-        $callbackData = $this->decodeJWT($request, config('octoverse.direct_merchant_secret_key'));
+        $callbackData = $this->decodeJWT($request->data, config('octoverse.direct_merchant_data_key'));
         $payments = Cart::where('invoice_no', $callbackData->invoiceNo)->get();
         foreach ($payments as $payment) {
             $payment->checkout_flg = $callbackData->status;
@@ -67,7 +67,7 @@ class PaymentService implements PaymentInterface
 
     public function updateRedirectPaymentSuccess($request)
     {
-        $callbackData = $this->decodeJWT($request, config('octoverse.redirect_merchant_secret_key'));
+        $callbackData = $this->decodeJWT($request->data, config('octoverse.redirect_merchant_data_key'));
         $payments = Cart::where('invoice_no', $callbackData->invoiceNo)->get();
         foreach ($payments as $payment) {
             $payment->checkout_flg = $callbackData->status;
