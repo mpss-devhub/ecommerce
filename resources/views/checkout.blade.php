@@ -86,7 +86,7 @@ Octoverse
         <div id="myModal" class="modal">
             <div class="modal-contentCheck">
                 <span class="close">&times;</span>
-                <h2 id="modalHeaderCheck" class="modalHeader" style="text-align: center;">Payment Information</h2>
+                <h2 id="modalHeader" class="modalHeaderCheck" style="text-align: center;">Payment Information</h2>
                 <div id="paymentForm" class="paymentForm">
                     <div class="paymentBox clearfix">
                         <label for="name" class="title">Name:</label>
