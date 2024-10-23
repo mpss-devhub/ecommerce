@@ -26,6 +26,14 @@ class PaymentService implements PaymentInterface
         return rtrim(base64_encode($encodedPayload), '=');
     }
 
+    public function decryptPayload($encryptedText, $key)
+    {
+        $cipher = "AES-128-ECB";
+        $options = OPENSSL_RAW_DATA;
+        $decodedText = base64_decode($encryptedText);
+        return json_decode(openssl_decrypt($decodedText, $cipher, $key, $options));
+    }
+
     public function getPaymentToken($payData, $url)
     {
         return Http::post($url, ["payData" => $payData])->json()['data'];
@@ -51,7 +59,7 @@ class PaymentService implements PaymentInterface
 
     public function updateDirectPaymentSuccess($request)
     {
-        $callbackData = $this->decodeJWT($request->data, config('octoverse.direct_merchant_data_key'));
+        $callbackData = $this->decryptPayload($request->data, config('octoverse.direct_merchant_data_key'));
         $payments = Cart::where('invoice_no', $callbackData->invoiceNo)->get();
         foreach ($payments as $payment) {
             $payment->checkout_flg = $callbackData->status;
@@ -67,7 +75,7 @@ class PaymentService implements PaymentInterface
 
     public function updateRedirectPaymentSuccess($request)
     {
-        $callbackData = $this->decodeJWT($request->data, config('octoverse.redirect_merchant_data_key'));
+        $callbackData = $this->decryptPayload($request->data, config('octoverse.redirect_merchant_data_key'));
         $payments = Cart::where('invoice_no', $callbackData->invoiceNo)->get();
         foreach ($payments as $payment) {
             $payment->checkout_flg = $callbackData->status;
