@@ -62,7 +62,7 @@ class PaymentService implements PaymentInterface
         $callbackData = $this->decryptPayload($request->data, config('octoverse.direct_merchant_data_key'));
         $payments = Cart::where('invoice_no', $callbackData->invoiceNo)->get();
         foreach ($payments as $payment) {
-            $payment->checkout_flg = $callbackData->status;
+            $payment->check_out_flg = $callbackData->status;
             $payment->save();
         }
         if ($callbackData->status === "SUCCESS") {
@@ -78,7 +78,7 @@ class PaymentService implements PaymentInterface
         $callbackData = $this->decryptPayload($request->data, config('octoverse.redirect_merchant_data_key'));
         $payments = Cart::where('invoice_no', $callbackData->invoiceNo)->get();
         foreach ($payments as $payment) {
-            $payment->checkout_flg = $callbackData->status;
+            $payment->check_out_flg = $callbackData->status;
             $payment->save();
         }
         if ($callbackData->status === "SUCCESS") {
