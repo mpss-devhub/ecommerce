@@ -9,12 +9,12 @@ use Yoeunes\Toastr\Facades\Toastr;
 
 class CheckOutController extends Controller
 {
-    protected $paymentInterface;
+    protected $PaymentInterface;
     protected $cartDao;
 
-    public function __construct(PaymentService $paymentInterface, CartDao $cartDao)
+    public function __construct(PaymentService $PaymentInterface, CartDao $cartDao)
     {
-        $this->paymentInterface = $paymentInterface;
+        $this->PaymentInterface = $PaymentInterface;
         $this->cartDao = $cartDao;
     }
 
@@ -34,9 +34,9 @@ class CheckOutController extends Controller
             'amount' => $amount,
             'invoiceNo' => $invoiceNo
         ];
-        $payData = $this->paymentInterface->encodeJWT($payload, config('octoverse.redirect_merchant_secret_key'));
-        $paymentTokenData = $this->paymentInterface->getPaymentToken($payData, config('octoverse.base_url') . 'auth/token');
-        $paymentToken = $this->paymentInterface->decodeJWT($paymentTokenData, config('octoverse.redirect_merchant_secret_key'));
+        $payData = $this->PaymentInterface->encodeJWT($payload, config('octoverse.redirect_merchant_secret_key'));
+        $paymentTokenData = $this->PaymentInterface->getPaymentToken($payData, config('octoverse.base_url') . 'auth/token');
+        $paymentToken = $this->PaymentInterface->decodeJWT($paymentTokenData, config('octoverse.redirect_merchant_secret_key'));
         $this->cartDao->saveCartInDb($data, $invoiceNo);
         return redirect()->away($paymentToken->paymenturl);
     }
@@ -59,9 +59,9 @@ class CheckOutController extends Controller
                     'amount' => $amount,
                     'invoiceNo' =>  $invoiceNo
                 ];
-                $payData = $this->paymentInterface->encodeJWT($payload, config('octoverse.direct_merchant_secret_key'));
-                $paymentTokenData = $this->paymentInterface->getPaymentToken($payData, config('octoverse.base_url') . 'auth/token');
-                $decodedToken = $this->paymentInterface->decodeJWT($paymentTokenData, config('octoverse.direct_merchant_secret_key'));
+                $payData = $this->PaymentInterface->encodeJWT($payload, config('octoverse.direct_merchant_secret_key'));
+                $paymentTokenData = $this->PaymentInterface->getPaymentToken($payData, config('octoverse.base_url') . 'auth/token');
+                $decodedToken = $this->PaymentInterface->decodeJWT($paymentTokenData, config('octoverse.direct_merchant_secret_key'));
                 $this->cartDao->saveCartInDb($cart, $invoiceNo);
                 session([
                     'accessToken' => $decodedToken->accessToken,
@@ -69,7 +69,7 @@ class CheckOutController extends Controller
                 ]);
                 $accessToken = session('accessToken');
                 $paymentToken = session('paymentToken');
-                $response = $this->paymentInterface->getAvailablePaymentsList($accessToken, $paymentToken, config('octoverse.base_url') . 'getAvailablePaymentsList');
+                $response = $this->PaymentInterface->getAvailablePaymentsList($accessToken, $paymentToken, config('octoverse.base_url') . 'getAvailablePaymentsList');
                 return view('checkout', compact('cart', 'response'));
             }
             Toastr::info('Your Cart is Empty', 'INFO');
@@ -82,8 +82,8 @@ class CheckOutController extends Controller
             "email" => $request->input('email'),
             "name" => $request->input('name')
         ];
-        $encodedPayload = $this->paymentInterface->encryptPayload($jwtPayload, config('octoverse.direct_merchant_data_key'));
-        $response = $this->paymentInterface->processPayment($accessToken, $paymentToken,  $request->input('selectedPaymentCode'), $encodedPayload, config('octoverse.base_url') . 'dopay');
+        $encodedPayload = $this->PaymentInterface->encryptPayload($jwtPayload, config('octoverse.direct_merchant_data_key'));
+        $response = $this->PaymentInterface->processPayment($accessToken, $paymentToken,  $request->input('selectedPaymentCode'), $encodedPayload, config('octoverse.base_url') . 'dopay');
         if ($response["respCode"] === "0000" && isset($response["data"])) {
             $type = isset($response["data"]["qrImg"]) ? "QR" : (isset($response["data"]["deeplink"]) ? "DEEP_LINK" : (isset($response["data"]["redirectUrl"]) ? "REDIRECT_URL" : "MESSAGE"));
             $data = $response["data"]["qrImg"] ??

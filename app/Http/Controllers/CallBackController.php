@@ -8,22 +8,22 @@ use Illuminate\Http\Request;
 
 class CallBackController extends Controller
 {
-    protected $paymentService;
+    protected $PaymentService;
 
-    public function __construct(PaymentService $paymentService)
+    public function __construct(PaymentService $PaymentService)
     {
-        $this->paymentService = $paymentService;
+        $this->PaymentService = $PaymentService;
     }
 
     public function directCallback(CallbackRequest $callbackRequest)
     {
-        $this->paymentService->updateDirectPaymentSuccess($callbackRequest);
+        $this->PaymentService->updateDirectPaymentSuccess($callbackRequest);
         return response()->json(['message' => 'success']);
     }
 
     public function redirectCallback(CallbackRequest $callbackRequest)
     {
-        $this->paymentService->updateRedirectPaymentSuccess($callbackRequest);
+        $this->PaymentService->updateRedirectPaymentSuccess($callbackRequest);
         return response()->json(['message' => 'success']);
     }
 }

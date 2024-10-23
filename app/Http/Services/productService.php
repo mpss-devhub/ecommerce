@@ -2,10 +2,10 @@
 
 namespace App\Http\Services;
 
-use App\Contracts\Services\productInterface;
+use App\Contracts\Services\ProductInterface;
 use App\Http\Dao\ProductDao;
 
-class productService implements productInterface
+class ProductService implements ProductInterface
 {
     private $productDao;
 

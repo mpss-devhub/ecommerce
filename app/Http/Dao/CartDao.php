@@ -2,11 +2,11 @@
 
 namespace App\Http\Dao;
 
-use App\Contracts\Dao\cartDaoInterface;
+use App\Contracts\Dao\CartDaoInterface;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class CartDao implements cartDaoInterface
+class CartDao implements CartDaoInterface
 {
 
     public function saveCartInDb($productData, $invoiceNo)
