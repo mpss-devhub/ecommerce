@@ -200,8 +200,9 @@ section.sec-mv {
   display: inline-block;
 }
 
-.gnav ul .dropdown .signout-icon {
-  font-size: 16px;
+.gnav ul .dropdown .signin-icon {
+  font-size: 20px;
+  padding-top: 7px;
 }
 
 .gnav ul .dropdown-content {

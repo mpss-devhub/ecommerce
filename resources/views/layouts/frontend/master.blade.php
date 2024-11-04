@@ -45,7 +45,7 @@
                     @else
                     <li class="dropdown pc">
                         <button class="dropbtn pc">
-                            <i class="fas fa-sign-out-alt signout-icon"></i>
+                            <i class="fas fa-sign-in-alt signin-icon"></i>
                         </button>
                         <div class="dropdown-content pc">
                             <a href="{{route('login')}}">Login</a>
