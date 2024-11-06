@@ -169,16 +169,12 @@ section.sec-mv {
   font-weight: 400;
   padding: 8px 18px;
 }
-.gnav ul li:nth-child(5) {
-  font-weight: 400;
-  padding: 0px 18px;
-}
+/* .gnav ul li:nth-child(5) {
+  font-size: 26px !important;
+} */
 
 .gnav ul li a {
   color: #5e5b61;
-}
-.gnav ul li .logout{
-  padding:8px  0!important;
 }
 
 .gnav ul li a:hover,
@@ -190,7 +186,6 @@ section.sec-mv {
 .gnav ul .dropbtn {
   background-color: #e5dcf3;
   color: #5e5b61;
-  font-size: 24px;
   border: none;
   cursor: pointer;
 }
@@ -201,8 +196,7 @@ section.sec-mv {
 }
 
 .gnav ul .dropdown .signin-icon {
-  font-size: 20px;
-  padding-top: 7px;
+  font-size: 16px;
 }
 
 .gnav ul .dropdown-content {
@@ -277,6 +271,10 @@ section.sec-mv {
 
   section.sec-mv {
     margin-top: 10.938vw;
+  }
+
+  .gnav ul li:nth-child(5) {
+    font-size: 26px;
   }
 
   .text-danger {
@@ -409,9 +407,13 @@ section.sec-mv {
   }
 
   .l-inner {
-    max-width: 166.884vw;
+    max-width: 156.884vw;
     width: 98%;
     margin: 0 auto;
+  }
+
+  .logo a{
+    margin-left: 4.333vw;
   }
 
   section.slider-row {
@@ -429,7 +431,7 @@ section.sec-mv {
   }
 
   .sec-header {
-    padding: 1.304vw 0;
+    padding: 5.304vw 0;
   }
 
   .sec-header .logo {
@@ -437,7 +439,7 @@ section.sec-mv {
   }
 
   .logo {
-    width: 11.333vw;
+    width: 18.333vw;
   }
 
   .logo-ttl {

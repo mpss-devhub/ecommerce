@@ -1,6 +1,22 @@
-.home-mv {
-  background-image: url(../img/09-img.jpg) ;
+/* .home-mv {
+  background-image: url(../img/09-img.jpg);
   height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} */
+
+.home-mv{
+  background-color: #bd95db;
+  height: 100vh;
+  position: relative;
+}
+.octoverse{
+  position: absolute;
+  width: 100px;
+  bottom: 20%;
+  right: 10%;
 }
 
 .txt-box {
@@ -21,12 +37,12 @@
 }
 
 .myanmar-text {
-  font-size: 16px ;
+  font-size: 16px;
   text-align: justify;
   line-height: 1.8;
   margin-bottom: 20px;
   text-indent: 5%;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
 
 .txt-box img {
@@ -103,9 +119,39 @@
     margin-top: 5.188vw;
     height: 71.067vw;
   }
+  .txt-box h3 {
+    font-size: 3.2vw;
+    padding-top: 5.867vw;
+    color: #65308c;
+  }
+
+  .txt-box img {
+    float: left;
+    width: 13.333vw;
+  }
+  .octoverse{
+    width: 13.333vw;
+  }
+
+  .eng-text {
+    margin-top: 6.8vw;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 2.667vw;
+    text-indent: 5%;
+  }
+  
+  .myanmar-text {
+    font-size: 2.133vw;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 2.667vw;
+    text-indent: 5%;
+    font-family: sans-serif;
+  }
 
   .txt-box {
-    width: 31.25vw;
+    width: 64.25vw;
     right: 10%;
     top: 10%;
     font-size: 3.516vw;
@@ -140,12 +186,25 @@
 /*home sp*/
 @media screen and (max-width: 767.9px) {
   .home-mv {
-    margin-top: 11.995vw;
-    height: 569px;
+    margin-top: 0.995vw;
+    height: 185.6vw;
   }
 
+  .txt-box h3 {
+    font-size: 3.2vw;
+    padding-top: 5.867vw;
+    color: #65308c;
+  }
+  .octoverse{
+    bottom: 10%;
+    width: 13.333vw;
+  }
+  .txt-box img {
+    float: left;
+    width: 13.333vw;
+  }
   .txt-box {
-    width: 77.751vw;
+    width: 70.751vw;
     right: 10%;
     top: 10%;
     font-size: 5.867vw;
@@ -153,7 +212,25 @@
 
   .txt-box small,
   .txt-box p {
-    font-size: 2.408vw;
+    font-size: 2.208vw;
+  }
+
+  .eng-text {
+    font-size: 3.133vw !important;
+    margin-top: 0.8vw;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 2.667vw;
+    text-indent: 5%;
+  }
+  
+  .myanmar-text {
+    font-size: 3.133vw !important;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 2.667vw;
+    text-indent: 5%;
+    font-family: sans-serif;
   }
 
   @-webkit-keyframes slideIn {
