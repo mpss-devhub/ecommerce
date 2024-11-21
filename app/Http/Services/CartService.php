@@ -25,9 +25,11 @@ class CartService implements CartInterface
                 'price' => $product->price,
                 'qty' => 1
             ];
+            $this->saveCart($cart);
+            return $result = ['msg'  => 'success', 'cart' => $cart];
         }
         $this->saveCart($cart);
-        return $cart;
+        return $result  = ['msg' => 'error', 'cart' => $cart];
     }
 
     public function updateProductQty($id, $qty)
@@ -52,5 +54,4 @@ class CartService implements CartInterface
     {
         session()->forget('cart');
     }
-
 }

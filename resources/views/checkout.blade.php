@@ -35,7 +35,7 @@ Octoverse
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
+                                <th>Name</th> 
                                 <th>Qty</th>
                                 <th>Unit Price</th>
                                 <th>Sub Total</th>

@@ -31,7 +31,7 @@ class ProductsController extends Controller
     {
         $product = $this->ProductService->getProductById($request->id);
         $cart = $this->CartService->addProductToCart($product);
-        return response()->json(['msg' => 'success', 'cart' => $cart]);
+        return response()->json([ 'msg'  => $cart['msg'], 'cart' => $cart['cart'] ]);
     }
 
     public function cart()

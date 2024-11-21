@@ -1,6 +1,5 @@
 .home-mv{
   background-color: #bd95db;
-  height: 100vh;
   position: relative;
 }
 .octoverse{
@@ -12,9 +11,9 @@
 
 .txt-box {
   width: 65%;
-  position: absolute;
-  left: 10%;
-  top: 17%;
+  margin-left: 100px;
+  padding-bottom: 90px;
+  padding-top: 84px;
   font-family: 'Roboto Condensed', sans-serif;
   color: #f0eaf8;
 }
@@ -108,7 +107,6 @@
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .home-mv {
     margin-top: 5.188vw;
-    height: 71.067vw;
   }
   .txt-box h3 {
     font-size: 3.2vw;
@@ -143,8 +141,9 @@
 
   .txt-box {
     width: 64.25vw;
-    right: 10%;
-    top: 10%;
+     margin-left: 13.333vw;
+    padding-bottom: 12vw;
+    padding-top: 5.2vw;
     font-size: 3.516vw;
   }
 
@@ -178,7 +177,6 @@
 @media screen and (max-width: 767.9px) {
   .home-mv {
     margin-top: 0.995vw;
-    height: 185.6vw;
   }
 
   .txt-box h3 {
@@ -196,18 +194,18 @@
   }
   .txt-box {
     width: 70.751vw;
-    right: 10%;
-    top: 10%;
+    margin-left: 13.333vw;
+    padding-bottom: 12vw;
+    padding-top: 18.2vw;
     font-size: 5.867vw;
   }
 
-  .txt-box small,
-  .txt-box p {
+  .txt-box small {
     font-size: 2.208vw;
   }
 
   .eng-text {
-    font-size: 3.133vw !important;
+    font-size: 2.233vw !important;
     margin-top: 0.8vw;
     text-align: justify;
     line-height: 1.8;
@@ -216,7 +214,7 @@
   }
   
   .myanmar-text {
-    font-size: 3.133vw !important;
+    font-size: 2.233vw !important;
     text-align: justify;
     line-height: 1.8;
     margin-bottom: 2.667vw;
