@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{asset('css/checkout.css')}}">
     <link rel="stylesheet" href="{{asset('css/history.css')}}">
     <link rel="stylesheet" href="{{asset('fontawesome/all.min.css')}}">
-    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}">
 </head>
 
 <body>
