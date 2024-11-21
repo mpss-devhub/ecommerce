@@ -16,7 +16,7 @@
 <body class="sec-login">
     <section class="login">
         <form action="{{ route('login') }}" method="post" class="log-form">
-        @csrf
+            @csrf
             <div class="img-container">
                 <img src="{{ asset('img/10-img.png') }}" alt="octoverse logo" class="octoverse-img">
             </div>
@@ -32,7 +32,6 @@
                 <div class="input-box">
                     <button type="submit" class="submit">Sign In</button>
                 </div>
-                <a href="{{ route('password.request') }}" class="forgot">Forgot Password ?</a>
                 <p class="or">OR</p>
                 <a href="{{route('register')}}" class="create">Create an New Account</a>
             </div>

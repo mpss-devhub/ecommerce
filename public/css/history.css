@@ -1,4 +1,5 @@
 .history-tbl {
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -27,33 +28,42 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    background-color: #f9f9f9; /* Light background for table */
+    background-color: #f9f9f9;
+    /* Light background for table */
 }
 
 .history-tbl thead {
-    background-color: #333; /* Dark header background */
-    color: #fff; /* White text for headers */
+    background-color: #333;
+    /* Dark header background */
+    color: #fff;
+    /* White text for headers */
 }
 
 .history-tbl th,
 .history-tbl td {
-    border: 1px solid #ddd; /* Light border for cells */
+    border: 1px solid #ddd;
+    /* Light border for cells */
     padding: 10px;
-    text-align: center; /* Center text in cells */
+    text-align: center;
+    /* Center text in cells */
 }
 
 .history-tbl tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light gray background for alternating rows */
+    background-color: #f2f2f2;
+    /* Light gray background for alternating rows */
 }
 
 .history-tbl tbody tr:hover {
-    background-color: #e0e0e0; /* Highlight row on hover */
+    background-color: #e0e0e0;
+    /* Highlight row on hover */
 }
 
 .history-tbl tfoot td {
     font-weight: bold;
-    background-color: #f1f1f1; /* Light background for footer */
-    border-top: 2px solid #ddd; /* Slightly thicker border for footer */
+    background-color: #f1f1f1;
+    /* Light background for footer */
+    border-top: 2px solid #ddd;
+    /* Slightly thicker border for footer */
 }
 
 .history-img {
@@ -66,8 +76,10 @@
     width: 50px;
     height: 50px;
     object-fit: cover;
-    border-radius: 5px; /* Rounded corners for images */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+    border-radius: 5px;
+    /* Rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for images */
 }
 
 /* Optional: Add a transition effect when hovering over table rows */
