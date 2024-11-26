@@ -77,7 +77,7 @@
                             @csrf
                             <a href="javascript:;" class="cart-btn clear" onclick="confirmClearCart(event)">CLEAR</a>
                         </form>
-                        <a href="#" class="cart-btn checkout myBtn" data-route="{{ route('redirectCheckOut') }}">REDIRECT CHECKOUT</a>
+                        <a href="#" class="cart-btn checkout myBtn" data-route="{{ route('redirectCheckOut') }}" target="_blank">REDIRECT CHECKOUT</a>
                         <a href="#" class="cart-btn checkout myBtn" data-route="{{ route('checkout') }}">DIRECT CHECKOUT</a>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
             </div>
             <div class="understandingBox">
                 <input type="checkbox" id="understandingCheck" />
-                <label for="understandingCheck">I understand the above statement.</label>
+                <label for="understandingCheck" class="understandingCheck">I understand the above statement.</label>
             </div>
             <button id="proceedBtn" class="paySubmit" style="margin-left: 40%;">Submit</button>
             <div id="loading" hidden></div>

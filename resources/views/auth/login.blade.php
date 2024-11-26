@@ -8,12 +8,19 @@
     <title>Octoverse</title>
     <link rel="icon" type="image/png" href="{{ asset('img/10-img.png') }}" class="w-6">
     <link rel="stylesheet" href="{{asset('css/reset.css')}}">
-    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/common.css')}}">
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
 </head>
 
-<body class="sec-login">
+<body class="">
+    <!-- <div class="octoverse-container pc tablet sp"> -->
+        
+    <!-- </div> -->
+    <div class="sec-login">
+    <div class="octo-container sp tablet">
+        <img src="{{ asset('img/01-logo.png') }}" alt="octoverse logo" class="octo-logo">
+    </div>
     <section class="login">
         <form action="{{ route('login') }}" method="post" class="log-form">
             @csrf
@@ -37,7 +44,7 @@
             </div>
         </form>
     </section>
-
+    </div>
     <script src="{{asset('js/libary/jquery.min.js')}}"></script>
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
     <script src="{{asset('js/libary/toastr.min.js')}}"></script>

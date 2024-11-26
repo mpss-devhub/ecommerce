@@ -336,6 +336,29 @@
     color: #5e5b61;
     border: 0.078vw solid #5e5b61;
   }
+
+  .modal-content {
+    margin: 50% auto;
+    padding: 2.667vw;
+    border: 0.133vw solid #888;
+    width: 80%;
+    max-width: 106.667vw !important;
+    padding: 2.667vw 2.667vw !important;
+  }
+  
+  .modal-content p{
+    font-size: 1.867vw;
+  }
+  
+  .modalHeader {
+    margin-top: 5.467vw !important;
+    text-align: start !important;
+  }
+  
+  .understandingBox{
+    font-size: 1.867vw;
+    margin-bottom: 5%;
+  }
 }
 
 /*sp*/
@@ -492,5 +515,27 @@
 
   .sec-cart .checkout:hover {
     border: 0.13vw solid #65308c;
+  }
+
+  .modal-content {
+    margin: 70% auto;
+    padding: 2.667vw;
+    border: 0.133vw solid #888;
+    width: 80%;
+    max-width: 106.667vw !important;
+    padding: 2.667vw 2.667vw !important;
+  }
+  
+  .modal-content p{
+    font-size: 1.867vw;
+  }
+  
+  .modalHeader {
+    margin-top: 5.467vw !important;
+    text-align: start !important;
+  }
+
+  .understandingCheck {
+    font-size: 3.1vw;
   }
 }

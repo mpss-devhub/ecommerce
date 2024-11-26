@@ -4,7 +4,7 @@
 	<div class="txt-box">
 		<div class="slide-ani clearfix">
 			<img src="{{ asset ('img/10-img.png') }}" alt="">
-			<h3 class="">Octoverse Payment Gateway Demo</h3><br>
+			<h3 class="">Octoverse Payment Gateway Demo</h3><br><br>
 		</div>
 		<p class="eng-text">
 		This website is a demo website that has been tested to understand the sample payment flow of Octoverse Payment Gateway. Please be informed that if you purchase items from this website, you will not actually receive the item, but your bank account will be charged for the value of the item.

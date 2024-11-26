@@ -108,6 +108,7 @@
   .home-mv {
     margin-top: 5.188vw;
   }
+
   .txt-box h3 {
     font-size: 3.2vw;
     padding-top: 5.867vw;
@@ -120,6 +121,8 @@
   }
   .octoverse{
     width: 13.333vw;
+    bottom: 5%;
+    right: 5%;
   }
 
   .eng-text {
@@ -128,10 +131,11 @@
     line-height: 1.8;
     margin-bottom: 2.667vw;
     text-indent: 5%;
+    font-size: 3vw;
   }
   
   .myanmar-text {
-    font-size: 2.133vw;
+    font-size: 2.80vw;
     text-align: justify;
     line-height: 1.8;
     margin-bottom: 2.667vw;
@@ -140,16 +144,10 @@
   }
 
   .txt-box {
-    width: 64.25vw;
+    width: 74.25vw;
      margin-left: 13.333vw;
-    padding-bottom: 12vw;
-    padding-top: 5.2vw;
-    font-size: 3.516vw;
-  }
-
-  .txt-box small,
-  .txt-box p {
-    font-size: 1.563vw;
+    padding-top: 11vw;
+    padding-bottom: 21vw;
   }
 
   @-webkit-keyframes slideIn {
@@ -171,6 +169,19 @@
       transform: translateX(0);
     }
   }
+  .shopNowBtn {
+    margin-top: 3.333vw !important;
+    padding: 0.667vw 3vw;
+    font-size: 3.133vw;
+    border-radius: 0.667vw;
+  }
+  
+  .shopNowBtn:hover {
+    margin-top: 3.333vw !important;
+    padding: 0.667vw 3vw;
+    font-size: 3.133vw;
+    border-radius: 0.667vw;
+  }
 }
 
 /*home sp*/
@@ -180,23 +191,23 @@
   }
 
   .txt-box h3 {
-    font-size: 3.2vw;
+    font-size: 3.8vw;
     padding-top: 5.867vw;
     color: #65308c;
   }
   .octoverse{
     bottom: 10%;
-    width: 13.333vw;
+    width: 28.995vw;
   }
   .txt-box img {
     float: left;
-    width: 13.333vw;
+    width: 17.333vw;
   }
   .txt-box {
     width: 70.751vw;
     margin-left: 13.333vw;
-    padding-bottom: 12vw;
-    padding-top: 18.2vw;
+    padding-bottom: 57vw;
+    padding-top: 54.2vw;
     font-size: 5.867vw;
   }
 

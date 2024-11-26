@@ -8,42 +8,42 @@
     <title>Octoverse</title>
     <link rel="icon" type="image/png" href="{{ asset('img/10-img.png') }}" class="w-6">
     <link rel="stylesheet" href="{{asset('css/common.css')}}">
-    <link rel="stylesheet" href="{{asset('css/login.css')}}">
+    <link rel="stylesheet" href="{{asset('css/registration.css')}}">
 </head>
 
-<body class="sec-login">
-    <section class="login">
-        <form name="regform" method="post" action="{{route('register')}}" class="log-form">
+<body class="register">
+    <section class="reg">
+        <form name="regform" method="post" action="{{route('register')}}" class="reg-form">
             @csrf
             <div class="img-container">
                 <img src="{{ asset('img/10-img.png') }}" alt="octoverse logo" class="octoverse-img">
             </div>
-            <div class="input-gp">
+            <div class="input-group">
                 <div class="input-box">
-                    <label for="name" class="ttl">Company Name</label>
+                    <label for="name" class="label">Company Name</label>
                     <input type="text" id="name" class="input" name="name" placeholder="Enter Company Name" value="{{ @old('name') }}">
-                    <span class="text-danger">{{ $errors->first('name') }}</span><br>
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
                 </div>
 
                 <div class="input-box">
-                    <label for="email" class="ttl">Email</label>
+                    <label for="email" class="label">Email</label>
                     <input type="email" id="email" class="input" name="email" placeholder="Enter Your Email Address" value="{{ @old('email') }}">
-                    <span class="text-danger">{{ $errors->first('email') }}</span><br>
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
                 </div>
 
                 <div class="input-box">
-                    <label for="password" class="ttl">Password</label>
+                    <label for="password" class="label">Password</label>
                     <input type="password" id="password" class="input" name="password" placeholder="Enter Your Password">
-                    <span class="text-danger">{{ $errors->first('password') }}</span><br>
+                    <span class="text-danger">{{ $errors->first('password') }}</span>
                 </div>
 
                 <div class="input-box">
-                    <label for="comfirm-pwd" class="ttl">Comfirm Password</label>
+                    <label for="comfirm-pwd" class="label">Comfirm Password</label>
                     <input type="password" id="comfirm-pwd" class="input" name="password_confirmation" placeholder="Comfirm Your Password">
-                    <span class="text-danger">{{ $errors->first('password') }}</span><br>
+                    <span class="text-danger">{{ $errors->first('password') }}</span>
                 </div>
                 <div class="input-box">
-                    <button class="submit" name="submit">Register</button>
+                    <button class="btn-submit" name="submit">Register</button>
                 </div>
             </div>  
         </form>

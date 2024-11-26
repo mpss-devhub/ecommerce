@@ -80,7 +80,7 @@ a {
   text-decoration: none;
   color: black;
   outline: none;
-  cursor: pointer;
+  cursor: url('../img/00.png')16 16, auto;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -172,6 +172,7 @@ section.sec-mv {
 
 .gnav ul li a {
   color: #5e5b61;
+  cursor: pointer;
 }
 
 .gnav ul li a:hover,
@@ -184,7 +185,6 @@ section.sec-mv {
   background-color: #e5dcf3;
   color: #5e5b61;
   border: none;
-  cursor: pointer;
 }
 
 .gnav ul .dropdown {
@@ -460,7 +460,6 @@ section.sec-mv {
     height: 3.651vw;
     border: none;
     background: none;
-    cursor: pointer;
     appearance: none;
   }
 
