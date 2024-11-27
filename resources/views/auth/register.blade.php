@@ -22,25 +22,25 @@
                 <div class="input-box">
                     <label for="name" class="label">Company Name</label>
                     <input type="text" id="name" class="input" name="name" placeholder="Enter Company Name" value="{{ @old('name') }}">
-                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                    <span class="text-danger" style="margin-bottom: 10px; margin-top: 0;">{{ $errors->first('name') }}</span>
                 </div>
 
                 <div class="input-box">
                     <label for="email" class="label">Email</label>
                     <input type="email" id="email" class="input" name="email" placeholder="Enter Your Email Address" value="{{ @old('email') }}">
-                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                    <span class="text-danger" style="margin-bottom: 10px; margin-top: 0;">{{ $errors->first('email') }}</span>
                 </div>
 
                 <div class="input-box">
                     <label for="password" class="label">Password</label>
                     <input type="password" id="password" class="input" name="password" placeholder="Enter Your Password">
-                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                    <span class="text-danger" style="margin-bottom: 10px; margin-top: 0;">{{ $errors->first('password') }}</span>
                 </div>
 
                 <div class="input-box">
                     <label for="comfirm-pwd" class="label">Comfirm Password</label>
                     <input type="password" id="comfirm-pwd" class="input" name="password_confirmation" placeholder="Comfirm Your Password">
-                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                    <span class="text-danger" style="margin-bottom: 10px; margin-top: 0;">{{ $errors->first('password') }}</span>
                 </div>
                 <div class="input-box">
                     <button class="btn-submit" name="submit">Register</button>

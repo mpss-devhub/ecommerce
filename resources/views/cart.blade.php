@@ -13,7 +13,7 @@
                         <tr class="header">
                             <th>Photo</th>
                             <th>Name</th>
-                            <th>Quatity</th>
+                            <th>Quantity</th>
                             <th>Unit Price</th>
                             <th>Sub Total</th>
                             <th>Action</th>

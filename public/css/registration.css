@@ -18,7 +18,7 @@ body {
 }
 
 .reg {
-  margin: 75px auto 60px;
+  margin: 5px auto 0px;
   padding: 30px 30px 20px;
   font-size: 20px;
   border-radius: 15px;
@@ -30,7 +30,7 @@ body {
   color: #6d6270;
   background-color: #e2e0e0;
   border-radius: 10px;
-  padding: 30px 20px;
+  padding: 14px 20px;
 }
 
 .input-group{
@@ -38,12 +38,12 @@ body {
 }
 .reg input[type=text], .reg input[type=email], .reg input[type=password] {
   width: 350px;
-  padding: 12px 20px;
+  padding: 9px 20px;
   border: 1px solid #aaaaaa;
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 16px;
   outline: none;
-  margin: 0 auto 9px;
+  margin: 0 auto;
 }
 
 .reg .input-box{
@@ -57,12 +57,12 @@ body {
   color: #ffffff;
   font-family: 'RobotoCondensed', sans-serif;
   font-weight: 400;
-  padding: 14px 20px;
+  padding: 9px 20px;
   margin: 15px 0;
   border: none;
   cursor: url('../img/00.png')16 16, pointer;
   font-size: 16px;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 .reg .btn-submit:hover {
   color: #5e5b61;
@@ -73,7 +73,7 @@ body {
   color: #5e5b61;
   font-family: 'RobotoCondensed', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   padding-bottom: 10px;
 }
 .reg .rdo-reg {
