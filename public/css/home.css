@@ -1,6 +1,9 @@
 .home-mv{
   background-color: #bd95db;
   position: relative;
+  height: min-content;
+  min-height: 100vh;
+  padding: 100px 0 100px 0;
 }
 .octoverse{
   position: absolute;
@@ -12,8 +15,6 @@
 .txt-box {
   width: 65%;
   margin-left: 100px;
-  padding-bottom: 90px;
-  padding-top: 84px;
   font-family: 'Roboto Condensed', sans-serif;
   color: #f0eaf8;
 }
@@ -106,48 +107,36 @@
 /*Home Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .home-mv {
-    margin-top: 5.188vw;
-  }
-
-  .txt-box h3 {
-    font-size: 3.2vw;
-    padding-top: 5.867vw;
-    color: #65308c;
-  }
-
-  .txt-box img {
-    float: left;
-    width: 13.333vw;
-  }
-  .octoverse{
-    width: 13.333vw;
-    bottom: 5%;
-    right: 5%;
-  }
-
-  .eng-text {
-    margin-top: 6.8vw;
-    text-align: justify;
-    line-height: 1.8;
-    margin-bottom: 2.667vw;
-    text-indent: 5%;
-    font-size: 3vw;
-  }
-  
-  .myanmar-text {
-    font-size: 2.80vw;
-    text-align: justify;
-    line-height: 1.8;
-    margin-bottom: 2.667vw;
-    text-indent: 5%;
-    font-family: sans-serif;
+    padding-bottom: 6.188vw;
+    padding-top: 7.188vw;
+    height: auto; 
+    min-height: 100vh; 
+    overflow: hidden;
   }
 
   .txt-box {
-    width: 74.25vw;
-     margin-left: 13.333vw;
-    padding-top: 11vw;
-    padding-bottom: 21vw;
+    width: 80%; 
+    margin-left: 10%; 
+  }
+
+  .txt-box h3 {
+    font-size: 2.8vw;
+  }
+
+  .eng-text,
+  .myanmar-text {
+    font-size: 2.5vw;
+  }
+
+  .octoverse {
+    width: 10%;
+    bottom: 10%;
+    right: 5%;
+  }
+
+  .shopNowBtn {
+    font-size: 2vw;
+    padding: 10px 20px;
   }
 
   @-webkit-keyframes slideIn {
@@ -185,53 +174,56 @@
 }
 
 /*home sp*/
+/* home sp */
 @media screen and (max-width: 767.9px) {
   .home-mv {
-    margin-top: 0.995vw;
+    margin-top: 0;
+    padding: 20vw 0; 
+    height: auto;
+    min-height: 100vh; 
+  }
+
+  .txt-box {
+    width: 80%; 
+    margin-left: 10%; 
+    font-size: 4.5vw; 
   }
 
   .txt-box h3 {
-    font-size: 3.8vw;
-    padding-top: 5.867vw;
-    color: #65308c;
+    font-size: 4vw; 
+    margin: auto 0; 
+    padding-top: 5vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .octoverse{
-    bottom: 10%;
-    width: 28.995vw;
-  }
+
   .txt-box img {
     float: left;
-    width: 17.333vw;
-  }
-  .txt-box {
-    width: 70.751vw;
-    margin-left: 13.333vw;
-    padding-bottom: 57vw;
-    padding-top: 54.2vw;
-    font-size: 5.867vw;
+    width: 17.333vw; 
+    margin-right: 5%; 
+    vertical-align: middle; 
   }
 
-  .txt-box small {
-    font-size: 2.208vw;
-  }
-
-  .eng-text {
-    font-size: 2.233vw !important;
-    margin-top: 0.8vw;
-    text-align: justify;
-    line-height: 1.8;
-    margin-bottom: 2.667vw;
-    text-indent: 5%;
-  }
-  
+  .eng-text,
   .myanmar-text {
-    font-size: 2.233vw !important;
-    text-align: justify;
-    line-height: 1.8;
-    margin-bottom: 2.667vw;
-    text-indent: 5%;
-    font-family: sans-serif;
+    font-size: 3.5vw; 
+    margin-top: 2vw;
+    margin-bottom: 2vw; 
+    text-indent: 5%; 
   }
+
+  .shopNowBtn {
+    font-size: 3.5vw; 
+    padding: 1.5vw 5vw; 
+    margin-top: 2vw; 
+  }
+
+  .octoverse {
+    bottom: 5%; 
+    width: 25vw; 
+  }
+
 
   @-webkit-keyframes slideIn {
     0% {
