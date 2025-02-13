@@ -1,10 +1,10 @@
 /*login*/
 .sec-login {
   background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
-  /* display: flex;
+  height: 100vh;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  padding: 125px;
+  align-items: center;
 }
 
 .img-container{ 

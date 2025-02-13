@@ -1,191 +1,196 @@
 body {
-  background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
-  margin: 0 auto;
+    background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
+    margin: 0 auto;
 }
 
-.img-container{ 
-  width: 30%;
-  margin: 0 auto;
+.img-container {
+    width: 30%;
+    margin: 0 auto;
 }
 .octoverse-img {
-  width: 100%;
+    width: 100%;
 }
 .register {
-  background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .reg {
-  margin: 5px auto 0px;
-  padding: 30px 30px 20px;
-  font-size: 20px;
-  border-radius: 15px;
+    font-size: 20px;
+    border-radius: 15px;
 }
+
 .reg-form {
-  width: 400px;
-  margin: 0 auto;
-  font-weight: 500;
-  color: #6d6270;
-  background-color: #e2e0e0;
-  border-radius: 10px;
-  padding: 14px 20px;
+    width: 400px;
+    font-weight: 500;
+    color: #6d6270;
+    background-color: #e2e0e0;
+    border-radius: 10px;
+    padding: 14px 20px;
 }
 
-.input-group{
-  margin-top: 30px;
+.input-group {
+    margin-top: 30px;
 }
-.reg input[type=text], .reg input[type=email], .reg input[type=password] {
-  width: 350px;
-  padding: 9px 20px;
-  border: 1px solid #aaaaaa;
-  border-radius: 15px;
-  font-size: 16px;
-  outline: none;
-  margin: 0 auto;
+.reg input[type="text"],
+.reg input[type="email"],
+.reg input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    margin: 0 auto;
 }
 
-.reg .input-box{
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
+.reg .input-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
 .reg .btn-submit {
-  width: 100%;
-  background-color: #5e5b61;
-  color: #ffffff;
-  font-family: 'RobotoCondensed', sans-serif;
-  font-weight: 400;
-  padding: 9px 20px;
-  margin: 15px 0;
-  border: none;
-  cursor: url('../img/00.png')16 16, pointer;
-  font-size: 16px;
-  border-radius: 15px;
+    width: 100%;
+    background-color: #5e5b61;
+    color: #ffffff;
+    font-family: "RobotoCondensed", sans-serif;
+    font-weight: 400;
+    padding: 9px 20px;
+    margin: 15px 0;
+    border: none;
+    cursor: url("../img/00.png") 16 16, pointer;
+    font-size: 16px;
+    border-radius: 8px;
 }
 .reg .btn-submit:hover {
-  color: #5e5b61;
-  background-color: #ffffff;
-  border-color: #5e5b61;
+    color: #5e5b61;
+    background-color: #ffffff;
+    border-color: #5e5b61;
 }
 .reg label {
-  color: #5e5b61;
-  font-family: 'RobotoCondensed', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  padding-bottom: 10px;
+    color: #5e5b61;
+    font-family: "RobotoCondensed", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding-bottom: 10px;
 }
 .reg .rdo-reg {
-  padding-top: 12px;
+    padding-top: 12px;
+}
+
+.login-txt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-txt a {
+  text-decoration: underline;
 }
 
 /*Register Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1280px) {
-  .img-container{ 
-    width: 30%;
-    margin: 0 auto;
-  }
-  .octoverse-img {
-    width: 100%;
-  }
-  
-  .reg {
-    margin: 8vw auto;
-    padding: 25vw 4vw;
-    font-size: 2.667vw;
-    border-radius: 2vw;
-  }
-  .reg-form {
-    width: 53.333vw;
-    margin: 0 auto;
-    border-radius: 1.333vw;
-    padding: 4vw 2.667vw;
-  }
-  
-  .input-group{
-    margin-top: 4vw;
-  }
-  .reg input[type=text], .reg input[type=email], .reg input[type=password] {
-    width: 46.667vw;
-    padding: 1.6zvw 2.667vw;
-    border: 0.133vw solid #aaaaaa;
-    border-radius: 2.667vw;
-    font-size: 2.133vw;
-    outline: none;
-    margin: 0 auto 1.2vw;
-  }
-  
-  .reg .input-box{
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.667vw;
-  }
-  .reg .btn-submit {
-    width: 100%;
-    padding: 1.867vw 2.667vw;
-    margin: 2vw 0;
-    border: none;
-    font-size: 2.133vw;
-    border-radius: 2.667vw;
-  }
-  .reg label {
-    font-weight: 400;
-    font-size: 2.133vw;
-    padding-bottom: 1.333vw;
-  }
-  .reg .rdo-reg {
-    padding-top: 1.6vw;
-  }
-  
+    .img-container {
+        width: 30%;
+        margin: 0 auto;
+    }
+    .octoverse-img {
+        width: 100%;
+    }
+
+    .reg {
+        margin: 8vw auto;
+        padding: 25vw 4vw;
+        font-size: 2.667vw;
+        border-radius: 2vw;
+    }
+    .reg-form {
+        width: 53.333vw;
+        margin: 0 auto;
+        border-radius: 1.333vw;
+        padding: 4vw 2.667vw;
+    }
+
+    .input-group {
+        margin-top: 4vw;
+    }
+    .reg input[type="text"],
+    .reg input[type="email"],
+    .reg input[type="password"] {
+        border: 0.133vw solid #aaaaaa;
+        font-size: 2.133vw;
+        outline: none;
+        margin: 0 auto 1.2vw;
+    }
+
+    .reg .input-box {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.667vw;
+    }
+    .reg .btn-submit {
+        width: 100%;
+        padding: 1.867vw 2.667vw;
+        margin: 2vw 0;
+        border: none;
+        font-size: 2.133vw;
+    }
+    .reg label {
+        font-weight: 400;
+        font-size: 2.133vw;
+        padding-bottom: 1.333vw;
+    }
+    .reg .rdo-reg {
+        padding-top: 1.6vw;
+    }
 }
 
 /*Register sp*/
 @media screen and (max-width: 767.9px) {
-  .reg {
-    margin: 8vw auto;
-    padding: 31vw 30px;
-    border-radius: 2vw;
-  }
-  .reg-form {
-    width: 65.333vw;
-    margin: 0 auto;
-    border-radius: 1.333vw;
-    padding: 4vw 2.667vw;
-  }
-  
-  .input-group{
-    margin-top: 4vw;
-  }
-  .reg input[type=text], .reg input[type=email], .reg input[type=password] {
-    width: 55.667vw;
-    padding: 1.6vw 2.667vw;
-    border: 0.133vw solid #aaaaaa;
-    border-radius: 2.667vw;
-    font-size: 3.133vw;
-    outline: none;
-    margin: 0 auto 1.2vw;
-  }
-  
-  .reg .input-box{
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.667vw;
-  }
-  .reg .btn-submit {
-    width: 55.667vw;
-    padding: 1.867vw 2.667vw;
-    margin: 2vw auto;
-    border: none;
-    font-size: 3.133vw;
-    border-radius: 2.667vw;
-  }
-  .reg label {
-    font-size: 3.133vw;
-    padding-bottom: 1.333vw;
-  }
-  .reg .rdo-reg {
-    padding-top: 1.6vw;
-  }
-  
+    .reg {
+        margin: 8vw auto;
+        padding: 31vw 30px;
+        border-radius: 2vw;
+    }
+    .reg-form {
+        width: 65.333vw;
+        margin: 0 auto;
+        border-radius: 1.333vw;
+        padding: 4vw 2.667vw;
+    }
+
+    .input-group {
+        margin-top: 4vw;
+    }
+    .reg input[type="text"],
+    .reg input[type="email"],
+    .reg input[type="password"] {
+        font-size: 3.133vw;
+        outline: none;
+        margin: 0 auto 1.2vw;
+    }
+
+    .reg .input-box {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.667vw;
+    }
+    .reg .btn-submit {
+        width: 55.667vw;
+        padding: 1.867vw 2.667vw;
+        margin: 2vw auto;
+        border: none;
+        font-size: 3.133vw;
+    }
+    .reg label {
+        font-size: 3.133vw;
+        padding-bottom: 1.333vw;
+    }
+    .reg .rdo-reg {
+        padding-top: 1.6vw;
+    }
 }

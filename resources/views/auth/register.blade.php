@@ -45,8 +45,12 @@
                 <div class="input-box">
                     <button class="btn-submit" name="submit">Register</button>
                 </div>
-            </div>  
+                <div class="input-box login-txt">
+                    <p>Already have an account? <a href="/login"> login</a></p>
+                </div>
+            </div>
         </form>
         </div>
 </body>
+
 </html>
