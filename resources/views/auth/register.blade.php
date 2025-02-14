@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="input-box">
-                    <label for="comfirm-pwd" class="label">Comfirm Password</label>
+                    <label for="comfirm-pwd" class="label">Confirm Password</label>
                     <input type="password" id="comfirm-pwd" class="input" name="password_confirmation" placeholder="Comfirm Your Password">
                     <span class="text-danger" style="margin-bottom: 10px; margin-top: 0;">{{ $errors->first('password') }}</span>
                 </div>
