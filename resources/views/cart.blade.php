@@ -1,7 +1,7 @@
 @extends('layouts.frontend.master')
 @section('content')
 <section class="sec-cart commonBox">
-    <div class="l-inner">
+    <div class="l-inner" >
         <div class="cart-mv">
             <div class="cart-box clearfix">
                 <i class="fa-solid fa-cart-shopping cart-icon"></i>
@@ -36,7 +36,7 @@
                             <td>
                                 <div class="qty-box clearfix">
                                     <a href="javascript:;" class="update-cart minus">&minus;</a>
-                                    <input type="number" class="qty" value="{{ $item['qty'] }}" data-id="{{ $product['id'] }}" min="1">
+                                    <input type="number" class="qty" value="{{ $item['qty'] }}" data-id="{{ $product['id'] }}" min="1" readonly>
                                     <a href="javascript:;" class="update-cart plus">&plus;</a>
                                 </div>
                             </td>
@@ -129,11 +129,22 @@
     proceedBtn.addEventListener('click', function(event) {
         if (understandingCheck.checked) {
             loadingIndicator.style.display = "block";
-            modal.style.display = "none";  
+            modal.style.display = "none";
             setTimeout(function() {
-                window.location.href = nextRoute; 
-            }, 1000); 
+                window.location.href = nextRoute;
+            }, 1000);
         }
+    });
+
+    document.querySelectorAll('.update-cart.minus').forEach(function(minusBtn) {
+        minusBtn.addEventListener('click', function(event) {
+            var qtyInput = this.closest('.qty-box').querySelector('.qty');
+            var productId = qtyInput.dataset.id;
+            var currentQty = parseInt(qtyInput.value);
+            if (currentQty === 1) {
+                document.querySelector('.removeCartItemForm' + productId).submit();
+            }
+        });
     });
 </script>
 
