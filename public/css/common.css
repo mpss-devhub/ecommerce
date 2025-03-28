@@ -48,12 +48,14 @@ body {
     left: 0;
     z-index: 10;
     width: 100%;
-    background-color: #e7e7e7;/ bg-slate-400 / padding-top: 1.5rem;/ py-6 / padding-bottom: 1.5rem;
+    background-color: #e7e7e7; /* bg-slate-400 */
+    padding-top: 1.5rem; /* py-6 */
+    padding-bottom: 1.5rem;
     overflow: hidden;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 100px;
-
 }
+
 
 @keyframes scrollText {
     0% {
@@ -78,20 +80,6 @@ body {
 .text-blue-700 {
     color: #1d4ed8;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .pc {
