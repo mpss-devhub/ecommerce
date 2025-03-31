@@ -40,23 +40,6 @@ body {
     font-weight: 400;
 }
 
-
-
-.fixed-banner {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    background-color: #e7e7e7; /* bg-slate-400 */
-    padding-top: 1.5rem; /* py-6 */
-    padding-bottom: 1.5rem;
-    overflow: hidden;
-    padding: 15px;
-    margin-bottom: 100px;
-}
-
-
 @keyframes scrollText {
     0% {
         transform: translateX(100%);
@@ -65,6 +48,20 @@ body {
     100% {
         transform: translateX(-100%);
     }
+}
+
+.fixed-banner {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #e7e7e7;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+  padding: 15px;
+  margin-bottom: 100px;
 }
 
 .animate-scroll {
@@ -80,7 +77,6 @@ body {
 .text-blue-700 {
     color: #1d4ed8;
 }
-
 
 .pc {
     display: block;
