@@ -11,36 +11,44 @@ body {
 }
 
 @font-face {
-    font-family: 'Rubik Distressed';
+    font-family: "Rubik Distressed";
     src: url(../Font/RubikDistressed-Regular.ttf);
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: "Roboto Condensed";
     src: url(../Font/RobotoCondensed-Bold.ttf);
     font-weight: 600;
 }
 
 @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: "Roboto Condensed";
     src: url(../Font/RobotoCondensed-LightItalic.ttf);
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: "Roboto Condensed";
     src: url(../Font/RobotoCondensed-Light.ttf);
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: "Roboto Condensed";
     src: url(../Font/RobotoCondensed-Regular.ttf);
     font-weight: 400;
 }
 
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
 
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 .fixed-banner {
     position: fixed;
@@ -56,17 +64,6 @@ body {
     margin-bottom: 100px;
 }
 
-
-@keyframes scrollText {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
 .animate-scroll {
     display: inline-block;
     white-space: nowrap;
@@ -80,7 +77,6 @@ body {
 .text-blue-700 {
     color: #1d4ed8;
 }
-
 
 .pc {
     display: block;
@@ -110,7 +106,7 @@ img {
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 16px;
     font-weight: 400;
     overflow-x: hidden;
@@ -121,7 +117,7 @@ a {
     text-decoration: none;
     color: black;
     outline: none;
-    cursor: url('../img/00.png')16 16, auto;
+    cursor: url("../img/00.png") 16 16, auto;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -136,7 +132,7 @@ a {
     margin-top: 5px;
 }
 
-#toast-container>div {
+#toast-container > div {
     width: 320px !important;
     opacity: 1 !important;
 }
@@ -146,7 +142,6 @@ a {
 }
 
 .swal2-styled.swal2-confirm {
-
     padding-left: 25px !important;
     padding-right: 25px !important;
 }
@@ -170,11 +165,10 @@ a {
     max-width: 1280px;
     width: 98%;
     margin: 0 auto;
-
 }
 
 .cmn-ttl {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: 600;
 }
 
@@ -208,7 +202,7 @@ section.sec-mv {
 .gnav ul li {
     float: left;
     font-size: 18px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: 400;
     padding: 8px 18px;
 }
@@ -228,7 +222,6 @@ section.sec-mv {
     background-color: #e5dcf3;
     color: #5e5b61;
     border: none;
-
 }
 
 .gnav ul .dropdown {
@@ -285,7 +278,7 @@ section.sec-mv {
     padding: 8px 0;
     border-top: 1px solid #ffffff;
     font-size: 10px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: 400;
 }
 
@@ -296,7 +289,6 @@ section.sec-mv {
 
 /*Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1280px) {
-
     .pc {
         display: block;
     }
@@ -416,7 +408,7 @@ section.sec-mv {
         margin-left: 2.344vw;
     }
 
-    .sec-footer .footer-box .right .sub-form input[type='email'] {
+    .sec-footer .footer-box .right .sub-form input[type="email"] {
         width: 18.438vw;
         padding: 0.391vw 0vw;
         padding-left: 1.406vw;
@@ -424,7 +416,7 @@ section.sec-mv {
         border-radius: 0.781vw 0 0 0.781vw;
     }
 
-    .sec-footer .footer-box .right .sub-form input[type='submit'] {
+    .sec-footer .footer-box .right .sub-form input[type="submit"] {
         left: -0.391vw;
         width: 9.609vw;
         padding: 0.391vw 0vw;
@@ -437,7 +429,6 @@ section.sec-mv {
         border-top: 0.078vw solid #ffffff;
         font-size: 1.563vw;
     }
-
 }
 
 /*sp*/
@@ -479,7 +470,6 @@ section.sec-mv {
         /* padding: 5.304vw 0; */
         padding: 10px 0;
         height: 65px;
-
     }
 
     .sec-header .logo {
@@ -517,7 +507,7 @@ section.sec-mv {
     .menu-icon,
     .menu-icon span {
         display: inline-block;
-        transition: all .4s;
+        transition: all 0.4s;
         position: fixed;
         right: 0;
     }
@@ -564,7 +554,7 @@ section.sec-mv {
         width: 0;
         background-color: #e5dcf3;
         text-align: center;
-        transition: all .4s;
+        transition: all 0.4s;
         padding: 4vw 6.25vw 5.469vw;
     }
 
@@ -630,7 +620,6 @@ section.sec-mv {
     }
 
     .sec-footer .footer-box .right ul li {
-
         margin-right: 0.652vw;
         margin-top: 1.304vw;
         padding-left: 5.215vw;
@@ -644,7 +633,7 @@ section.sec-mv {
         margin-top: 6.519vw;
     }
 
-    .sec-footer .footer-box .right .sub-form input[type='email'] {
+    .sec-footer .footer-box .right .sub-form input[type="email"] {
         width: 26.076vw;
         padding: 0.652vw 0vw;
         font-size: 1.825vw;
@@ -653,7 +642,7 @@ section.sec-mv {
         border-radius: 1.304vw 0 0 1.304vw;
     }
 
-    .sec-footer .footer-box .right .sub-form input[type='submit'] {
+    .sec-footer .footer-box .right .sub-form input[type="submit"] {
         left: -1.591vw;
         width: 13.038vw;
         font-size: 1.825vw;
