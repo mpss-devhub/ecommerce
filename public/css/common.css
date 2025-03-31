@@ -40,8 +40,6 @@ body {
     font-weight: 400;
 }
 
-
-
 .fixed-banner {
     position: fixed;
     top: 64px;
@@ -52,7 +50,7 @@ body {
     padding-top: 1.5rem; /* py-6 */
     padding-bottom: 1.5rem;
     overflow: hidden;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 100px;
 }
 
