@@ -61,7 +61,7 @@ body {
     padding-bottom: 1.5rem;
     overflow: hidden;
     padding: 11px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .animate-scroll {
@@ -119,6 +119,25 @@ a {
     outline: none;
     cursor: url("../img/00.png") 16 16, auto;
     -webkit-tap-highlight-color: transparent;
+}
+.fixed-banner {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #e7e7e7; /* bg-slate-400 */
+    padding-top: 1.5rem; /* py-6 */
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+    padding: 11px;
+    /* margin-bottom: 100px; */
+}
+
+.animate-scroll {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 11s linear infinite;
 }
 
 .logo {
@@ -310,7 +329,7 @@ section.sec-mv {
     }
 
     .gnav ul li:nth-child(5) {
-        font-size: 26px;
+        font-size: 19px;
     }
 
     .text-danger {
@@ -319,12 +338,14 @@ section.sec-mv {
         padding-left: 2.344vw;
     }
 
+
     .sec-header {
-        padding: 0.781vw 0;
+        padding: 0.381vw 0;
     }
 
     .sec-header .logo {
         float: left;
+        margin-top: 10px;
     }
 
     .logo-ttl {
@@ -333,8 +354,10 @@ section.sec-mv {
     }
 
     .logo {
-        width: 11.333vw;
+        /* width: 11.333vw; */
+        width: 7.533vw;
     }
+
 
     .logo-ttl a {
         letter-spacing: 0.094vw;
@@ -345,12 +368,17 @@ section.sec-mv {
     }
 
     .gnav ul li {
-        font-size: 2.188vw;
-        padding: 1.172vw 1.953vw;
+        /* font-size: 2.188vw; */
+        font-size: 1.5vw;
+        /* padding: 1.172vw 1.953vw; */
+        padding: 1.272vw 1.153vw;
+
     }
 
+
     .gnav ul .dropbtn {
-        font-size: 1.875vw;
+        /* font-size: 1.875vw; */
+        font-size: 1vw;
     }
 
     .gnav ul .dropbtn svg {
@@ -363,6 +391,7 @@ section.sec-mv {
 
     .gnav ul .dropdown-content a {
         padding: 0.938vw 1.172vw;
+        font-size: 1.3vw;
     }
 
     .sec-footer .footer-box {
@@ -440,6 +469,19 @@ section.sec-mv {
     .sp {
         display: block;
     }
+    .fixed-banner {
+        position: fixed;
+        top: 53px;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        background-color: #e7e7e7; /* bg-slate-400 */
+        padding-top: 1.5rem; /* py-6 */
+        padding-bottom: 1.5rem;
+        overflow: hidden;
+        padding: 11px;
+        /* margin-bottom: 100px; */
+    }
 
     .l-inner {
         max-width: 156.884vw;
@@ -468,8 +510,8 @@ section.sec-mv {
 
     .sec-header {
         /* padding: 5.304vw 0; */
-        padding: 10px 0;
-        height: 65px;
+        padding: 8px 0;
+        height: 55px;
     }
 
     .sec-header .logo {

@@ -146,7 +146,7 @@
 /*Tablet*/
 @media screen and (min-width: 768px) and (max-width: 1280px) {
 	.box-container {
-		padding: 8vw 0;
+		padding: 5% 0;
 	}
 
 	.box-container .ttl-box {
@@ -156,7 +156,7 @@
 
 	.item-box .item-list img {
 		width: 16.2vw;
-		height: 20.667vw;
+		height: 13.667vw;
 		margin: 1.1vw;
 	}
 
@@ -194,7 +194,7 @@
 
 	.box-container .cmn-p {
 		padding-top: 1.563vw;
-		font-size: 1.563vw;
+		font-size: 1.363vw;
 	}
 
 	.box-container sup {
@@ -204,7 +204,7 @@
 
 	.box-container .cmn-h5 {
 		padding: 0.125vw 0;
-		font-size: 1.719vw;
+		font-size: 1.519vw;
 	}
 
 	.box-container .add-to-cart-btn {

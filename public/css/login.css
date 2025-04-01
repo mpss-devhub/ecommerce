@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.img-container{ 
+.img-container{
   width: 30%;
   margin: 0 auto;
 }
@@ -143,43 +143,48 @@
   .sec-login {
     padding: 20.813vw 0 58.813vw;
   }
+  .octoverse-img{
+    width: 100px;
+  }
 
   .log-form {
-    width: 50.25vw;
-    font-size: 4.594vw;
+    width: 30.25vw;
+    font-size: 1.594vw;
     border-radius: 0.781vw;
+    margin-top: -130px;
   }
-  
+
   .log-form .input-gp {
-    row-gap: 4.333vw;
-    margin-top: 4vw;
+    row-gap: 0.533vw;
+    margin-top: 1.0vw;
   }
 
   .log-form .input-box {
     margin: 0 auto;
-    width: 30.438vw;
+    width: 35.438vw;
   }
 
   .log-form .input {
-    width: 30.438vw;
+    width: 23.438vw;
     padding: 0.781vw 1.172vw;
     border: 0.078vw solid #5e5b61;
     border-radius: 1.172vw;
+    margin-left: 43px;
   }
 
   .log-form .input::placeholder {
     padding-left: 0.781vw;
-    font-size: 1.706vw;
+    font-size: 1.206vw;
   }
 
   .log-form .submit {
     border: 0.078vw solid #5e5b61;
-    width: 30.438vw;
+    width: 20.438vw;
     padding: 0.781vw 0;
     border-radius: 1.953vw;
     margin-bottom: 1.172vw;
-    font-size: 2.406vw;
-
+    font-size: 1.406vw;
+    margin-left: 60px;
   }
 
   .log-form .forgot {
@@ -189,13 +194,16 @@
   }
 
   .log-form .create {
-    font-size: 2.094vw;
+    font-size: 1.594vw;
     letter-spacing: 0.094vw;
-    padding: 1.563vw 0 3.125vw 0.781vw;
+    /* padding: 1.563vw 0 3.125vw 0.781vw; */
+    padding: 1.563vw  3.125vw 3.125vw 0.781vw;
+    margin-left: -50px;
   }
 
   .log-form .or {
-    font-size: 1.875vw;
+    font-size: 1.375vw;
+    margin-left: -60px;
   }
 
   .log-form .or::before {
@@ -220,7 +228,7 @@
     transform: translateY(-50%);
   }
 
-  .octo-container{ 
+  .octo-container{
     width: 30%;
     margin: 0 auto 11.633vw;
   }
@@ -322,7 +330,7 @@
     content: '';
     transform: translateY(-50%);
   }
-  
+
   .log-form .or::after {
     position: absolute;
     top: 76%;
@@ -334,7 +342,7 @@
     transform: translateY(-50%);
   }
 
-  .octo-container{ 
+  .octo-container{
     width: 40%;
     margin: 0 auto 22.633vw;
   }

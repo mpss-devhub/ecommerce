@@ -128,8 +128,23 @@
 
     .eng-text,
     .myanmar-text {
-      font-size: 2.5vw;
+      font-size: 1.3vw;
     }
+    .txt-box .clearfix{
+        margin-top: 15px;
+        margin-bottom: -50px;
+    }
+
+    .txt-box img {
+        float: left;
+        width: 80px;
+      }
+
+      .txt-box h3 {
+        font-size: 20px;
+        padding-top: 44px;
+        color: #65308c;
+      }
 
     .octoverse {
       width: 10%;
@@ -164,14 +179,14 @@
     .shopNowBtn {
       margin-top: 3.333vw !important;
       padding: 0.667vw 3vw;
-      font-size: 3.133vw;
+      font-size: 1.5vw;
       border-radius: 0.667vw;
     }
 
     .shopNowBtn:hover {
       margin-top: 3.333vw !important;
       padding: 0.667vw 3vw;
-      font-size: 3.133vw;
+      font-size: 1.5vw;
       border-radius: 0.667vw;
     }
   }
@@ -180,7 +195,7 @@
   /* home sp */
   @media screen and (max-width: 767.9px) {
     .home-mv {
-      margin-top: 20px;
+      margin-top: 40px;
       padding: 20vw 0;
       height: auto;
       min-height: 100vh;

@@ -86,3 +86,8 @@
 .history-tbl tbody tr:hover {
     transition: background-color 0.3s ease-in-out;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .sec-cart{
+        margin-top: 30px;
+    }
+}

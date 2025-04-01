@@ -99,7 +99,15 @@ body {
         margin: 0 auto;
     }
     .octoverse-img {
-        width: 100%;
+        width: 80%;
+    }
+    .register {
+        background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 250px;
     }
 
     .reg {
@@ -109,40 +117,40 @@ body {
         border-radius: 2vw;
     }
     .reg-form {
-        width: 53.333vw;
+        width: 35.333vw;
         margin: 0 auto;
         border-radius: 1.333vw;
-        padding: 4vw 2.667vw;
+        padding: 1.5vw 2.067vw;
     }
 
     .input-group {
-        margin-top: 4vw;
+        margin-top: 0.2vw;
     }
     .reg input[type="text"],
     .reg input[type="email"],
     .reg input[type="password"] {
         border: 0.133vw solid #aaaaaa;
-        font-size: 2.133vw;
+        font-size: 1.133vw;
         outline: none;
-        margin: 0 auto 1.2vw;
+        margin: 0 auto 0.2vw;
     }
 
     .reg .input-box {
         display: flex;
         flex-direction: column;
-        row-gap: 0.667vw;
+        row-gap: 0.167vw;
     }
     .reg .btn-submit {
         width: 100%;
-        padding: 1.867vw 2.667vw;
-        margin: 2vw 0;
+        padding: 0.867vw 2.667vw;
+        margin: 1vw 0;
         border: none;
-        font-size: 2.133vw;
+        font-size: 1.133vw;
     }
     .reg label {
         font-weight: 400;
-        font-size: 2.133vw;
-        padding-bottom: 1.333vw;
+        font-size: 1.133vw;
+        padding-bottom: 1.033vw;
     }
     .reg .rdo-reg {
         padding-top: 1.6vw;
