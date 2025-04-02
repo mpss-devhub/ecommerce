@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ asset('css/history.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('css/forgot-password.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('css/reset-password.css') }}?v={{ time() }}">
 </head>
 
 <body>

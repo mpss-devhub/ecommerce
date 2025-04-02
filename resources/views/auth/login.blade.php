@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Octoverse</title>
     <link rel="icon" type="image/png" href="{{ asset('img/10-img.png') }}" class="w-6">
     <link rel="stylesheet" href="{{asset('css/reset.css')}}">
@@ -36,6 +36,9 @@
                         <div class="input-box">
                             <input type="password" name="password" id="password" class="input @error('password') is-invalid @enderror" placeholder="Enter Your Password">
                             <p class="text-danger">{{ $errors->first('password') }}</p>
+                        </div>
+                        <div class="input-box">
+                            <a href="{{ route('password.request') }}" class="forgot-password">Forgot Password?</a>
                         </div>
                         <div class="input-box">
                             <button type="submit" class="submit">Sign In</button>

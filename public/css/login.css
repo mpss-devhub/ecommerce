@@ -1,4 +1,9 @@
 /*login*/
+
+html, body {
+    touch-action: manipulation;
+}
+
 .sec-login {
   background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
   height: 100vh;
@@ -134,6 +139,9 @@
   transform: translateY(-50%);
 }
 
+.forgot-password{
+    color: #5e5b80;
+}
 /*tablet*/
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .tablet{
@@ -232,6 +240,11 @@
     width: 30%;
     margin: 0 auto 11.633vw;
   }
+  .forgot-password{
+    margin-left: 45px;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
 
 }
 
@@ -242,6 +255,9 @@
     padding-right: 0;
     padding-top: 22.038vw;
     padding-bottom: 49.038vw;
+  }
+  .forgot-password{
+    font-size: 12px;
   }
 
   .log-form {

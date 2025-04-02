@@ -15,21 +15,22 @@
             </p>
         </div>
         <hr>
+
         <div class="form-container">
             <form method="POST" action="{{ route('password.email') }}">
                 @csrf
                 <div>
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="email" required autofocus />
+                    <input id="email" type="email" name="email" class="input @error('email') is-invalid @enderror" required autofocus />
+                    <p class="text-danger" style="margin-top: -10px;">{{ $errors->first('email') }}</p>
                 </div>
                 <div class="button-container">
                     <button type="submit">Email Password Reset Link</button>
                 </div>
             </form>
         </div>
+
     </div>
-
-
 </div>
 
 @endsection

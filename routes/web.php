@@ -5,6 +5,8 @@ use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\NewPasswordController;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,13 @@ Route::middleware('auth')->group(function () {
     Route::match(['get', 'post'], '/checkout', [CheckOutController::class, 'checkout'])->name('checkout');
     Route::get('/redirect/checkout', [CheckOutController::class, 'redirectCheckOut'])->name('redirectCheckOut');
     Route::get('/history', [ProductsController::class, 'viewHistory'])->name('history');
+});
+
+Route::middleware('guest')->group(function () {
+    Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])->name('password.request');
+    Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])->name('password.email');
+    Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])->name('password.reset');
+    Route::post('reset-password', [NewPasswordController::class, 'store'])->name('password.update');
 });
 
 Auth::routes();
