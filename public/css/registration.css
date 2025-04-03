@@ -130,7 +130,7 @@ body {
     .reg input[type="email"],
     .reg input[type="password"] {
         border: 0.133vw solid #aaaaaa;
-        font-size: 1.133vw;
+        font-size: 1.333vw;
         outline: none;
         margin: 0 auto 0.2vw;
     }
@@ -149,16 +149,23 @@ body {
     }
     .reg label {
         font-weight: 400;
-        font-size: 1.133vw;
+        font-size: 1.333vw;
         padding-bottom: 1.033vw;
     }
     .reg .rdo-reg {
         padding-top: 1.6vw;
     }
+    .login-txt {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
 }
-
+@media screen and (min-width: 581px) and (max-width: 767px) {
+}
 /*Register sp*/
-@media screen and (max-width: 767.9px) {
+@media screen and (max-width: 580px) {
     .reg {
         margin: 8vw auto;
         padding: 31vw 30px;

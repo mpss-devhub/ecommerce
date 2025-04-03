@@ -178,189 +178,209 @@
     font-size: 14px;
     margin-bottom: 5%;
   }
+    /*Tablet*/
+    @media screen and (min-width: 1081px) and (max-width: 1280px) {
+        .sec-cart {
+          padding-top: 4.333vw;
+          padding-bottom: 1.3vw;
 
-  /*Tablet*/
-  @media screen and (min-width: 768px) and (max-width: 1280px) {
-    .sec-cart {
-      padding-top: 4.333vw;
-      padding-bottom: 1.3vw;
+        }
 
-    }
+        .sec-cart .img-cart {
+          width: 1.563vw;
+        }
 
-    .sec-cart .img-cart {
-      width: 1.563vw;
-    }
+        .sec-cart .cart-mv {
+          width: 95%;
+          margin: 1.563vw auto;
+          padding: 0.781vw 0;
+        }
 
-    .sec-cart .cart-mv {
-      width: 95%;
-      margin: 1.563vw auto;
-      padding: 0.781vw 0;
-    }
+        .cart-icon {
+          font-size: 2vw;
+          margin-right: 0.9vw;
+          margin-top: 0.167vw;
+        }
 
-    .cart-icon {
-      font-size: 2vw;
-      margin-right: 0.9vw;
-      margin-top: 0.167vw;
-    }
+        .cart-box {
+          width: 27.344vw;
+          margin: 0 auto;
+          margin-top: 20px;
+        }
 
-    .cart-box {
-      width: 27.344vw;
-      margin: 0 auto;
-    }
+        .sec-cart .cmn-ttl {
+          text-align: center;
+          color: #5e5b61;
+          font-size: 1.969vw;
+          float: left;
+        }
 
+        .sec-cart .cart-table {
+          width: 78.125vw;
+          margin: 0 auto;
+          padding: 1.563vw 0;
+          margin-top: 1.563vw;
+        }
+
+        .del-icon {
+          font-size: 2.2vw;
+          color: red;
+        }
+
+        .sec-cart .cart-table .header {
+          border-top: 0.078vw solid #65308c;
+          border-bottom: 0.078vw solid #65308c;
+          width: 78.125vw;
+        }
+
+        .sec-cart .cart-table tr th {
+          padding: 1.172vw 0;
+          width: 13.047vw;
+          font-size: 1.875vw;
+        }
+
+        .sec-cart .cart-table tr td {
+          padding: 0.781vw 0;
+          text-align: center;
+          width: 13.047vw;
+          vertical-align: middle;
+        }
+
+        .sec-cart .cart-table tr td img {
+          width: 50%;
+        }
+
+        .sec-cart .cart-table tr td .qty-box {
+          width: 15.625vw;
+          margin: 0 auto;
+        }
+
+        .sec-cart .cart-table tr td .qty {
+          width: 3.906vw;
+          margin: 0 0.391vw;
+          outline: none;
+          margin-top: 0.547vw;
+          padding: 0.391vw 0vw;
+          float: left;
+          padding-left: 1.094vw;
+          text-align: center;
+          font-size: 1.25vw;
+        }
+
+        .sec-cart .cart-table tr td .update-cart {
+          font-size: 2.5vw;
+          margin: 0.391vw 0;
+
+        }
+
+        .sec-cart .cart-table tr td .minus {
+          float: left;
+          margin-left: 4.375vw;
+        }
+
+        .sec-cart .cart-table tr td .plus {
+          float: left;
+        }
+
+        .sec-cart .cart-table tr .grand-ttl {
+          font-size: 1.875vw;
+          font-family: 'Roboto Condensed', sans-serif;
+          font-weight: 600;
+          color: #5e5b61;
+        }
+
+        .sec-cart .cart-table .tfoot {
+          border-top: 0.078vw solid #65308c;
+          border-bottom: 0.078vw solid #65308c;
+        }
+
+        .btn-blk {
+          float: right;
+        }
+
+        .cart-btn {
+          letter-spacing: 0.109vw;
+          color: #ffffff;
+          padding: 0.781vw 1.563vw;
+          border-radius: 0.391vw;
+          margin-right: 1.563vw;
+        }
+
+        .sec-cart .back {
+          background-color: #343a40;
+          border: 0.078vw solid #343a40;
+        }
+
+        .sec-cart .back:hover {
+          background-color: white;
+          color: #343a40;
+          border: 0.078vw solid #343a40;
+        }
+
+        .sec-cart .clear {
+          background-color: #ff0000;
+          border: 0.078vw solid #ff0000;
+        }
+
+        .sec-cart .clear:hover {
+          background-color: white;
+          color: #ff0000;
+          border: 0.078vw solid #ff0000;
+        }
+
+        .sec-cart .checkout {
+          background-color: #5e5b61;
+          border: 0.078vw solid #5e5b61;
+        }
+
+        .sec-cart .checkout:hover {
+          background-color: white;
+          color: #5e5b61;
+          border: 0.078vw solid #5e5b61;
+        }
+
+        .modal-content {
+          margin: 50% auto;
+          padding: 2.667vw;
+          border: 0.133vw solid #888;
+          width: 80%;
+          max-width: 106.667vw !important;
+          padding: 2.667vw 2.667vw !important;
+        }
+
+        .modal-content p{
+          font-size: 1.867vw;
+        }
+
+        .modalHeader {
+          margin-top: 5.467vw !important;
+          text-align: start !important;
+        }
+
+        .understandingBox{
+          font-size: 1.867vw;
+          margin-bottom: 5%;
+        }
+      }
+
+  @media screen and (min-width: 768px) and (max-width: 1080px) {
     .sec-cart .cmn-ttl {
-      text-align: center;
-      color: #5e5b61;
-      font-size: 1.969vw;
-      float: left;
-    }
-
-    .sec-cart .cart-table {
-      width: 78.125vw;
-      margin: 0 auto;
-      padding: 1.563vw 0;
-      margin-top: 1.563vw;
-    }
-
-    .del-icon {
-      font-size: 2.2vw;
-      color: red;
-    }
-
-    .sec-cart .cart-table .header {
-      border-top: 0.078vw solid #65308c;
-      border-bottom: 0.078vw solid #65308c;
-      width: 78.125vw;
-    }
-
-    .sec-cart .cart-table tr th {
-      padding: 1.172vw 0;
-      width: 13.047vw;
-      font-size: 1.875vw;
-    }
-
-    .sec-cart .cart-table tr td {
-      padding: 0.781vw 0;
-      text-align: center;
-      width: 13.047vw;
-      vertical-align: middle;
-    }
-
-    .sec-cart .cart-table tr td img {
-      width: 50%;
-    }
-
-    .sec-cart .cart-table tr td .qty-box {
-      width: 15.625vw;
-      margin: 0 auto;
-    }
-
-    .sec-cart .cart-table tr td .qty {
-      width: 3.906vw;
-      margin: 0 0.391vw;
-      outline: none;
-      margin-top: 0.547vw;
-      padding: 0.391vw 0vw;
-      float: left;
-      padding-left: 1.094vw;
-      text-align: center;
-      font-size: 1.25vw;
-    }
-
-    .sec-cart .cart-table tr td .update-cart {
-      font-size: 2.5vw;
-      margin: 0.391vw 0;
-
-    }
-
-    .sec-cart .cart-table tr td .minus {
-      float: left;
-      margin-left: 4.375vw;
-    }
-
-    .sec-cart .cart-table tr td .plus {
-      float: left;
-    }
-
-    .sec-cart .cart-table tr .grand-ttl {
-      font-size: 1.875vw;
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight: 600;
-      color: #5e5b61;
-    }
-
-    .sec-cart .cart-table .tfoot {
-      border-top: 0.078vw solid #65308c;
-      border-bottom: 0.078vw solid #65308c;
-    }
-
-    .btn-blk {
-      float: right;
-    }
-
-    .cart-btn {
-      letter-spacing: 0.109vw;
-      color: #ffffff;
-      padding: 0.781vw 1.563vw;
-      border-radius: 0.391vw;
-      margin-right: 1.563vw;
-    }
-
-    .sec-cart .back {
-      background-color: #343a40;
-      border: 0.078vw solid #343a40;
-    }
-
-    .sec-cart .back:hover {
-      background-color: white;
-      color: #343a40;
-      border: 0.078vw solid #343a40;
-    }
-
-    .sec-cart .clear {
-      background-color: #ff0000;
-      border: 0.078vw solid #ff0000;
-    }
-
-    .sec-cart .clear:hover {
-      background-color: white;
-      color: #ff0000;
-      border: 0.078vw solid #ff0000;
-    }
-
-    .sec-cart .checkout {
-      background-color: #5e5b61;
-      border: 0.078vw solid #5e5b61;
-    }
-
-    .sec-cart .checkout:hover {
-      background-color: white;
-      color: #5e5b61;
-      border: 0.078vw solid #5e5b61;
-    }
-
-    .modal-content {
-      margin: 50% auto;
-      padding: 2.667vw;
-      border: 0.133vw solid #888;
-      width: 80%;
-      max-width: 106.667vw !important;
-      padding: 2.667vw 2.667vw !important;
-    }
-
-    .modal-content p{
-      font-size: 1.867vw;
-    }
-
-    .modalHeader {
-      margin-top: 5.467vw !important;
-      text-align: start !important;
-    }
-
-    .understandingBox{
-      font-size: 1.867vw;
-      margin-bottom: 5%;
-    }
+        text-align: center;
+        color: #5e5b61;
+        font-size: 21px;
+        float: left;
+      }
+      .cart-box {
+        width: 350px;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-left: 350px;
+      }
+      .cart-icon {
+        font-size: 2vw;
+        margin-right: 0.9vw;
+        margin-top: 0.167vw;
+      }
   }
 
   /*sp*/
@@ -389,6 +409,7 @@
     .cart-box {
       width: 23.832vw;
       margin: 0 auto;
+      margin-top: 50px;
     }
 
     .del-icon {

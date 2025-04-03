@@ -105,10 +105,11 @@
   }
 
   /* End Review Row */
-
+  /* @media screen and (min-width: 768px) and (max-width: 1082px) {
+  } */
 
   /*Home Tablet*/
-  @media screen and (min-width: 768px) and (max-width: 1280px) {
+  @media screen and (min-width: 1082px) and (max-width: 1280px) {
     .home-mv {
       padding-bottom: 6.188vw;
       padding-top: 7.188vw;
@@ -131,7 +132,7 @@
       font-size: 1.3vw;
     }
     .txt-box .clearfix{
-        margin-top: 15px;
+        margin-top: 25px;
         margin-bottom: -50px;
     }
 

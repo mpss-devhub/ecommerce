@@ -31,6 +31,7 @@
 .sec-checkout .left-col {
   float: left;
   width: 40%;
+  margin-top: 100px;
 }
 
 .sec-checkout .left-col .Ewallet,.QR,.webpay{
@@ -54,6 +55,7 @@
 
 .sec-checkout .right-col {
   float: right;
+  margin-top: 120px;
 }
 
 /* .sec-checkout .left-col .webpay .pay-list a:nth-child(3), a:nth-child(4){
@@ -185,7 +187,10 @@
 .QR-block img{
   margin-top: 10px;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+
+}
+@media screen and (min-width: 1080px) and (max-width: 1280px) {
   .sec-checkout {
     margin-top: 5.469vw;
     padding: 5.313vw 0;
@@ -207,10 +212,12 @@
   }
 
   .sec-checkout .left-col {
+    margin-top: 10px;
     float: left;
   }
 
   .sec-checkout .right-col {
+    margin-top: 10px;
     float: right;
   }
 
@@ -277,6 +284,7 @@
     float: none;
     width: 80%;
     margin: 0 auto;
+    margin-top: 30px;
   }
 
   .sec-checkout .right-col {
@@ -323,5 +331,11 @@
 
   .sec-checkout .currency-unit {
     font-size: 1.565vw;
+  }
+  .sec-checkout .left-col h2{
+    font-size: 20px;
+    color: #777272;
+    padding: 10px 0;
+    text-decoration: underline #65308c;
   }
 }

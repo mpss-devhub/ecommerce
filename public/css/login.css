@@ -142,8 +142,10 @@ html, body {
 .forgot-password{
     color: #5e5b80;
 }
+@media screen and (min-width: 768px) and (max-width: 1081px) {
+}
 /*tablet*/
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 1082px) and (max-width: 1280px) {
   .tablet{
     display: block;
   }
@@ -151,15 +153,13 @@ html, body {
   .sec-login {
     padding: 20.813vw 0 58.813vw;
   }
-  .octoverse-img{
-    width: 100px;
-  }
+
 
   .log-form {
     width: 30.25vw;
     font-size: 1.594vw;
     border-radius: 0.781vw;
-    margin-top: -130px;
+    margin-top: 10px;
   }
 
   .log-form .input-gp {
@@ -245,11 +245,25 @@ html, body {
     font-size: 17px;
     margin-bottom: 10px;
   }
+  .log-form .create {
+    font-size: 16px;
+  }
+
+}
+@media screen and (min-width: 445px) and (max-width: 768px) {
+
+    .octoverse-img {
+        width: 50%;
+    }
+    .octo-container{
+        width: 40%;
+        margin: 0 auto 5.633vw;
+      }
 
 }
 
 /*sp*/
-@media screen and (max-width: 767.9px) {
+@media screen and (max-width: 444px) {
   .sec-login {
     padding-left: 0;
     padding-right: 0;
@@ -264,6 +278,7 @@ html, body {
     width: 77.151vw;
     font-size: 5.997vw;
     border-radius: 1.304vw;
+
   }
 
   .log-form .input-box {
