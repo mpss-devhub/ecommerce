@@ -25,7 +25,7 @@
 
             <!-- Confirm Password Input -->
             <div class="form-group">
-                <label for="password_confirmation">Confirm Password</label>
+                <label for="password_confirmation" >Confirm Password</label>
                 <input id="password_confirmation" type="password" name="password_confirmation" class="input @error('password') is-invalid @enderror" required />
                 <p class="text-danger">{{ $errors->first('password') }}</p>
             </div>

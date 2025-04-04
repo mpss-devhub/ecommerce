@@ -142,8 +142,6 @@ html, body {
 .forgot-password{
     color: #5e5b80;
 }
-@media screen and (min-width: 768px) and (max-width: 1081px) {
-}
 /*tablet*/
 @media screen and (min-width: 1082px) and (max-width: 1280px) {
   .tablet{
@@ -259,6 +257,9 @@ html, body {
         width: 40%;
         margin: 0 auto 5.633vw;
       }
+      .forgot-password{
+        font-size: 16px;
+      }
 
 }
 
@@ -271,14 +272,13 @@ html, body {
     padding-bottom: 49.038vw;
   }
   .forgot-password{
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .log-form {
     width: 77.151vw;
     font-size: 5.997vw;
     border-radius: 1.304vw;
-
   }
 
   .log-form .input-box {
@@ -302,15 +302,15 @@ html, body {
 
   .log-form .input {
     width: 50.3vw;
-    padding: 3.304vw 1.956vw;
+    padding: 2.304vw 1.956vw;
     border: 0.13vw solid #5e5b61;
     border-radius: 1.956vw;
-    font-size: 1.6vw;
+    font-size: 2.8vw;
   }
 
   .log-form .input::placeholder {
     padding-left: 1.304vw;
-    font-size: 2.347vw;
+    font-size: 2.547vw;
   }
 
   .log-form .submit {

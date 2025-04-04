@@ -15,6 +15,16 @@
             </p>
         </div>
         <hr>
+        @if(session('status'))
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="close-btn">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                </div>
+                <p>{{ session('status') }}</p>
+            </div>
+        </div>
+        @endif
 
         <div class="form-container">
             <form method="POST" action="{{ route('password.email') }}">
@@ -25,12 +35,17 @@
                     <p class="text-danger" style="margin-top: -10px;">{{ $errors->first('email') }}</p>
                 </div>
                 <div class="button-container">
-                    <button type="submit">Email Password Reset Link</button>
+                    <button class="btn-submit" name="submit">Email Password Reset Link</button>
                 </div>
             </form>
         </div>
 
     </div>
 </div>
+<script>
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
 
 @endsection
