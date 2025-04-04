@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Octoverse</title>
-    <link rel="icon" type="image/png" href="{{ asset('img/10-img.png') }}" class="w-6">
-    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
-    <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/common.css')}}">
-    <link rel="stylesheet" href="{{asset('css/login.css')}}">
+    <link rel="icon" type="image/png" href="{{ asset('img/10-img.png') }}?v={{ time() }}" class="w-6">
+    <link rel="stylesheet" href="{{asset('css/reset.css')}}?v={{ time() }}">
+    <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}?v={{ time() }}">
+    <link rel="stylesheet" href="{{asset('css/common.css')}}?v={{ time() }}">
+    <link rel="stylesheet" href="{{asset('css/login.css')}}?v={{ time() }}">
 </head>
 
 <body class="">
