@@ -20,7 +20,7 @@
                         </tr>
                     </thead>
 
-                    
+
                     <tbody>
                         @php $total_price = 0 @endphp
                         @foreach($cart as $key => $item)

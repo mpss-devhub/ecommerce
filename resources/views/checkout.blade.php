@@ -1,3 +1,4 @@
+
 @extends('layouts.frontend.master')
 @section('title')
 Octoverse
@@ -35,7 +36,7 @@ Octoverse
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th> 
+                                <th>Name</th>
                                 <th>Qty</th>
                                 <th>Unit Price</th>
                                 <th>Sub Total</th>
@@ -160,7 +161,7 @@ Octoverse
     event.preventDefault();
 
     const submitButton = this;
-    submitButton.disabled = true; 
+    submitButton.disabled = true;
 
     $.ajax({
         type: 'POST',
@@ -180,7 +181,7 @@ Octoverse
             console.log(response);
             if (response.message) {
                 toastr.error(response.message);
-                submitButton.disabled = false;  
+                submitButton.disabled = false;
             } else if (response.data) {
                 if (response.data.type === 'QR') {
                     const qrImageElement = document.querySelector('.QR-block img');
@@ -189,11 +190,11 @@ Octoverse
                 } else if (response.data.type === 'DEEP_LINK') {
                     window.location.href = response.data.data;
                 } else if (response.data.type === 'REDIRECT_URL') {
-                    window.location.href = response.data.data; 
+                    window.location.href = response.data.data;
                 } else if (response.data.type === 'MESSAGE') {
                     toastr.success(response.data.data);
                     setTimeout(function() {
-                        window.location.href = '/';  
+                        window.location.href = '/';
                     }, 100);
                 }
             }
@@ -201,7 +202,7 @@ Octoverse
         error: function(xhr, status, error) {
             console.error("Error occurred: ", error);
             toastr.error("An error occurred. Please try again.");
-            submitButton.disabled = false; 
+            submitButton.disabled = false;
         }
     });
 });

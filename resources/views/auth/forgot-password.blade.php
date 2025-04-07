@@ -16,7 +16,7 @@
         </div>
         <hr>
         @if(session('status'))
-        <div id="myModal" class="modal">
+        <div id="my-Modal" class="modal-box">
             <div class="modal-content">
                 <div class="close-btn">
                     <span class="close" onclick="closeModal()">&times;</span>
@@ -44,7 +44,7 @@
 </div>
 <script>
     function closeModal() {
-        document.getElementById("myModal").style.display = "none";
+        document.getElementById("my-Modal").style.display = "none";
     }
 </script>
 
