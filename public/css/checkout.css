@@ -1,0 +1,341 @@
+.sec-checkout label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.sec-checkout .checkout-ttl {
+  position: relative;
+  margin-bottom: 36px;
+  padding-bottom: 14px;
+  font-size: 24px;
+  color: #777272;
+}
+
+.sec-checkout .checkout-ttl:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #65308c;
+  content: '';
+}
+
+.sec-checkout .left-col,
+.sec-checkout .right-col {
+  width: 50%;
+}
+
+.sec-checkout .left-col {
+  float: left;
+  width: 40%;
+  margin-top: 100px;
+}
+
+.sec-checkout .left-col .Ewallet,.QR,.webpay{
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+
+.sec-checkout .left-col h2{
+  font-size: 24px;
+  color: #777272;
+  padding: 10px 0;
+  text-decoration: underline #65308c;
+}
+
+.sec-checkout .left-col .pay-list a {
+  float: left;
+  width: 9%;
+  margin-right: 2%;
+  margin-left: 5%;
+}
+
+.sec-checkout .right-col {
+  float: right;
+  margin-top: 120px;
+}
+
+/* .sec-checkout .left-col .webpay .pay-list a:nth-child(3), a:nth-child(4){
+  margin-top: 5px !important;
+} */
+/* New */
+
+.checkout-btn {
+  padding: 10px 20px;
+  border: 1px solid #65308c;
+  background-color: #65308c;
+  color: #ffffff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: url('../img/00.png')16 16, pointer;;
+  transition: .4s;
+}
+
+.checkout-btn:hover {
+  background-color: transparent;
+  color: #65308c;
+}
+.infoForm {
+  margin-bottom: 50px;
+}
+.sec-checkout .order-info-blk table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sec-checkout .order-info-blk table tr th {
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 4px double #65308c;
+}
+
+.sec-checkout .order-info-blk table tr th,
+.sec-checkout .order-info-blk table tr td {
+  padding: 16px 16px 16px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sec-checkout .order-info-blk table tfoot tr td {
+  color: #65308c;
+  font-weight: 700;
+  border-top: 4px double #65308c;
+}
+
+.sec-checkout .currency-unit {
+  font-size: 12px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+.modal-contentCheck {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 560px !important;
+}
+
+.modalHeaderCheck {
+  margin-bottom: 5%;
+  text-align: center !important;
+}
+
+.paymentForm {
+  width: 75%;
+  margin: auto;
+  padding: 0 27px;
+}
+.paymentForm .paymentBox{
+  margin-bottom: 25px;
+}
+
+.paymentForm .title {
+  float: left;
+  width: 20%;
+  margin-top: 10px;
+}
+
+.paymentForm .paytxt-box {
+  float: right;
+  width: 75%;
+  padding: 4px 0;
+}
+
+.paySubmit {
+  width: 25%;
+  padding: 5px 0px;
+  margin-left: 25%;
+  background-color: rgb(101, 48, 140);
+  border: none;
+  color: white
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: url('../img/00.png')16 16, pointer;;
+}
+.QR-block {
+  margin: auto;
+  width: 50%;
+}
+
+.QR-block img{
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+
+}
+@media screen and (min-width: 1080px) and (max-width: 1280px) {
+  .sec-checkout {
+    margin-top: 5.469vw;
+    padding: 5.313vw 0;
+  }
+
+  .sec-checkout label {
+    margin-bottom: 0.469vw;
+    font-size: 1.094vw;
+  }
+
+  .sec-checkout .checkout-ttl {
+    margin-bottom: 2.813vw;
+    padding-bottom: 1.094vw;
+    font-size: 1.875vw;
+  }
+
+  .sec-checkout .checkout-ttl:after {
+    height: 0.234vw;
+  }
+
+  .sec-checkout .left-col {
+    margin-top: 10px;
+    float: left;
+  }
+
+  .sec-checkout .right-col {
+    margin-top: 10px;
+    float: right;
+  }
+
+  .sec-checkout .user-info-blk .input-bx {
+    margin-bottom: 1.563vw;
+  }
+
+  .sec-checkout .user-info-blk input {
+    padding: 0.664vw;
+    border: 0.117vw solid #2d3038;
+  }
+
+  .sec-checkout .user-info-blk .text-danger {
+    margin-top: 0.391vw;
+  }
+
+  .checkout-btn {
+    padding: 0.781vw 1.563vw;
+    border: 0.078vw solid #65308c;
+    font-size: 1.094vw;
+    letter-spacing: 0.078vw;
+  }
+
+  .sec-checkout .order-info-blk table tr th {
+    border-bottom: 0.313vw double #006685;
+  }
+
+  .sec-checkout .order-info-blk table tr th,
+  .sec-checkout .order-info-blk table tr td {
+    padding: 1.250vw 1.250vw 1.250vw 0;
+  }
+
+  .sec-checkout .order-info-blk table tfoot tr td {
+    border-top: 0.313vw double #006685;
+  }
+
+  .sec-checkout .currency-unit {
+    font-size: 0.938vw;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .sec-checkout {
+    margin-top: 9.126vw;
+    padding: 8.866vw 0;
+  }
+
+  .sec-checkout label {
+    margin-bottom: 0.782vw;
+    font-size: 1.825vw;
+  }
+
+  .sec-checkout .checkout-ttl {
+    margin-bottom: 4.694vw;
+    padding-bottom: 1.825vw;
+    font-size: 3.129vw;
+  }
+
+  .sec-checkout .checkout-ttl:after {
+    height: 0.391vw;
+  }
+
+  .sec-checkout .left-col {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .sec-checkout .right-col {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .sec-checkout .user-info-blk .input-bx {
+    margin-bottom: 2.608vw;
+  }
+
+  .sec-checkout .user-info-blk input {
+    width: 100%;
+    padding: 1.108vw;
+    border: 0.196vw solid #2d3038;
+    font-size: 1.825vw;
+  }
+
+  .sec-checkout .user-info-blk .text-danger {
+    margin-top: 0.652vw;
+  }
+
+  .checkout-btn {
+    margin-bottom: 7.823vw;
+    padding: 1.304vw 2.608vw;
+    border: 0.130vw solid #65308c;
+    font-size: 1.825vw;
+    letter-spacing: 0.130vw;
+  }
+
+  .sec-checkout .order-info-blk table tr th {
+    border-bottom: 0.522vw double #006685;
+  }
+
+  .sec-checkout .order-info-blk table tr th,
+  .sec-checkout .order-info-blk table tr td {
+    padding: 2.086vw 2.086vw 2.086vw 0;
+  }
+
+  .sec-checkout .order-info-blk table tfoot tr td {
+    border-top: 0.522vw double #006685;
+  }
+
+  .sec-checkout .currency-unit {
+    font-size: 1.565vw;
+  }
+  .sec-checkout .left-col h2{
+    font-size: 20px;
+    color: #777272;
+    padding: 10px 0;
+    text-decoration: underline #65308c;
+  }
+}

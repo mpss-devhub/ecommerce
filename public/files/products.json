@@ -1,0 +1,102 @@
+[
+    {
+        "category_id"    : 1,
+        "name"           : "rice",
+        "original_price" : 1,
+        "brand"          : "ပေါ်ဆန်း(ကြားပျံ)",
+        "photo"          : "01-rice.jpg"
+    },
+
+
+    {
+        "category_id"    : 1,
+        "name"           : "rice",
+        "original_price" : 1,
+        "brand"          : "မင်္ဂလာ ဆင်းသွယ်",
+        "photo"          : "02-rice.jpg"
+    },
+
+    {
+        "category_id"    : 1,
+        "name"           : "rice",
+        "original_price" : 1,
+        "brand"          : "မင်္ဂလာ ဇီယာ",
+        "photo"          : "03-rice.jpg"
+    },
+
+
+    {
+        "category_id"    : 2,
+        "name"           : "Oil",
+        "original_price" : 1,
+        "brand"          : "မင်္ဂလာ မြေပဲဆီ",
+        "photo"          : "04-oil.jpg"
+    },
+    
+
+    {
+        "category_id"    : 2,
+        "name"           : "Oil",
+        "original_price" : 2000,
+        "offer_price"    : 1500,
+        "brand"          : "မင်္ဂလာ နေကြာဆီ",
+        "photo"          : "05-oil.jpg"
+    },
+
+    {
+        "category_id"    : 3,
+        "name"           : "egg",
+        "original_price" : 1,
+        "brand"          : "ကြက်ဥ (၁၀လုံးကတ်)",
+        "photo"          : "06-egg.jpg"
+    },
+
+    {
+        "category_id"    : 3,
+        "name"           : "egg",
+        "original_price" : 1,
+        "brand"          : "ကြက်ဥ (အလုံး၃၀)",
+        "photo"          : "07-egg.jpg"
+    },
+
+    {
+        "category_id"    : 3,
+        "name"           : "egg",
+        "original_price" : 1,
+        "brand"          : "ကြက်ဥ တစ်လုံးချင်း",
+        "photo"          : "08-egg.jpg"
+    },
+
+    {
+        "category_id"    : 4,
+        "name"           : "Sugar",
+        "original_price" : 1,
+        "brand"          : "သကြား",
+        "photo"          : "09-sugar.jpg"
+    },
+
+    {
+        "category_id"    : 5,
+        "name"           : "Salt",
+        "original_price" : 1,
+        "brand"          : "ဆား",
+        "photo"          : "10-salt.jpg"
+    },
+
+
+    {
+        "category_id"    : 6,
+        "name"           : "Dried fish",
+        "original_price" : 1,
+        "brand"          : "ငါးနီတူခြောက်",
+        "photo"          : "11-driedfish.jpg"
+    },
+
+    {
+        "category_id"    : 7,
+        "name"           : "RiceBox",
+        "original_price" : 500,
+        "brand"          : "၂၄ ပြည်ဆန်ထည့်ပုံး",
+        "photo"          : "12-ricebox.jpg"
+    }
+]

@@ -1,0 +1,106 @@
+.history-tbl {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.history-margin {
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+}
+
+.history-tbl .history-div {
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.history-tbl label {
+    margin-right: 10px;
+}
+
+.history-space {
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+.history-tbl table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    /* Light background for table */
+}
+
+.history-tbl thead {
+    background-color: #333;
+    /* Dark header background */
+    color: #fff;
+    /* White text for headers */
+}
+
+.history-tbl th,
+.history-tbl td {
+    border: 1px solid #ddd;
+    /* Light border for cells */
+    padding: 10px;
+    text-align: center;
+    /* Center text in cells */
+}
+
+.history-tbl tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Light gray background for alternating rows */
+}
+
+.history-tbl tbody tr:hover {
+    background-color: #e0e0e0;
+    /* Highlight row on hover */
+}
+
+.history-tbl tfoot td {
+    font-weight: bold;
+    background-color: #f1f1f1;
+    /* Light background for footer */
+    border-top: 2px solid #ddd;
+    /* Slightly thicker border for footer */
+}
+
+.history-img {
+    display: flex;
+    align-items: center;
+}
+
+.history-img img {
+    margin: 0px 30px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    /* Rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for images */
+}
+
+/* Optional: Add a transition effect when hovering over table rows */
+.history-tbl tbody tr:hover {
+    transition: background-color 0.3s ease-in-out;
+}
+.sec-cart{
+    margin-top: 90px;
+}
+@media screen and (min-width: 1081px) and (max-width: 1280px) {
+    .sec-cart{
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+    .sec-cart{
+        margin-top: 90px;
+    }
+}
+@media screen and (max-width: 767.9px) {
+    .sec-cart{
+        margin-top: 10px;
+    }
+}

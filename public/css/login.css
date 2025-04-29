@@ -1,0 +1,380 @@
+/*login*/
+
+html, body {
+    touch-action: manipulation;
+}
+
+.sec-login {
+  background-image: linear-gradient(284deg, #d9cae9, #b1ade2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container{
+  width: 30%;
+  margin: 0 auto;
+}
+.octoverse-img {
+  width: 100%;
+}
+
+
+.log-form {
+  width: 400px;
+  margin: 0 auto;
+  font-weight: 500;
+  color: #6d6270;
+  background-color: #e2e0e0;
+  border-radius: 10px;
+  padding: 30px 0;
+}
+
+.log-form .ttl {
+  font-size: 16px;
+}
+
+.log-form .input-gp {
+  display: grid;
+  row-gap: 25px;
+  margin-top: 15px;
+}
+
+.log-form .input-box{
+  width: 300px;
+  margin: 0 auto;
+}
+
+.log-form .input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px double #aaaaaa;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.log-form .input::placeholder {
+  color: #777676;
+  opacity: 0.6;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.log-form .submit {
+  font-family: 'RobotoCondensed-Bold', sans-serif;
+  font-weight: 500;
+  background-color: #5e5b61;
+  border: 1px solid #5e5b61;
+  width: 100%;
+  padding: 10px 15px  ;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: url('../img/00.png')16 16, pointer;;
+}
+
+.log-form .submit:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #b1ade2;
+  color: #5e5b61;
+}
+
+.log-form .forgot {
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  font-family: 'RobotoCondensed-Bold', sans-serif;
+  font-weight: 500;
+  display: block;
+}
+
+.log-form .create {
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  font-family: 'RobotoCondensed-Bold', sans-serif;
+  font-weight: 500;
+  display: block;
+}
+
+.log-form .forgot:hover {
+  color: #9590d0;
+}
+
+.log-form .create:hover {
+  color: #9590d0;
+}
+
+.log-form .or {
+  font-size: 16px;
+  text-align: center;
+  font-family: 'RobotoCondensed-Bold', sans-serif;
+  font-weight: 700;
+}
+
+.log-form .or::before {
+  position: absolute;
+  top: 76%;
+  right: 10%;
+  background: url(../img/img_02.png) no-repeat;
+  width: 120px;
+  height: 1px;
+  content: '';
+  transform: translateY(-50%);
+}
+
+.log-form .or::after {
+  position: absolute;
+  top: 76%;
+  left: 10%;
+  background: url(../img/img_02.png) no-repeat;
+  width: 120px;
+  height: 1px;
+  content: '';
+  transform: translateY(-50%);
+}
+
+.forgot-password{
+    color: #5e5b80;
+}
+/*tablet*/
+@media screen and (min-width: 1082px) and (max-width: 1280px) {
+  .tablet{
+    display: block;
+  }
+
+  .sec-login {
+    padding: 20.813vw 0 58.813vw;
+  }
+
+
+  .log-form {
+    width: 30.25vw;
+    font-size: 1.594vw;
+    border-radius: 0.781vw;
+    margin-top: 10px;
+  }
+
+  .log-form .input-gp {
+    row-gap: 0.533vw;
+    margin-top: 1.0vw;
+  }
+
+  .log-form .input-box {
+    margin: 0 auto;
+    width: 35.438vw;
+  }
+
+  .log-form .input {
+    width: 23.438vw;
+    padding: 0.781vw 1.172vw;
+    border: 0.078vw solid #5e5b61;
+    border-radius: 1.172vw;
+    margin-left: 43px;
+  }
+
+  .log-form .input::placeholder {
+    padding-left: 0.781vw;
+    font-size: 1.206vw;
+  }
+
+  .log-form .submit {
+    border: 0.078vw solid #5e5b61;
+    width: 20.438vw;
+    padding: 0.781vw 0;
+    border-radius: 1.953vw;
+    margin-bottom: 1.172vw;
+    font-size: 1.406vw;
+    margin-left: 60px;
+  }
+
+  .log-form .forgot {
+    font-size: 1.094vw;
+    letter-spacing: 0.094vw;
+    padding: 1.563vw 0 1.953vw 0.781vw;
+  }
+
+  .log-form .create {
+    font-size: 1.594vw;
+    letter-spacing: 0.094vw;
+    /* padding: 1.563vw 0 3.125vw 0.781vw; */
+    padding: 1.563vw  3.125vw 3.125vw 0.781vw;
+    margin-left: -50px;
+  }
+
+  .log-form .or {
+    font-size: 1.375vw;
+    margin-left: -60px;
+  }
+
+  .log-form .or::before {
+    position: absolute;
+    top: 76%;
+    right: 10%;
+    background: url(../img/img_02.png) no-repeat;
+    width: 9.375vw;
+    height: 0.078vw;
+    content: '';
+    transform: translateY(-50%);
+  }
+
+  .log-form .or::after {
+    position: absolute;
+    top: 76%;
+    left: 10%;
+    background: url(../img/img_02.png) no-repeat;
+    width: 9.375vw;
+    height: 0.078vw;
+    content: '';
+    transform: translateY(-50%);
+  }
+
+  .octo-container{
+    width: 30%;
+    margin: 0 auto 11.633vw;
+  }
+  .forgot-password{
+    margin-left: 45px;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .log-form .create {
+    font-size: 16px;
+  }
+
+}
+@media screen and (min-width: 445px) and (max-width: 768px) {
+
+    .octoverse-img {
+        width: 50%;
+    }
+    .octo-container{
+        width: 40%;
+        margin: 0 auto 5.633vw;
+      }
+      .forgot-password{
+        font-size: 16px;
+      }
+
+}
+
+/*sp*/
+@media screen and (max-width: 444px) {
+  .sec-login {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 22.038vw;
+    padding-bottom: 49.038vw;
+  }
+  .forgot-password{
+    font-size: 13px;
+  }
+
+  .log-form {
+    width: 77.151vw;
+    font-size: 5.997vw;
+    border-radius: 1.304vw;
+  }
+
+  .log-form .input-box {
+    margin: 0 auto;
+    width: 23.2vw;
+  }
+
+  .log-form .ttl {
+    font-size: 2.133vw;
+  }
+
+  .log-form .input-gp {
+    row-gap: 3.333vw;
+    margin-top: 2vw;
+  }
+
+  .log-form .input-box {
+    margin: 0 auto;
+    width: 50.3vw;
+  }
+
+  .log-form .input {
+    width: 50.3vw;
+    padding: 2.304vw 1.956vw;
+    border: 0.13vw solid #5e5b61;
+    border-radius: 1.956vw;
+    font-size: 2.8vw;
+  }
+
+  .log-form .input::placeholder {
+    padding-left: 1.304vw;
+    font-size: 2.547vw;
+  }
+
+  .log-form .submit {
+    border: 0.13vw solid #5e5b61;
+    width: 50.3vw;
+    padding: 1.304vw 0;
+    margin: 0 auto 1.956vw;
+    border-radius: 3.259vw;
+    /* margin-bottom: 1.956vw; */
+    font-size: 2.347vw;
+  }
+
+  .log-form .forgot {
+    font-size: 1.825vw;
+    letter-spacing: 0.156vw;
+    padding: 2.608vw 0 3.259vw 1.304vw;
+  }
+
+  .log-form .create {
+    font-size: 2.725vw;
+    letter-spacing: 0.156vw;
+    padding: 2.608vw 0 1.304vw;
+  }
+
+  .log-form .or {
+    font-size: 3.129vw;
+  }
+
+  .log-form .or::before {
+    position: absolute;
+    top: 76%;
+    right: 10%;
+    background: url(../img/img_02.png) no-repeat;
+    width: 15.645vw;
+    height: 0.13vw;
+    content: '';
+    transform: translateY(-50%);
+  }
+
+
+  .log-form .or::after {
+    position: absolute;
+    top: 76%;
+    left: 10%;
+    background: url(../img/img_02.png) no-repeat;
+    width: 15.645vw;
+    height: 0.13vw;
+    content: '';
+    transform: translateY(-50%);
+  }
+
+  .log-form .or::after {
+    position: absolute;
+    top: 76%;
+    left: 10%;
+    background: url(../img/img_02.png) no-repeat;
+    width: 15.645vw;
+    height: 0.13vw;
+    content: '';
+    transform: translateY(-50%);
+  }
+
+  .octo-container{
+    width: 40%;
+    margin: 0 auto 22.633vw;
+  }
+}
