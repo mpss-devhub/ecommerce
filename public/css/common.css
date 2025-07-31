@@ -40,22 +40,6 @@ body {
     font-weight: 400;
 }
 
-
-.fixed-banner {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    background-color: #e7e7e7; /* bg-slate-400 */
-    padding-top: 1.5rem; /* py-6 */
-    padding-bottom: 1.5rem;
-    overflow: hidden;
-    padding: 15px;
-    margin-bottom: 100px;
-}
-
-
 @keyframes scrollText {
     0% {
         transform: translateX(100%);
@@ -124,7 +108,7 @@ a {
 }
 .fixed-banner {
     position: fixed;
-    top: 64px;
+    top: 66px;
     left: 0;
     z-index: 10;
     width: 100%;
@@ -194,7 +178,7 @@ a {
 }
 
 .sec-header {
-    padding: 10px 0;
+    padding: 13px 0;
     background-color: #e5dcf3;
     position: fixed;
     width: 100%;
@@ -540,7 +524,7 @@ section.sec-mv {
 
     .sec-header {
         /* padding: 5.304vw 0; */
-        padding: 8px 0;
+        padding: 15px 0;
         height: 55px;
     }
 

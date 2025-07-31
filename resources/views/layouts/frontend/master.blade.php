@@ -56,7 +56,7 @@
                                 class="{{ Request::is('/register') ? 'active' : '' }}">Register</a>
                         </div>
                     </li>
-                    <li class="  sp">
+                    <li class="sp">
                         <ul class="list">
                             <li><a href="{{ route('register') }}"
                                     class="{{ Request::is('/register') ? 'active' : '' }}  sp">Register</a></li>
@@ -65,9 +65,7 @@
                         </ul>
                     </li>
                 </ul>
-                </li>
                 @endauth
-                </ul>
             </nav>
             <!--gnav-->
             <button class="menu-icon">

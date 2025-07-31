@@ -1,4 +1,20 @@
+
 // Store Cart
+const style = document.createElement('style');
+style.innerHTML = `
+    .toast {
+        margin-top: 5px !important;
+    }
+`;
+document.head.appendChild(style);
+
+toastr.options = {
+    positionClass: 'toast-top-center',
+    closeButton: true,
+    progressBar: true
+};
+
+
 $('.add-to-cart-btn').click(function (e) {
     e.preventDefault();
     let id = $(this).data('id');
@@ -12,9 +28,10 @@ $('.add-to-cart-btn').click(function (e) {
             let cart_count = Object.keys(response.cart).length;
 
             if (response.msg == 'success') {
-                toastr.success('Item Added to Your Cart Successfully &nbsp;<i class="fa fa-check-circle"></i>', 'SUCCESS', {
+                toastr.success('<div class="left-0">Item Added to Your Cart Successfully &nbsp;<i class="fa fa-check-circle"></i></div>', 'SUCCESS', {
                     closeButton: true,
                     progressBar: true,
+                    positionClass: 'toast-top-center'
                 });
             } else {
                 toastr.error('Item Already Exist in Your Cart &nbsp;<i class="fa fa-exclamation-circle"></i>', 'WARNING', {
