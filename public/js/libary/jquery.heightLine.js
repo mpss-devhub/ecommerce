@@ -14,7 +14,8 @@
 	} else {
 		factory(jQuery, window, document);
 	}
-}(function($, window, document, undefined) {
+}
+(function($, window, document, undefined) {
 	$.fn.heightLine = function(){
 		var target = this,fontSizeChangeTimer,windowResizeId= Math.random();
 		var heightLineObj = {

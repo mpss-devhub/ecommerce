@@ -76,16 +76,16 @@
         </div>
         <!--l-inner-->
     </header>
-    <div class="fixed-banner ">
+    <!-- Banner -->
+    <!-- <div class="fixed-banner ">
         <section class="text-white items-center">
             <div class="whitespace-nowrap">
                 <div class="animate-scroll">
-                    <p class="inline-block mx-2 text-blue-700"> မြန်မာ့နှစ်သစ်ကူး Promotion အဖြစ် Integration Fee 50%
-                        Off ကို 01-April-2025 မှ 30-April-2025 အထိ ရယူ ခံစားလိုက်ပါ။ </p>
+
                 </div>
             </div>
         </section>
-    </div>
+    </div> -->
 
     <!--header-->
     @yield('content')
@@ -100,6 +100,7 @@
     <script src="{{ asset('js/cart.js') }}"></script>
     <script src="{{ asset('js/checkout.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('js/inspect-closer.js') }}"></script>
     <!-- @stack('js') -->
 
 </body>

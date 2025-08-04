@@ -1,19 +1,17 @@
-
 // Store Cart
-const style = document.createElement('style');
-style.innerHTML = `
-    .toast {
-        margin-top: 5px !important;
-    }
-`;
-document.head.appendChild(style);
-
+// Set toastr options for center alignment
 toastr.options = {
-    positionClass: 'toast-top-center',
-    closeButton: true,
-    progressBar: true
+  positionClass: 'toast-top-center',
 };
 
+const style = document.createElement('style');
+style.textContent = `
+  .toast-top-center {
+    top: 5px !important;
+    margin-top: 10px !important;
+  }
+`;
+document.head.appendChild(style);
 
 $('.add-to-cart-btn').click(function (e) {
     e.preventDefault();
@@ -28,15 +26,16 @@ $('.add-to-cart-btn').click(function (e) {
             let cart_count = Object.keys(response.cart).length;
 
             if (response.msg == 'success') {
-                toastr.success('<div class="left-0">Item Added to Your Cart Successfully &nbsp;<i class="fa fa-check-circle"></i></div>', 'SUCCESS', {
+                toastr.success('Item Added to Your Cart Successfully &nbsp;<i class="fa fa-check-circle"></i>', 'SUCCESS', {
                     closeButton: true,
                     progressBar: true,
-                    positionClass: 'toast-top-center'
+                    positionClass: 'toast-top-center',
                 });
             } else {
                 toastr.error('Item Already Exist in Your Cart &nbsp;<i class="fa fa-exclamation-circle"></i>', 'WARNING', {
                     closeButton: true,
                     progressBar: true,
+                    positionClass: 'toast-top-center'
                 });
             }
 
