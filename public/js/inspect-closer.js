@@ -48,7 +48,7 @@
       debugger;
       const endTime = performance.now();
       
-      if (endTime - startTime > 100) {
+      if (endTime - startTime > 500) {
           if (!devToolsOpened) {
               devToolsOpened = true;
               showWarning();
@@ -67,7 +67,7 @@
 
   // Run checks periodically
   setInterval(checkDevTools, 1000);
-  setInterval(checkDebugger, 1500);
+//   setInterval(checkDebugger, 1500);
 
   // Ensure links work normally
   document.querySelectorAll('a').forEach(link => {
